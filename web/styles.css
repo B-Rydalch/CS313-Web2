@@ -14,7 +14,7 @@ head{
     color: antiquewhite;
  }
 
- img{
+ #img{
     max-width: 1000px;
     max-height: 1000px;
     border-image: url("http://www.wildtextures.com/wp-content/uploads/2011/10/wildtextures-old-wood-original-file.jpg") 30 round;
