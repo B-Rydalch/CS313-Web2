@@ -17,19 +17,19 @@
           function startTimer() {
               setInterval(displayNextImage, 3000);
           }
-
+          
           var images = [], x = -1;
-          images[0] = "image1.jpg";
+          images[0] = "background-image: url(https://www.ldstemple.pics/wp-content/uploads/washington-dc-lds-temple-sunset.jpg);";
           images[1] = "image2.jpg";
           images[2] = "image3.jpg";
       </script>
    </head> 
 
-   <body onload = "startTimer()">
-       <img id="img" src="/images/startpicture.jpg"/>
+   <body id="img" onload = "startTimer()" style="background-image: url(http://www.normons.com/wp-content/uploads/2012/10/salt-lake-mormon-temple2071.jpg);">
+       <!--<img id="img" src="/images/startpicture.jpg"/>
        <button type="button" onclick="displayPreviousImage()">Previous</button>
-       <button type="button" onclick="displayNextImage()">Next</button>
-       <body style="background-image: url(http://www.normons.com/wp-content/uploads/2012/10/salt-lake-mormon-temple2071.jpg);">
+       <button type="button" onclick="displayNextImage()">Next</button>-->
+     
         <div class="hello header"></div>
    </body>
 </html>
