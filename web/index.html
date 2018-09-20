@@ -3,7 +3,7 @@
 <html>
    <head>
       <title>change picture</title>
-      <script type = "text/javascript">
+      <!--<script type = "text/javascript">
           function displayNextImage() {
               x = (x === images.length - 1) ? 0 : x + 1;
               document.getElementById("img").src = images[x];
@@ -22,6 +22,50 @@
           images[0] = "background-image: url(https://www.ldstemple.pics/wp-content/uploads/washington-dc-lds-temple-sunset.jpg);";
           images[1] = "image2.jpg";
           images[2] = "image3.jpg";
+      </script>-->
+      <script>
+        $(window).load(function() { //start after HTML, images have loaded
+ 
+            var InfiniteRotator =
+            {
+                init: function()
+                {
+                    //initial fade-in time (in milliseconds)
+                    var initialFadeIn = 1000;
+         
+                    //interval between items (in milliseconds)
+                    var itemInterval = 5000;
+         
+                    //cross-fade time (in milliseconds)
+                    var fadeTime = 2500;
+         
+                    //count number of items
+                    var numberOfItems = $('.rotating-item').length;
+         
+                    //set current item
+                    var currentItem = 0;
+         
+                    //show first item
+                    $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+         
+                    //loop through the items
+                    var infiniteLoop = setInterval(function(){
+                        $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+         
+                        if(currentItem == numberOfItems -1){
+                            currentItem = 0;
+                        }else{
+                            currentItem++;
+                        }
+                        $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+         
+                    }, itemInterval);
+                }
+            };
+         
+            InfiniteRotator.init();
+         
+        });
       </script>
    </head> 
 
@@ -30,6 +74,16 @@
        <button type="button" onclick="displayPreviousImage()">Previous</button>
        <button type="button" onclick="displayNextImage()">Next</button>-->
      
-        <div class="hello header"></div>
+      <div class="hello header"></div>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1"></script><script type="text/javascript" src="js/infinite-rotator.js"></script>
+    <pre>
+        <h1>Infinite Rotating Images Using jQuery (JavaScript)</h1>
+        <div id="rotating-item-wrapper"><img class="rotating-item" src="images/greenpeople.jpg" alt="a person entering a building" width="980" height="347" />
+            <img class="rotating-item" src="images/image1.jpg" alt="photo of building across from our office" width="980" height="347" />
+            <img class="rotating-item" src="images/imgage2.jpg" alt="building entrance with neon backlit walls" width="980" height="347" />
+            <img class="rotating-item" src="images/image3.jpg" alt="building lobby window reflections" width="980" height="347" />
+        </div>
+    </pre>
    </body>
 </html>
