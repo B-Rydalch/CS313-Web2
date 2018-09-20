@@ -1,3 +1,8 @@
-header{
+head{
     background: #000000 url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3676349.jpg) 100% 100% no-repeat;
+ }
+
+ body {
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3676349.jpg");
+    background-color: #cccccc;
  }
