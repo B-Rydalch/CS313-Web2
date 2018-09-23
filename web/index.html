@@ -4,34 +4,16 @@
    <head>
       <title>CS313</title>
       <link rel="stylesheet" href="styles.css">
-      <script type = "text/javascript">
-          function displayNextImage() {
-              x = (x === images.length - 1) ? 0 : x + 1;
-              document.getElementById("img").src = images[x];
-          }
-
-          function displayPreviousImage() {
-              x = (x <= 0) ? images.length - 1 : x - 1;
-              document.getElementById("img").src = images[x];
-          }
-
-          function startTimer() {
-              setInterval(displayNextImage, 3000);
-          }
-          
-          var images = [], x = -1;
-          images[0] = "images/image1.jpg";
-          images[1] = "images/image2.jpg";
-          images[2] = "images/image3.jpg";
-          images[3] = "images/image4.jpg";
-      </script>
-
+      <script src="scripts.js"></script>
    </head> 
 
    <body onload = "startTimer()">
        <div id="welcome">
-            <h1>Hello Brother Burton!</h1>
-            <h3>Please enjoy some pictures of my favorite places to visit.</h3>
+            <h1>Welcome</h1>
+            <h3>About me</h3>
+                <h4>Hometown:</h4><p>Idaho Falls</p>
+                <h4>Major:</h4><p>Computer Science</p>
+                <h4>Interests/Hobbies:</h4><p>Cooking, reading technology books, movies, games, softball.</p>
        </div>
        <img id="img" src="images/startpicture.jpg"/>
         <!-- <img id="img" src="http://www.moroni10.com/LDS/Temple_Tour/salt-lake-temple-north.jpg"/> -->
