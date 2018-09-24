@@ -1,9 +1,10 @@
 head{
-    background: #000000 url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3676349.jpg) 100% 100% no-repeat;
+    background-image: "images/background", 100% 100% no-repeat;
  }
 
  body {
     background-repeat: no-repeat; 
+    background-size: cover;
     /* background-image: "images/border.jpg";
     background-clip:border-box;
     background-position: center; 
@@ -14,8 +15,6 @@ head{
  #welcome{
     font-size: 300%;
     text-align: center;
-    text-decoration: underline;
-
  }
 
  #slideshow{
