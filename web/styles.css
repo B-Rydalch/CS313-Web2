@@ -4,21 +4,20 @@ head{
 
  body {
     padding: 10px; 
-    border: "http://www.wildtextures.com/wp-content/uploads/2011/10/wildtextures-old-wood-original-file.jpg";
-    background-image: "images/background.jpg";
+    background-image: "images/border.jpg";
     background-clip:border-box;
     background-position: center; 
     background-repeat: no-repeat; 
-
+    color: antiquewhite;
+    border-style: solid;
  }
 
  #welcome{
     font-size: 300%;
-    color: antiquewhite;
  }
 
- #img{
+ #slideshow{
+    position: relative;
     max-width: 1000px;
     max-height: 1000px;
-    border-image: url("http://www.wildtextures.com/wp-content/uploads/2011/10/wildtextures-old-wood-original-file.jpg") 30 round;
  }
