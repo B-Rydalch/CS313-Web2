@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-
 <html>
    <head>
       <title>CS313</title>
       <link rel="stylesheet" href="styles.css">
       <script src="scripts.js"></script>
    </head> 
-
    <body onload = "startTimer()">
        <div id="welcome">
             <h1>Welcome</h1>
-            <h3>About me</h3>
-                <h4>Hometown:</h4><p>Idaho Falls</p>
-                <h4>Major:</h4><p>Computer Science</p>
-                <h4>Interests/Hobbies:</h4><p>Cooking, reading technology books, movies, games, softball.</p>
+            <h3>About Me</h3>
+            <p>
+                Major: Computer Science 
+                Hometown: Idaho Falls 
+                Hobbies/Interests: 
+                <ul>
+                    cooking
+                    reading technology books
+                    games
+                    softball
+                    spending time with family
+                </ul>
+            </p>
        </div>
+       <h3>Places I enjoy visiting</h3>
        <img id="img" src="images/startpicture.jpg"/>
-        <!-- <img id="img" src="http://www.moroni10.com/LDS/Temple_Tour/salt-lake-temple-north.jpg"/> -->
         <div>
             <button type="button" onclick="displayPreviousImage()">Previous</button>
             <button type="button" onclick="displayNextImage()">Next</button>
         </div>
-
-    
    </body>
 </html>
