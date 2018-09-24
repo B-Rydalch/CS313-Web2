@@ -3,12 +3,17 @@ head{
  }
 
  body {
-
+    /* background-image: "images/border.jpg";
+    background-clip:border-box;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: antiquewhite;
+    border-style: solid; */
  }
 
  #welcome{
     font-size: 300%;
-    font-display: center;
+    text-align: center;
     text-decoration: underline;
 
  }
