@@ -22,60 +22,19 @@
         <section class="intro">  
             <a name="home"></a>
             <div class="content">
-                <h1 class="headerStyle">Welcome</h1>
-
-                <div id="carousel1" class="carousel slide" data-ride="carousel" data-pause=false>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./images/main/pic1-1.jpeg" alt="First slide">
-                            <div class="carousel-caption">
-                                <p>Neuschwanstein Castle</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./images/main/pic2-1.jpeg" alt="Second slide">
-                            <div class="carousel-caption">
-                                <h1>Cairo, Egypt</h1>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./images/main/pic3-1.jpeg" alt="Third slide">
-                            <div class="carousel-caption">
-                                <p>Smithfield, Utah - Utah Ogden Mission</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <h1 class="headerStyle">Welcome</h1>
             </div>
         </section>
 
         <section class="intro">  
             <div class="content">
-                <h1 class="headerStyle">Avid software developer, golfer and lover of the Office</h1>
-
-                <div id="carousel2" class="carousel slide" data-ride="carousel" data-pause=false>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./images/main/pic4-1.jpeg" alt="First slide">
-                            <div class="carousel-caption">
-                                <h1>Golf in Saudi Arabia</h1>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./images/main/pic5-1.png" alt="Second slide">
-                            <div class="carousel-caption">
-                                <h1>Jim and Dwight</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="intro">
             <a name="projects"></a>  
             <div class="content">
-                <h1 class="headerStyle projectHeader">Projects</h1>
+                <!-- <h1 class="headerStyle projectHeader">Projects</h1> -->
 
                 <div class="card-deck">
                     <div class="card mb-4">

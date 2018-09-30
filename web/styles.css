@@ -1,11 +1,10 @@
 
-head{
 
-}
  body {
     background-image: "images/background";
     background-repeat: no-repeat; d
     background-size: cover;
+    padding-top: 5rem;
  }
 
  #welcome{
@@ -20,16 +19,9 @@ head{
  }
 
 
- .intro {
-    text-align: center;
-}
-
-body {
-    padding-top: 5rem;
-}
-
 .intro {
-	height: 85vh;
+    text-align: center;
+    height: 85vh;
 }
 
 .content {
@@ -40,16 +32,6 @@ body {
 	font-size: 3em;
 	display: block;
 	font-weight: 300;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-    color: white;
-    background-color: darkgray;
 }
 
 .active {
@@ -86,7 +68,15 @@ section:nth-child(even) {
 .card-deck {
     justify-content: space-around;
 }
-
+ 
 .projectHeader {
     margin-bottom: 1.5rem;
+}
+
+.header {
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

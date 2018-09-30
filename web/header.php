@@ -11,6 +11,9 @@
                 <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item ">
+                <a class="nav-link" href="#aboutme">About Me</a>
+            </li>
+            <li class="nav-item ">
                 <a class="nav-link" href="#projects">Projects</a>
             </li>
         </ul>
