@@ -34,7 +34,7 @@
         <section class="intro">
             <a name="projects"></a>  
             <div class="content">
-                <!-- <h1 class="headerStyle projectHeader">Projects</h1> -->
+                <h1 class="headerStyle projectHeader">Projects</h1>
 
                 <div class="card-deck">
                     <div class="card mb-4">
