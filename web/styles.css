@@ -2,9 +2,8 @@
 
  body {
     background-image: "images/background";
-    background-repeat: no-repeat; d
+    background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 5rem;
  }
 
  #welcome{
