@@ -8,11 +8,11 @@
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/png" href="https://sylvanson.com/wp-content/uploads/2017/03/favicon-512.png">
 
-    <title>Sam McGrath</title>
+    <title>CS231 Web Engineering 2</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link href="main.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -22,7 +22,7 @@
         <section class="intro">  
             <a name="home"></a>
             <div class="content">
-                <h1 class="headerStyle">Sam McGrath</h1>
+                <h1 class="headerStyle">Welcome</h1>
 
                 <div id="carousel1" class="carousel slide" data-ride="carousel" data-pause=false>
                     <div class="carousel-inner">

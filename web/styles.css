@@ -18,3 +18,75 @@ head{
     max-width: 1000px;
     max-height: 1000px;
  }
+
+
+ .intro {
+    text-align: center;
+}
+
+body {
+    padding-top: 5rem;
+}
+
+.intro {
+	height: 85vh;
+}
+
+.content {
+	vertical-align: middle;
+}
+
+.headerStyle {
+	font-size: 3em;
+	display: block;
+	font-weight: 300;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    color: white;
+    background-color: darkgray;
+}
+
+.active {
+    color: white;
+}
+
+section:nth-child(even) {
+    background-color: rgb(243, 243, 243);
+}
+
+.card .btn-primary {
+	background-color: darkslategray;
+	border-color: darkslategray;
+	text-transform: uppercase;
+}
+
+.card .btn-primary:hover {
+	background-color: rgb(35, 59, 59);
+	border-color: gb(35, 59, 59);
+}
+
+.card-img-top {
+	width: 100%;
+	height: 10vw;
+	object-fit: cover;
+}
+
+.card-deck .card {
+	margin-left: 10px;
+	margin-right: 10px;
+	max-width: 234px;
+}
+
+.card-deck {
+    justify-content: space-around;
+}
+
+.projectHeader {
+    margin-bottom: 1.5rem;
+}
