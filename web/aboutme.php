@@ -1,3 +1,5 @@
+<?php
+echo "
 <!DOCTYPE html>
 <html lang="en">   
    <head>
@@ -12,10 +14,9 @@
    <body onload = "startTimer()">
         <?php include 'header.php' ?>
        <div id="welcome">
-            <h1>Welcome</h1>
+            <h1>About Me</h1>
         </div>
         <div>
-            <h3>About Me</h3>
             <ul>
                 <p>
                    <li>Major: Computer Science</li>
@@ -42,4 +43,5 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
    </body>
-</html>
+</html>";
+?>

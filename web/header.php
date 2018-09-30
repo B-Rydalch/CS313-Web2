@@ -2,9 +2,9 @@
     $filename = $_SERVER['REQUEST_URI'];
     $about = "";
     $home = "";
-    if ($filename == '/w02-toa/about-me.php') {
+    if ($filename == '/aboutme.php') {
         $about = " active";
-    } else if ($filename == '/w02-toa/home.php') {
+    } else if ($filename == '/home.php') {
         $home = " active";
     echo "<nav class='navbar navbar-expand-md navbar-dark bg-dark fixed-top link-top'>
             <a class='navbar-brand' href='#'>Brad Rydalch</a>
