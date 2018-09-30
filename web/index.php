@@ -25,12 +25,6 @@
               <h1 class="headerStyle">Welcome</h1>
             </div>
         </section>
-
-        <section class="intro">  
-            <div class="content">
-            </div>
-        </section>
-
         <section class="intro">
             <a name="projects"></a>  
             <div class="content">
