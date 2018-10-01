@@ -6,7 +6,7 @@
     background-size: cover;
  }
 
- .welcome, aboutme{
+ .welcome .aboutme{
     padding: 500 px; 
     font-size: 300%;
     text-align: center;
