@@ -1,9 +1,11 @@
-
-
- body {
+ 
+body {
     background-image: "images/background";
     background-repeat: no-repeat;
     background-size: cover;
+ }
+ .headercss {
+     background-image: 
  }
 
  .welcome .aboutme{
@@ -12,13 +14,15 @@
     text-align: center;
  }
 
+
+
  #slideshow{
     position: relative;
     max-width: 1000px;
     max-height: 1000px;
  }
 
-
+/*
 .intro {
     text-align: center;
     height: 85vh;
@@ -79,4 +83,4 @@ section:nth-child(even) {
     display: flex;
     justify-content: center;
     align-content: center;
-}
+} */
