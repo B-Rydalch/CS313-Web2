@@ -3,7 +3,7 @@
 ?>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top link-top">
-    <a class="navbar-brand" href="#">Brad Rydalch</a>
+    <a class="navbar-brand" href="#">BR</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item activef">
