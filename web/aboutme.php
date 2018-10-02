@@ -35,7 +35,7 @@
             <h3>Places I enjoy visiting</h3>
             <img id="img" src="images/startpicture.jpg"/>
         </div>
-        <div>
+        <div class="buttons">
             <button type="button" onclick="displayPreviousImage()">Previous</button>
             <button type="button" onclick="displayNextImage()">Next</button>
         </div>
