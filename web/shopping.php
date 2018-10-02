@@ -13,7 +13,7 @@
         <?php include 'header.php' ?>
         <div class="card-deck">
           <div class="card">
-            <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Card image cap">
+            <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Pokemon kit">
             <div class="card-body">
               <h5 class="card-title">Pokemon Trainer Kit</h5>
               <p class="card-text">Become a professional Pokemon trainer with this special trainers kit!</p>
@@ -21,19 +21,19 @@
             </div>
           </div>
           <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="shopping-items/avengers.jpg" alt="Avengers Team">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Avengers Action Figures</h5>
+              <p class="card-text">Join the avengers in epic battles against Loki!</p>
+              <p class="card-text"><small class="text-muted">$45.99</small></p>
             </div>
           </div>
           <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="shopping-items/ferdinand.jpg" alt="Disney Ferdiand">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Ferdinand Beanny Baby</h5>
+              <p class="card-text">Have fun with Ferdinand and his friends. </p>
+              <p class="card-text"><small class="text-muted">$29.99</small></p>
             </div>
           </div>
         </div>
