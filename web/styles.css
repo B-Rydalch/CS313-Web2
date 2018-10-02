@@ -3,7 +3,7 @@ body {
     background-image: url("images/border.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    color: antiquewhite;
+    color: darkslategray;
  }
 
  .welcome .aboutme{
@@ -19,6 +19,7 @@ body {
  }
 
  #headerIntro {
+     padding: 200rem;
      font-size: 16.5rem;
      color: darkslategray
  }
