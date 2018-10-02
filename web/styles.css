@@ -28,6 +28,10 @@ body {
     text-align: center;
 
 }
+.details{
+    padding: 50px; 
+}
+
  .major{
     font-size: 100px;
  }
