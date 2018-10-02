@@ -28,6 +28,9 @@ body {
     text-align: center;
 
 }
+.job{
+    font-size: 70px;
+}
 .details{
     padding: 50px; 
 }

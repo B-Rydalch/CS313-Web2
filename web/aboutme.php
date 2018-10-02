@@ -19,6 +19,7 @@
                 <p>
                    <li class="major">Major: Computer Science</li>
                     <li class="town">Hometown: Idaho Falls</li>
+                    <li class="job">Headed to Bentonville for Walmart</li>
                     <h4 class="hobbies">Hobbies/Interests:</h4>
                     <ul class="hobbylist">
                         <li>cooking</li>
