@@ -4,8 +4,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
  }
- .headercss {
-     background-image: url("images/background.jpg");
+
+ .navbar-default {
+     background-image: url("images/border.jpg");
  }
 
  .welcome .aboutme{
