@@ -23,11 +23,15 @@ body {
      font-size: 16.5rem;
      color: darkslategray
  }
+.aboutme{
+    font-size: 500px;
+    text-align: center;
 
- .major .town .hobbies{
-    font-size: 100px;
+}
+ .major, .town, .hobbies{
+    font-size: 300px;
  }
 
  .hobbylist{
-     
+
  }
