@@ -17,10 +17,10 @@
         <div>
             <ul>
                 <p>
-                   <li>Major: Computer Science</li>
-                    <li>Hometown: Idaho Falls</li>
-                    <h4>Hobbies/Interests:</h4>
-                    <ul>
+                   <li class="major">Major: Computer Science</li>
+                    <li class="town">Hometown: Idaho Falls</li>
+                    <h4 class="hobbies">Hobbies/Interests:</h4>
+                    <ul class="hobbylist">
                         <li>cooking</li>
                         <li>reading technology books</li>
                         <li>games</li>
