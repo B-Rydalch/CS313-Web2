@@ -24,7 +24,7 @@
     <div>
         <section class="welcome">  
             <div class="content">
-              <h1 class="headerstyle">Welcome</h1>
+              <h1 id="headerIntro">Welcome</h1>
             </div>
         </section>
     </div>
