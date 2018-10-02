@@ -29,29 +29,29 @@ body {
 
 }
 .job{
-    font-size: 70px;
+    font-size: 40px;
 }
 .details{
-    padding: 50px; 
+    padding: 30px; 
 }
 
  .major{
-    font-size: 70px;
+    font-size: 40px;
  }
 
  .town{
-    font-size: 70px;
+    font-size: 40px;
  }
 
  .hobbies{
-    font-size: 70px;
+    font-size: 40px;
  }
 
  .hobbylist{
-    font-size: 50px;
+    font-size: 30px;
  }
 
  .slideshow{
     text-align: center;
-    padding: 70 px;
+    padding: 50 px;
  }
