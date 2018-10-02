@@ -1,12 +1,8 @@
  
 body {
-    background-image: "images/background";
+    background-image: url("images/border.jpg");
     background-repeat: no-repeat;
     background-size: cover;
- }
-
- .navbar-default {
-     background-image: url("images/border.jpg");
  }
 
  .welcome .aboutme{
