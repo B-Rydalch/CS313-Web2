@@ -23,14 +23,17 @@ body {
      font-size: 16.5rem;
      color: darkslategray
  }
+ 
 .aboutme{
     font-size: 500px;
     text-align: center;
 
 }
+
 .job{
     font-size: 40px;
 }
+
 .details{
     padding: 30px; 
 }
