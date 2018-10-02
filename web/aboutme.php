@@ -31,7 +31,7 @@
                 </p>
             </ul>
        </div>
-       <div id="slideshow">
+       <div class="slideshow">
             <h3>Places I enjoy visiting</h3>
             <img id="img" src="images/startpicture.jpg"/>
         </div>
