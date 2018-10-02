@@ -10,10 +10,17 @@
             Name: <input type="text" name="name"><br>
             E-mail: <input type="text" name="email"><br>
             Major:<br>
-            <input type="radio" name="major" value="Computer Science"> Computer Science<br>
+            <?php
+                $arr = array("Computer Science", "Web Design & Development", "Computer Information Technology", "Computer Engineering");
+
+                foreach($arr as $major) {
+                    echo "<input type=\"radio\" name=\"major\" value=\"$major\"> $major<br>"
+                }
+            ?>
+            <!-- <input type="radio" name="major" value="Computer Science"> Computer Science<br>
             <input type="radio" name="major" value="Web Design & Development"> Web Design & Development<br>
             <input type="radio" name="major" value="Computer Information Technology"> Computer Information Technology<br>
-            <input type="radio" name="major" value="Computer Engineering"> Computer Engineering<br>
+            <input type="radio" name="major" value="Computer Engineering"> Computer Engineering<br> -->
             Continents visited:<br>
             <input type="checkbox" name="continent[]" value="North America"> North America<br>
             <input type="checkbox" name="continent[]" value="South America"> South America<br>
