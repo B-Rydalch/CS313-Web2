@@ -1,5 +1,5 @@
 <html>
-<body>
+<body style="font-size:25px;">
 
 Welcome <?php echo $_POST["name"]; ?><br>
 <a href="mailto:<?php echo $_POST["email"]; ?>"> Email <?php echo $_POST["email"]; ?></a><br>
