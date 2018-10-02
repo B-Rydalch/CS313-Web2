@@ -5,7 +5,7 @@ body {
     background-size: cover;
  }
  .headercss {
-     background-image: 
+     background-image: url("images/background.jpg");
  }
 
  .welcome .aboutme{
@@ -13,8 +13,6 @@ body {
     font-size: 300%;
     text-align: center;
  }
-
-
 
  #slideshow{
     position: relative;
