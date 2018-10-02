@@ -8,7 +8,7 @@ Your comment is: <?php echo $_POST["comment"];?><br>
 Countries visited:<br>
 
 <?php
-    var_dump($_POST["continent"]);
+    //var_dump($_POST["continent"]);
     foreach ($_POST["continent"] as $selected) {
         echo "$selected<br>";
     }
