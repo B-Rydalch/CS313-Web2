@@ -15,7 +15,7 @@
             <a href="#" class="list-group-item list-group-item-action active">
                 Week 3
             </a>
-            <a href="#" class="list-group-item list-group-item-action">Week 4</a>
+            <a href="shopping.php" class="list-group-item list-group-item-action">Week 4</a>
             <a href="#" class="list-group-item list-group-item-action">Week 5</a>
             <a href="#" class="list-group-item list-group-item-action">week 6</a>
             <a href="#" class="list-group-item list-group-item-action disabled">Week 7</a>
