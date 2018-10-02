@@ -10,7 +10,7 @@ Countries visited:<br>
 <?php
     //var_dump($_POST["continent"]);
     foreach ($_POST["continent"] as $selected) {
-        echo "$selected<br>";
+        echo "<p>$selected</p><br>";
     }
 ?>  
 
