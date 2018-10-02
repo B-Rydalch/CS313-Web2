@@ -14,7 +14,7 @@
        <div class="aboutme">
             <h1>About Me</h1>
         </div>
-        <div>
+        <div class="details">
             <ul>
                 <p>
                    <li class="major">Major: Computer Science</li>

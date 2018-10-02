@@ -33,9 +33,17 @@ body {
 }
 
  .major{
-    font-size: 100px;
+    font-size: 70px;
+ }
+
+ .town{
+    font-size: 70px;
+ }
+
+ .hobbies{
+    font-size: 70px;
  }
 
  .hobbylist{
-
+    font-size: 50px;
  }
