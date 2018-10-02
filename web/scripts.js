@@ -18,4 +18,4 @@ images[1] = "images/image2.jpg";
 images[2] = "images/image3.jpg";
 images[3] = "images/image4.jpg";
 images[4] = "images/terror.jpg";
-images[5] = "images/fam.png";
+images[5] = "images/fam.jpg";
