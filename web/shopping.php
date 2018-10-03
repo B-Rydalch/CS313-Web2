@@ -33,7 +33,7 @@
             <div class="card-body">
               <h5 class="card-title">Ferdinand Beanny Baby</h5>
               <p class="card-text">Have fun with Ferdinand and his friends. </p>
-              <p class="card-text"><small class="text-muted">$29.99</small></p>
+              <p class="card-text"><small class="text-muted">$29.99</small><button>add to cart</button></p>
             </div>
           </div>
         </div>
