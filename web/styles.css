@@ -62,3 +62,7 @@ body {
  .buttons{
     text-align: center;
  }
+
+ .card-deck{
+    padding: 50px; 
+ }
