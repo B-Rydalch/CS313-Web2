@@ -67,3 +67,7 @@ body {
     padding: 50px; 
     padding-top:150px;
  }
+ 
+ .btn{
+    float: right;
+ }

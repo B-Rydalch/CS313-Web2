@@ -17,7 +17,7 @@
             <div class="card-body">
               <h5 class="card-title">Pokemon Trainer Kit</h5>
               <p class="card-text">Become a professional Pokemon trainer with this special trainers kit!</p>
-              <p class="card-text"><small class="text-muted">$24.99</small></p>
+              <p class="card-text"><small class="text-muted">$24.99</small><button class="btn">Add to cart</button></p>
             </div>
           </div>
           <div class="card">
@@ -25,7 +25,7 @@
             <div class="card-body">
               <h5 class="card-title">Avengers Action Figures</h5>
               <p class="card-text">Join the avengers in epic battles against Loki!</p>
-              <p class="card-text"><small class="text-muted">$45.99</small></p>
+              <p class="card-text"><small class="text-muted">$45.99</small><button class="btn">Add to cart</button></p>
             </div>
           </div>
           <div class="card">
@@ -33,7 +33,7 @@
             <div class="card-body">
               <h5 class="card-title">Ferdinand Beanny Baby</h5>
               <p class="card-text">Have fun with Ferdinand and his friends. </p>
-              <p class="card-text"><small class="text-muted">$29.99</small><button>add to cart</button></p>
+              <p class="card-text"><small class="text-muted">$29.99</small><button class="btn">Add to cart</button></p>
             </div>
           </div>
         </div>
