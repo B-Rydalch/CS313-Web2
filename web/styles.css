@@ -80,3 +80,8 @@ body {
  .btn{
     float: right;
  }
+
+ .cart-btn {
+     text-align: center;
+     font-size: 200%;
+ }
