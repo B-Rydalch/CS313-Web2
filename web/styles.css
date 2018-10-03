@@ -20,15 +20,14 @@ body {
  }
 
  #headerIntro {
-     padding: 20rem;
-     font-size: 16.5rem;
-     color: darkslategray
+    padding: 20rem;
+    font-size: 16.5rem;
+    color: darkslategray
  }
  
 .aboutme{
     font-size: 500px;
     text-align: center;
-
 }
 
 .job{
