@@ -66,6 +66,12 @@ body {
  .card-deck{
     padding: 50px; 
     padding-top:150px;
+    max-width: 200px;
+    min-width: 100px;
+ }
+
+ .card-text{
+    color:black;
  }
  
  .btn{
