@@ -15,4 +15,3 @@
        $_SESSION["cart"][$_REQUEST["item"] - 1]["quantity"] += $itemAmount;
    }
 ?>
-?>

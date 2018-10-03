@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js"></script>
     </head> 
-    <body>
+    <body >
         <?php require 'header.php' ?>
         <?php require 'shopping-script.php' ?>
         <h1>Shopping Cart</h1>
