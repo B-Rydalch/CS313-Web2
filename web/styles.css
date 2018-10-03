@@ -61,7 +61,7 @@ body {
 
  .shopping-title {
     padding-top: 150px;
-    font-size: 50%;
+    font-size: 150%;
     text-align: center;
  }
  .buttons{
@@ -71,8 +71,6 @@ body {
  .card-deck{
     padding: 150px; 
     padding-top:150px;
-    /* max-width: 1000px;
-    min-width: 700px; */
  }
 
  .card-text{
