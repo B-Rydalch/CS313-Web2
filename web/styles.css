@@ -50,15 +50,18 @@ body {
     font-size: 40px;
  }
 
- .hobbylist{
+ .hobbylist {
     font-size: 30px;
  }
 
- .slideshow{
+ .slideshow {
     text-align: center;
     padding: 50 px;
  }
 
+ .shopping-title {
+    text-align: center;
+ }
  .buttons{
     text-align: center;
  }

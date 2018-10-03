@@ -12,7 +12,7 @@
    <body>
         <?php require 'header.php' ?>
         <?php require 'shopping-script.php' ?>
-        <h2>Which one of my kids are you shopping for?</h2>
+        <h2 class="shopping-title"><u>Which one of my kids are you shopping for?</u></h2>
         <div class="card-deck">
           <div class="card">
             <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Pokemon kit">
