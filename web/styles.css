@@ -60,7 +60,8 @@ body {
  }
 
  .shopping-title {
-    padding: 150px;
+    padding-top: 150px;
+    font-size: 50%;
     text-align: center;
  }
  .buttons{
