@@ -1,3 +1,7 @@
+
+<?php require 'header.php' ?>
+<?php require 'shopping-script.php' ?>
+
 <h1>Shopping Cart</h1>
 
 <div class="shopping-cart">
