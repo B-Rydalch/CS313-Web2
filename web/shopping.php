@@ -10,8 +10,9 @@
         <script src="scripts.js"></script>
    </head> 
    <body>
-        <?php include 'header.php' ?>
-        
+        <?php require 'header.php' ?>
+        <?php require 'shopping-script.php' ?>
+
         <div class="card-deck">
           <div class="card">
             <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Pokemon kit">

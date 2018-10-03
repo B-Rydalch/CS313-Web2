@@ -66,8 +66,8 @@ body {
  .card-deck{
     padding: 150px; 
     padding-top:150px;
-    max-width: 1000px;
-    min-width: 700px;
+    /* max-width: 1000px;
+    min-width: 700px; */
  }
 
  .card-text{
