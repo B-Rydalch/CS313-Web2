@@ -12,7 +12,7 @@
    <body>
         <?php require 'header.php' ?>
         <?php require 'shopping-script.php' ?>
-
+        <h2>Which one of my kids are you shopping for?</h2>
         <div class="card-deck">
           <div class="card">
             <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Pokemon kit">
@@ -38,6 +38,8 @@
               <p class="card-text"><small class="text-muted">$29.99</small><button class="btn">Add to cart</button></p>
             </div>
           </div>
+        </div>
+        <div>
         </div>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
