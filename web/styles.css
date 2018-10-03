@@ -84,8 +84,6 @@ body {
 
  .cart-btn {
     text-align: center;
-    font-size: 200%;
-    color: black;
-    padding: 50px; 
-    float: center;
+    /* font-size: 200%;
+    color: black; */
  }
