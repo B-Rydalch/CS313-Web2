@@ -4,7 +4,7 @@
 
     session_start();
 
-    if (isset($_SESSION["activeSession"])) {
+    if (!isset($_SESSION["activeSession"])) {
         $_SESSION["activeSession"] = true;
         $_SESSION["counter"] = 0;
     }
