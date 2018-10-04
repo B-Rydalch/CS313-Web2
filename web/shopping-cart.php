@@ -221,7 +221,7 @@
                             </div>
 
                         </div>
-                        <div class="ibox-content">
+                        <!--<div class="ibox-content">
                             <div class="table-responsive">
                                 <table class="table shoping-cart-table">
 
@@ -265,7 +265,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div>-->
                         <!--<div class="ibox-content">
                             <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
                             <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
