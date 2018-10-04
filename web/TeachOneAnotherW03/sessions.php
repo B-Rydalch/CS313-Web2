@@ -1,10 +1,19 @@
 <?php
-    setcookie("fav-text", "c is for cookie", time() + (86400*7));
+    // setcookie("fav-text", "c is for cookie", time() + (86400*7));
+    // $favorite = $_COOKIE["fav-text"];
 
+    session_start()
+
+    if (!isset($_SESSION["activeSession"])) {
+        $_SESSION["activeSession"] = True;
+        $counter = 0;
+    }
+
+    $_SESSION["counter"]++;
 ?>
 
 <html>
     <body>
-        <h1> this is a cookie monster tester</h1>
+        <br><p>You have visited this page <?php  $counter ?> number of times.</p><br>
     </body>
 </html>
