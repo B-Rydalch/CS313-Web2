@@ -2,7 +2,7 @@
     // setcookie("fav-text", "c is for cookie", time() + (86400*7));
     // $favorite = $_COOKIE["fav-text"];
 
-    session_start()
+    session_start();
 
     if (isset($_SESSION["activeSession"])) {
         $_SESSION["activeSession"] = true;
