@@ -95,10 +95,7 @@ body {
 
  .shopping-cart {
     text-align: center;
-    display: inline-block;
- }
+  }
 
  .column-labels {
-    display: inline;
-    text-align: center;
  }
