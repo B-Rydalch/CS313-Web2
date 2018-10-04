@@ -266,11 +266,11 @@
                                 </table>
                             </div>
                         </div>
-                        {% comment %} <div class="ibox-content">
+                        <!--<div class="ibox-content">
                             <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
                             <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
 
-                        </div> {% endcomment %}
+                        </div>-->
                     </div>
                 </div>
                 <div class="col-md-3">
