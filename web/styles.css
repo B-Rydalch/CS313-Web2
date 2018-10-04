@@ -88,6 +88,10 @@ body {
     padding: 50px;
  }
 
+ .cart-title {
+    text-align: center;
+ }
+
  .shopping-cart {
     text-align: center;
     display: inline-block;
