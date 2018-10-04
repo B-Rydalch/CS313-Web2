@@ -15,6 +15,6 @@
 
 <html>
     <body>
-        <br><p>You have visited this page ( <?php  $_SESSION["counter"] ?> ) number of times.</p><br>
+        <br><p>You have visited this page ( <?php echo $_SESSION["counter"]; ?> ) number of times.</p><br>
     </body>
 </html>
