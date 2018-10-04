@@ -6,14 +6,15 @@
 
     if (!isset($_SESSION["activeSession"])) {
         $_SESSION["activeSession"] = True;
-        $counter = 0;
+        $_SESSION["counter"] = 0;
     }
 
     $_SESSION["counter"]++;
+    
 ?>
 
 <html>
     <body>
-        <br><p>You have visited this page <?php  $counter ?> number of times.</p><br>
+        <br><p>You have visited this page <?php  $_SESSION["counter"] ?> number of times.</p><br>
     </body>
 </html>
