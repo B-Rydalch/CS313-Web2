@@ -26,8 +26,8 @@
             <img class="card-img-top" src="shopping-items/avengers.jpg" alt="Avengers Team">
             <div class="card-body">
               <h5 class="card-title" name="shoppingitem[]" value="Avengers">Avengers Action Figures</h5>
-              <p class="card-text">Join the avengers in epic battles against Loki!</p>
-              <p class="card-text"><small class="text-muted">$45.99</small><button class="btn">Add to cart</button></p>
+              <p class="card-text" name="description">Join the avengers in epic battles against Loki!</p>
+              <p class="card-text" name="price"><small class="text-muted">$45.99</small><button class="btn">Add to cart</button></p>
             </div>
           </div>
           <div class="card">
