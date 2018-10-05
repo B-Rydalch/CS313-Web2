@@ -17,7 +17,7 @@
           <div class="card">
             <img class="card-img-top" src="shopping-items/pokemon1.jpg" alt="Pokemon kit">
             <div class="card-body">
-              <h5 class="card-title">Pokemon Trainer Kit</h5>
+              <h5 class="card-title" name="shopping-item" value="pokemon">Pokemon Trainer Kit</h5>
               <p class="card-text">Become a professional Pokemon trainer with this special trainers kit!</p>
               <p class="card-text"><small class="text-muted">$24.99</small><button class="btn">Add to cart</button></p>
             </div>
@@ -25,7 +25,7 @@
           <div class="card">
             <img class="card-img-top" src="shopping-items/avengers.jpg" alt="Avengers Team">
             <div class="card-body">
-              <h5 class="card-title">Avengers Action Figures</h5>
+              <h5 class="card-title" name="shopping-item" value="Avengers">Avengers Action Figures</h5>
               <p class="card-text">Join the avengers in epic battles against Loki!</p>
               <p class="card-text"><small class="text-muted">$45.99</small><button class="btn">Add to cart</button></p>
             </div>
@@ -33,7 +33,7 @@
           <div class="card">
             <img class="card-img-top" src="shopping-items/ferdinand.jpg" alt="Disney Ferdiand">
             <div class="card-body">
-              <h5 class="card-title">Ferdinand Beanny Baby</h5>
+              <h5 class="card-title" name="shopping-item" value="Ferdinand">Ferdinand Beanny Baby</h5>
               <p class="card-text">Have fun with Ferdinand and his friends. </p>
               <p class="card-text"><small class="text-muted">$29.99</small><button class="btn">Add to cart</button></p>
             </div>

@@ -8,9 +8,8 @@
         crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js"></script>
-
     </head> 
-    <body >
+    <body class="cart-body">
         <?php require 'header.php' ?>
         <?php require 'shopping-script.php' ?>
         <h1 class="cart-title">Shopping Cart</h1>
@@ -53,7 +52,6 @@
                                                 <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
                                             </div>
                                         </td>
-
                                         <td>
                                             $180,00
                                             <s class="small text-muted">$230,00</s>
@@ -70,12 +68,10 @@
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-                        <div class="ibox-content">
+                        <!-- <div class="ibox-content">
                             <div class="table-responsive">
                                 <table class="table shoping-cart-table">
-
                                     <tbody>
                                     <tr>
                                         <td width="90">
@@ -102,7 +98,6 @@
                                                 <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
                                             </div>
                                         </td>
-
                                         <td>
                                             $50,00
                                             <s class="small text-muted">$63,00</s>
@@ -115,17 +110,14 @@
                                                 $100,00
                                             </h4>
                                         </td>
-
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
                         <div class="ibox-content">
                             <div class="table-responsive">
                                 <table class="table shoping-cart-table">
-
                                     <tbody>
                                     <tr>
                                         <td width="90">
@@ -153,7 +145,6 @@
                                                 <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
                                             </div>
                                         </td>
-
                                         <td>
                                             $110,00
                                         </td>
@@ -165,17 +156,14 @@
                                                 $110,00
                                             </h4>
                                         </td>
-
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
                         <div class="ibox-content">
                             <div class="table-responsive">
                                 <table class="table shoping-cart-table">
-
                                     <tbody>
                                     <tr>
                                         <td width="90">
@@ -195,14 +183,12 @@
                                                 <dt>Description lists</dt>
                                                 <dd>A description list is perfect for defining terms.</dd>
                                             </dl>
-
                                             <div class="m-t-sm">
                                                 <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
                                                 |
                                                 <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
                                             </div>
                                         </td>
-
                                         <td>
                                             $130,00
                                         </td>
@@ -214,13 +200,11 @@
                                                 $130,00
                                             </h4>
                                         </td>
-
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-
-                        </div>
+                        </div> -->
                         <!--<div class="ibox-content">
                             <div class="table-responsive">
                                 <table class="table shoping-cart-table">
@@ -269,7 +253,6 @@
                         <!--<div class="ibox-content">
                             <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
                             <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
-
                         </div>-->
                     </div>
                 </div>
@@ -285,7 +268,6 @@
                             <h2 class="font-bold">
                                 $390,00
                             </h2>
-
                             <hr>
                             <span class="text-muted small">
                                 *For United States, France and Germany applicable sales tax will be applied
@@ -298,7 +280,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="ibox">
                         <div class="ibox-title">
                             <h5>Support</h5>
@@ -310,10 +291,8 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="ibox">
                         <div class="ibox-content">
-
                             <p class="font-bold">
                             Other products you may be interested
                             </p>
@@ -324,7 +303,6 @@
                                     Many desktop publishing packages and web page editors now.
                                 </div>
                                 <div class="m-t text-righ">
-
                                     <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
                                 </div>
                             </div>
@@ -344,6 +322,6 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
   </body>
 </html>
