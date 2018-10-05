@@ -3,7 +3,7 @@
 
     // $quantitiy = $_REQUEST["quantity"]
 
-    // $arrtitle = array("Pokemon Trainer Kit", "Avengers Action Figures", "Ferdinand Beanny Babies");
+    $arrtitle = array("Pokemon Trainer Kit", "Avengers Action Figures", "Ferdinand Beanny Babies");
     $arrdescription = array("Become a professional Pokemon trainer with this special trainers kit!",
                              "Join the avengers in epic battles against Loki!",
                               "Have fun with Ferdinand and his friends.");
