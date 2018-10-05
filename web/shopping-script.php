@@ -8,9 +8,9 @@
                              "Join the avengers in epic battles against Loki!",
                               "Have fun with Ferdinand and his friends.");
     
-    // foreach ($arrtitle as $shoppingitem) {
-    //     echo "$shoppingitem";
-    // }
+    foreach ($arrtitle as $shoppingitem) {
+        echo "$shoppingitem";
+    }
 
     // foreach($arrdescription as $description) {
     //     echo "$description";
