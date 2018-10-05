@@ -167,6 +167,7 @@ table.shoping-cart-table tr td:last-child {
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
+  color: black;
 }
 
 .ibox.collapsed .ibox-content {
