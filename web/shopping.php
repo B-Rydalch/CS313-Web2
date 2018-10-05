@@ -1,4 +1,32 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+
+	if (isset($_POST)) {
+        $_SESSION["cart"][key($_POST)]["quantity"] = 0;
+    }
+
+	// $total = 0;
+	// foreach ($_SESSION['cart'] as $name => $props) {
+	// 	if ($props['quantity'] == 1) {
+	// 		$total += $props['price'];
+	// 	}
+	// }
+	// $_SESSION['total'] = $total;
+
+	// function isEmpty($arr) {
+	// 	$val = true;
+	// 	foreach ($arr as $name => $props) {
+	// 		if ($props['quantity'] == 1) {
+	// 			$val = false;
+	// 		}
+	// 	}
+
+	// 	return $val;
+	// }
+?>
+
+
+!DOCTYPE html>
 <html lang="en">   
    <head>
         <meta charset="utf-8">
@@ -11,7 +39,6 @@
    </head> 
    <body>
         <?php require 'header.php' ?>
-        <?php require 'shopping-script.php' ?>
         <h2 class="shopping-title"><u>Which one of my kids are you shopping for?</u></h2>
         <div class="card-deck">
           <div class="card">

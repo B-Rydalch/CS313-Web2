@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     // $quantitiy = $_REQUEST["quantity"]
 
