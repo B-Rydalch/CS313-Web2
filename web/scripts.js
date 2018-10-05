@@ -34,13 +34,13 @@ var fadeTime = 300;
 
 
 /* Assign actions */
-$('.product-quantity input').change( function() {
-  updateQuantity(this);
-});
+// $('.product-quantity input').change( function() {
+//   updateQuantity(this);
+// });
 
-$('.product-removal button').click( function() {
-  removeItem(this);
-});
+// $('.product-removal button').click( function() {
+//   removeItem(this);
+// });
 
 
 /* Recalculate cart */
