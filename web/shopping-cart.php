@@ -291,7 +291,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="ibox">
+                    <!-- <div class="ibox">
                         <div class="ibox-content">
                             <p class="font-bold">
                             Other products you may be interested
@@ -318,7 +318,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
