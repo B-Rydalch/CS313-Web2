@@ -43,7 +43,7 @@
         <script src='/scripts.js'></script>
    </head> 
    <body>
-        <?php include '/header.php' ?>
+        <?php include 'CS313-Web2/web/header.php' ?>
         <h2 class='shopping-title'><u>Which one of my kids are you shopping for?</u></h2>
         <div class='card-deck'>
         <form action='' method='post'>
@@ -68,7 +68,7 @@
         </form>
         <form action='' method='post'>
           <div class='card'>
-            <img class='card-img-top' src='web/shopping-items/ferdinand.jpg' alt='Disney Ferdiand'>
+            <img class='card-img-top' src='/shopping-items/ferdinand.jpg' alt='Disney Ferdiand'>
             <div class='card-body'>
               <h5 class='card-title' name='shoppingitem[]' value='Ferdinand'>Ferdinand Beanny Baby</h5>
               <p class='card-text'>Have fun with Ferdinand and his friends. </p>
