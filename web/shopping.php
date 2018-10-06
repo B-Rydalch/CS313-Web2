@@ -21,7 +21,7 @@
 ?>
 
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en'>   
    <head>
         <meta charset='utf-8'>
@@ -43,6 +43,7 @@
               <h5 class='card-title'>Pokemon Trainer Kit</h5>
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
               <?php 
+                  var_dump($_POST["inventory"]);
                   if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
                     echo "<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>";
                   } else {
