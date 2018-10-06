@@ -25,7 +25,8 @@
   //                 } else {
   //                   echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>";
   //                 }
-  //             ?>
+  //        
+       ?>
 
 
 
