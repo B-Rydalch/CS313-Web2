@@ -3,9 +3,9 @@
   
   // array structure = (item,image,desc,quantity,price)
   $inventory = array(
-    'pokemon'  => array('name'=>'pokemon', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99);
-    'avengers' => array('name'=>'avengers', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99);
-    'ferdinand'=> array('name'=>'ferdinand', 'img'=>'shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99);
+    'pokemon'  => array('name'=>'pokemon', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
+    'avengers' => array('name'=>'avengers', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
+    'ferdinand'=> array('name'=>'ferdinand', 'img'=>'shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99)
   );
   
   $selectedinventory = array();
