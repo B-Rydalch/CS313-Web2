@@ -48,7 +48,7 @@
         <div class='card-deck'>
         <form action='' method='post'>
           <div class='card'>
-            <img class='card-img-top' src='web/shopping-items/pokemon1.jpg' alt='Pokemon kit'>
+            <img class='card-img-top' src='/shopping-items/pokemon1.jpg' alt='Pokemon kit'>
             <div class='card-body'>
               <h5 class='card-title'>Pokemon Trainer Kit</h5>
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
@@ -58,7 +58,7 @@
         </form>
         <form action='' method='post'>
           <div class='card'>
-            <img class='card-img-top' src='web/shopping-items/avengers.jpg' alt='Avengers Team'>
+            <img class='card-img-top' src='/shopping-items/avengers.jpg' alt='Avengers Team'>
             <div class='card-body'>
               <h5 class='card-title' name='shoppingitem[]' value='Avengers'>Avengers Action Figures</h5>
               <p class='card-text' name='description'>Join the avengers in epic battles against Loki!</p>
