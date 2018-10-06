@@ -53,6 +53,7 @@
               ?>
             </div>
           </div>
+        </form>
           <div class='card'>
             <img class='card-img-top' src='shopping-items/avengers.jpg' alt='Avengers Team'>
             <div class='card-body'>
@@ -69,7 +70,6 @@
               <p class='card-text'><small class='text-muted'>$29.99</small><button class='btn'>Add to cart</button></p>
             </div>
           </div>
-        </form>
         <div class='cart-btn'>
           <button><a href='shopping-cart.php'>View Shopping Cart</a></button>
         </div>
