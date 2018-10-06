@@ -12,11 +12,11 @@
 
   if (!isset($_SESSION['activeSession'])) {
     $_SESSION['activeSession'] = true;
-    $_SESSION['cart'] = $cart;
+    $_SESSION['inventory'] = $inventory;
   } 
   
   if (isset($_POST)) {
-    $_SESSION['cart'][key($_POST)]['quantity']++;
+    $_SESSION['inventory'][key($_POST)]['quantity']++;
   }
 ?>
 
@@ -40,13 +40,13 @@
           <div class='card'>
             <img class='card-img-top' src='shopping-items/pokemon1.jpg' alt='Pokemon kit'>
             <div class='card-body'>
-              <h5 class='card-title' name='shoppingitem[]' value='Pokemon Trainer Kit'>Pokemon Trainer Kit</h5>
-              <p class='card-text' name='desc[]'>Become a professional Pokemon trainer with this special trainers kit!</p>
+              <h5 class='card-title'>Pokemon Trainer Kit</h5>
+              <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
               <?php 
                   if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
                     echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>';
                   } else {
-                    echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>'
+                    echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>';
                   }
               ?>
             </div>
