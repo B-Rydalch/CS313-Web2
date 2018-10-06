@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                         <div class='ibox-content'>
-                            <button class='btn btn-primary pull-right'><i class='fa fa fa-shopping-cart'></i>Checkout</button>
+                            <button class='btn btn-primary pull-right'><i class='fa fa fa-shopping-cart'><a href='/shopping-checkout.php'></i>Checkout</a></button>
                             <button class='btn btn-white'><i class='fa fa-arrow-left'></i><a href='/shopping.php'>Continue shopping</a></button>
                         </div>
                     </div>
