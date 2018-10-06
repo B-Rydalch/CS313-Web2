@@ -29,11 +29,11 @@
         <title>CS313</title>
         <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
         crossorigin='anonymous'>
-        <link rel='stylesheet' href='styles.css'>
-        <script src='scripts.js'></script>
+        <link rel='stylesheet' href='/styles.css'>
+        <script src='/scripts.js'></script>
    </head> 
    <body>
-        <?php require 'header.php' ?>
+        <?php require '/header.php' ?>
         <h2 class='shopping-title'><u>Which one of my kids are you shopping for?</u></h2>
         <div class='card-deck'>
         <form action='' method='post'>
