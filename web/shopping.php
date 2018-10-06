@@ -18,14 +18,6 @@
   if (isset($_POST)) {
     $_SESSION['inventory'][key($_POST)]['quantity']++;
   }
-
-  // <?php 
-  //                 if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
-  //                   echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>';
-  //                 } else {
-  //                   echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>';
-  //                 }
-  //             ?>
 ?>
 
 
@@ -50,7 +42,13 @@
             <div class='card-body'>
               <h5 class='card-title'>Pokemon Trainer Kit</h5>
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
-              <!-- <div> </div>-->
+              <?php 
+                  if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
+                    echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>';
+                  } else {
+                    echo '<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>';
+                  }
+              ?>
             </div>
           </div>
           <div class='card'>
