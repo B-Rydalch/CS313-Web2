@@ -72,7 +72,7 @@ body {
     padding-top:150px;
  }
 
- .card-text{
+.card-title, .card-text{
     color:black;
  }
  
