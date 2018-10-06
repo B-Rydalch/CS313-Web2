@@ -1,23 +1,31 @@
 <?php
   session_start();
   
-  array structure = (item,image,desc,quantity,price)
-  $inventory = array(
-    'pokemon'  => array('name'=>'pokemon', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
-    'avengers' => array('name'=>'avengers', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
-    'ferdinand'=> array('name'=>'ferdinand', 'img'=>'shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99)
-  );
+  // array structure = (item,image,desc,quantity,price)
+  // $inventory = array(
+  //   'pokemon'  => array('name'=>'pokemon', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
+  //   'avengers' => array('name'=>'avengers', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
+  //   'ferdinand'=> array('name'=>'ferdinand', 'img'=>'shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99)
+  // );
   
-  $selectedinventory = array();
+  // $selectedinventory = array();
 
-  if (!isset($_SESSION['activeSession'])) {
-    $_SESSION['activeSession'] = true;
-    $_SESSION['inventory'] = $inventory;
-  } 
+  // if (!isset($_SESSION['activeSession'])) {
+  //   $_SESSION['activeSession'] = true;
+  //   $_SESSION['inventory'] = $inventory;
+  // } 
   
-  if (isset($_POST)) {
-    $_SESSION['inventory'][key($_POST)]['quantity']++;
-  }
+  // if (isset($_POST)) {
+  //   $_SESSION['inventory'][key($_POST)]['quantity']++;
+  // }
+
+  // <?php 
+  //                 if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
+  //                   echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>";
+  //                 } else {
+  //                   echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>";
+  //                 }
+  //             ?>
 
 ?>
 
@@ -43,13 +51,7 @@
             <div class='card-body'>
               <h5 class='card-title'>Pokemon Trainer Kit</h5>
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
-              <?php 
-                  if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
-                    echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>";
-                  } else {
-                    echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>";
-                  }
-              ?>
+              <!---->
             </div>
           </div>
         </form>
