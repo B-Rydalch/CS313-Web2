@@ -24,7 +24,6 @@
                             <span class='pull-right'>(<strong>5</strong>) items</span>
                             <h5>Items in your cart</h5>
                         </div>
-                        <?php echo "
                             <div class='ibox-content'>
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
@@ -62,7 +61,6 @@
                                     </table>
                                 </div>
                             </div>
-                        "?>
                         <div class='ibox-content'>
                             <button class='btn btn-primary pull-right'><i class='fa fa fa-shopping-cart'></i>Checkout</button>
                             <button class='btn btn-white'><i class='fa fa-arrow-left'></i><a href='/shopping.php'>Continue shopping</a></button>
