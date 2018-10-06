@@ -43,7 +43,7 @@
         <script src='/scripts.js'></script>
    </head> 
    <body>
-        <?php include 'web/header.php' ?>
+        <?php include '/header.php' ?>
         <h2 class='shopping-title'><u>Which one of my kids are you shopping for?</u></h2>
         <div class='card-deck'>
         <form action='' method='post'>
