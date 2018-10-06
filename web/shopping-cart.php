@@ -1,4 +1,29 @@
-
+<?php    
+    session_start();
+    
+    if (isset($_POST)) {
+        $_SESSION["cart"][key($_POST)]["quantity"] = 0;
+    }
+    
+    $total = 0;
+    foreach ($_SESSION['cart'] as $name => $props) {
+        if ($props['quantity'] == 1) {
+            $total += $props['price'];
+        }
+    }
+    $_SESSION['total'] = $total;
+    
+    function isEmpty($arr) {
+        $val = true;
+        foreach ($arr as $name => $props) {
+            if ($props['quantity'] == 1) {
+                $val = false;
+            }
+        }
+    
+        return $val;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang='en'>   

@@ -44,16 +44,15 @@
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
               <?php 
                   if ($_SESSION['inventory']['pokemon']['quantity'] == 1) {
-                    echo "<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>";
+                    echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add Another?</button></p>";
                   } else {
-                    echo "<p class='card-text' name=price[] value='24.99'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>";
+                    echo "<p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>";
                   }
-                  var_dump($_POST["inventory"]);
-
               ?>
             </div>
           </div>
         </form>
+        <form action='' method='post'>
           <div class='card'>
             <img class='card-img-top' src='shopping-items/avengers.jpg' alt='Avengers Team'>
             <div class='card-body'>
@@ -62,6 +61,8 @@
               <p class='card-text' name='price'><small class='text-muted'>$45.99</small><button class='btn'>Add to cart</button></p>
             </div>
           </div>
+        </form>
+        <form action='' method='post'>
           <div class='card'>
             <img class='card-img-top' src='shopping-items/ferdinand.jpg' alt='Disney Ferdiand'>
             <div class='card-body'>
@@ -70,6 +71,7 @@
               <p class='card-text'><small class='text-muted'>$29.99</small><button class='btn'>Add to cart</button></p>
             </div>
           </div>
+        </form>
         <div class='cart-btn'>
           <button><a href='shopping-cart.php'>View Shopping Cart</a></button>
         </div>
