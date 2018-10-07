@@ -53,10 +53,10 @@
                                     <table class='table shoping-cart-table'>
                                         <tbody>
                                             <?php 
-                                                var_dump($_POST['inventory']);
+                                                // var_dump($_POST['inventory']);
             
                                                 foreach ($_POST['inventory'] as $selected) {
-                                                    echo '<tr><td>'$selected'<\td><\tr>';
+                                                    echo '<tr><td>'.$selected['name']'<\td><\tr>';
                                                 }
             
                                             
