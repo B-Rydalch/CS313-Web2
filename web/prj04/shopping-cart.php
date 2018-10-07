@@ -76,7 +76,6 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                   
                                                                     <s class='small text-muted'>$230,00</s>
                                                                 </td>
                                                                 <td width='65'>
@@ -89,13 +88,13 @@
                                                                 </td>
                                                             </tr>";
                                                         }   else {
-                                                                echo '
+                                                                echo "
                                                                     <div class='card-body'>
                                                                         <div class='row'>
                                                                             <h1>No items in cart.</h1>
                                                                         </div>
                                                                     </div>
-                                                                <br>';
+                                                                <br>";
                                                             }
                                                     }
                                                 }
