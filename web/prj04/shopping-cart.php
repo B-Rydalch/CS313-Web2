@@ -52,8 +52,54 @@
                             <div class='ibox-content'>
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
-                                        <tbody>                                      
+                                        <tbody>
+                                            <?php 
+                                                //var_dump($_POST['inventory']);
 
+                                                if (!isEmpty($_SESSION['inventory'])) {
+                                                    foreach ($_SESSION['inventory'] as $name => $props) {
+                                                        if ($props['quantity'] == 1) {
+                                                            echo "
+                                                            <tr>
+                                                                <td width='90'>
+                                                                    <div class='cart-product-imitation'>
+                                                                    <img src="$props['img']" alt=" $props['name'] " width='120' height='80'>
+                                                                    </div>
+                                                                </td>
+                                                                <td class='desc'>
+                                                                    <h3><a href='#' class='text-navy'>". $props['name'] ."</a></h3>
+                                                                    <small>". $props['desc'] "</small>
+                                                                    <div class='m-t-sm'>
+                                                                        <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
+                                                                        |
+                                                                        <a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove item</a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                   
+                                                                    <s class='small text-muted'>$230,00</s>
+                                                                </td>
+                                                                <td width='65'>
+                                                                    <input type='text' class='form-control' placeholder='1'>
+                                                                </td>
+                                                                <td>
+                                                                    <h4>
+                                                                        $180,00
+                                                                    </h4>
+                                                                </td>
+                                                            </tr>";
+                                                        }   else {
+                                                                echo "
+                                                                    <div class='card-body'>
+                                                                        <div class='row'>
+                                                                            <h1>No items in cart.</h1>
+                                                                        </div>
+                                                                    </div>
+                                                                <br>";
+                                                            }
+                                                    }
+                                                }
+                                            ?>
                                     
                                                 <!-- <tr>
                                                 //     <td width='90'>
