@@ -53,7 +53,7 @@
                                     <table class='table shoping-cart-table'>
                                         <tbody>
                                             <?php 
-
+                                                var_dump($_POST['shoppingitem'])
                                                 foreach ($_POST["shoppingitem"] as $selected) {
                                                     echo "$selected<br>";
                                                 }
