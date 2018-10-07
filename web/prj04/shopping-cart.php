@@ -54,20 +54,21 @@
                                     <table class='table shoping-cart-table'>
                                         <tbody>
                                             <?php 
+                                                var_dump($_POST['inventory']);
 
-                                                if (!isEmpty($_SESSION['inventory']))
-                                                    foreach ($_SESSION['inventory'] as $name => $props)
-                                                        if ($props['quantity'] == 1)
+                                                if (!isEmpty($_SESSION['inventory'])) {
+                                                    foreach ($_SESSION['inventory'] as $name => $props) {
+                                                        if ($props['quantity'] == 1) {
                                                             echo "
                                                             <tr>
                                                                 <td width='90'>
                                                                     <div class='cart-product-imitation'>
-                                                                    <img src=" . $props['img'] . " alt=" . $name ." width='120' height='80'>
+                                                                    <img src="$props['img']" alt=" $props['name'] " width='120' height='80'>
                                                                     </div>
                                                                 </td>
                                                                 <td class='desc'>
                                                                     <h3><a href='#' class='text-navy'>". $props['name'] ."</a></h3>
-                                                              
+                                                                    <small>". $props['desc'] "</small>
                                                                     <div class='m-t-sm'>
                                                                         <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
                                                                         |
@@ -87,7 +88,7 @@
                                                                     </h4>
                                                                 </td>
                                                             </tr>
-                                                            ";} else {
+                                                        ";} else {
                                                                 echo "
                                                                     <div class='card-body'>
                                                                         <div class='row'>
@@ -95,8 +96,10 @@
                                                                         </div>
                                                                     </div>
                                                                     <br>
-                                                                "
-                                                            };
+                                                                ";
+                                                            }
+                                                        }
+                                                    }
 
                                                 // <tr>
                                                 //     <td width='90'>
@@ -126,8 +129,6 @@
                                                 //     </td>
                                                 // </tr>
                                             ?>
-
-
                                         </tbody>
                                     </table>
                                 </div>
