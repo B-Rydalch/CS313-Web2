@@ -57,6 +57,7 @@
               <h5 class='card-title'>Pokemon Trainer Kit</h5>
               <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
               <!-- -->
+              <p class='card-text'><small class='text-muted'>$24.99</small><button class='btn'>Add to cart</button></p>
             </div>
           </div>
           </form>
