@@ -53,34 +53,7 @@
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
                                         <tbody>
-                                            <?php 
-                                                //var_dump($_POST['inventory']);
-
-                                                if (!isEmpty($_SESSION['inventory'])) {
-                                                    foreach ($_SESSION['inventory'] as $name => $props) {
-                                                        if ($props['quantity'] == 1) {
-                                                            echo "
-                                                            <tr>
-                                                                <td width='90'>
-                                                                    <div class='cart-product-imitation'>
-                                                                    <img src=" . $props['img'] . " alt=" . $name ." width='120' height='80'>
-                                                                    <!--<img src="$props['img']" alt='" . $props['name'] . "' width='120' height='80'>-->
-                                                                    </div>
-                                                                </td>
-                                                                
-                                                            </tr>";
-                                                        }   else {
-                                                                echo "
-                                                                    <div class='card-body'>
-                                                                        <div class='row'>
-                                                                            <h1>No items in cart.</h1>
-                                                                        </div>
-                                                                    </div>
-                                                                <br>";
-                                                            }
-                                                    }
-                                                }
-                                            ?>
+                                        
                                     
                                                 <!-- <tr>
                                                 //     <td width='90'>
