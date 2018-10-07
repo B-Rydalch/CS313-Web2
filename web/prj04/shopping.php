@@ -49,6 +49,7 @@
                 <p class='card-text'>
                   <small class='text-muted'><?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
                   <button class='btn'>Add to cart</button>
+                  <?php var_dump($_POST['inventory']); ?>
                 </p>
               </div>
             </div>
