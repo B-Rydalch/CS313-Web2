@@ -1,28 +1,28 @@
 <?php    
     session_start();
     
-    // if (isset($_POST)) {
-    //     $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
-    // }
+    if (isset($_POST)) {
+        $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
+    }
     
-    // $total = 0;
-    // foreach ($_SESSION['inventory'] as $name => $props) {
-    //     if ($props['quantity'] == 1) {
-    //         $total += $props['price'];
-    //     }
-    // }
-    // $_SESSION['total'] = $total;
+    $total = 0;
+    foreach ($_SESSION['inventory'] as $name => $props) {
+        if ($props['quantity'] == 1) {
+            $total += $props['price'];
+        }
+    }
+    $_SESSION['total'] = $total;
     
-    // function isEmpty($arr) {
-    //     $val = true;
-    //     foreach ($arr as $name => $props) {
-    //         if ($props['quantity'] == 1) {
-    //             $val = false;
-    //         }
-    //     }
+    function isEmpty($arr) {
+        $val = true;
+        foreach ($arr as $name => $props) {
+            if ($props['quantity'] == 1) {
+                $val = false;
+            }
+        }
     
-    //     return $val;
-    // }
+        return $val;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +55,9 @@
                                             <?php 
                                                 // var_dump($_POST['inventory']);
             
-                                                foreach ($_POST['inventory'] as $selected) {
-                                                    echo '<tr><td>'.$selected['name']'<\td><\tr>';
-                                                }
+                                                // foreach ($_POST['inventory'] as $selected) {
+                                                //     echo '<tr><td>'.$selected['name']'<\td><\tr>';
+                                                // }
             
                                             
                                                 // <tr>
