@@ -37,7 +37,7 @@
         <link rel='stylesheet' href='/styles.css'>
         <script src='/scripts.js'></script>
     </head> 
-    <body class='cart-body'>
+    <body class='cart'>
         <?php include '/header.php' ?>
         <h1 class='cart-title'>Shopping Cart</h1>
         <div class='container'>
