@@ -44,7 +44,6 @@
                 <p class='card-text'>
                   <small class='text-muted'><?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
                   <button class='btn'>Add to cart</button>
-                  <?php var_dump($_POST['inventory']); ?>
                 </p>
               </div>
             </div>
@@ -52,20 +51,25 @@
             <!-- avengers section -->
             <div class='card'>
               <img class='card-img-top' src='/shopping-items/avengers.jpg' alt='Avengers Team'>
-              <div class='card-body'>
-                <h5 class='card-title' name='shoppingitem[]' value='Avengers'>Avengers Action Figures</h5>
-                <p class='card-text' name='description'>Join the avengers in epic battles against Loki!</p>
-                <p class='card-text' name='price'><small class='text-muted'>$45.99</small><button class='btn'>Add to cart</button></p>
+              <div class='card-body' id='avengers'>
+                <h5 class='card-title'>Avengers Action Figures</h5>
+                <p class='card-text'>Join the avengers in epic battles against Loki!</p>
+                <p class='card-text'>
+                  <small class='text-muted'><?php echo $_SESSION['inventory']['avengers']['price'];?></small>
+                  <button class='btn'>Add to cart</button>
+                </p>
               </div>
             </div>
 
             <!-- ferdinand section --> 
             <div class='card'>
               <img class='card-img-top' src='/shopping-items/ferdinand.jpg' alt='Disney Ferdiand'>
-              <div class='card-body'>
-                <h5 class='card-title' name='shoppingitem[]' value='Ferdinand'>Ferdinand Beanny Baby</h5>
+              <div class='card-body' id='ferdinand'>
+                <h5 class='card-title'>Ferdinand Beanny Baby</h5>
                 <p class='card-text'>Have fun with Ferdinand and his friends. </p>
-                <p class='card-text'><small class='text-muted'>$29.99</small><button class='btn'>Add to cart</button></p>
+                <p class='card-text'><small class='text-muted'><?php echo $_SESSION['inventory']['ferdinand']['price'];?></small>
+                  <button class='btn'>Add to cart</button>
+                </p>
               </div>
             </div>
         </form>
