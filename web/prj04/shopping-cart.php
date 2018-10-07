@@ -54,10 +54,12 @@
                                         <tbody>
                                             <?php 
                                                 var_dump($_POST['shoppingitem'])
-                                                foreach ($_POST["shoppingitem"] as $selected) {
-                                                    echo "$selected<br>";
-                                                }
-
+                                                echo "<tr>"
+                                                    foreach ($_POST["shoppingitem"] as $selected) {
+                                                        echo "<td>$selected<td>";
+                                                    }
+                                                    "</tr>"
+                                            
                                                 // <tr>
                                                 //     <td width='90'>
                                                 //         <div class='cart-product-imitation'>
