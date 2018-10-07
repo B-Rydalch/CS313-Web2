@@ -66,9 +66,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td class='desc'>
-                                                                    <h3><a href='#' class='text-navy'>
-                                                                    '. $props['name'] .'
-                                                                    </a></h3>
+                                                                    <h3><a href='#' class='text-navy'>". $props['name'] ."</a></h3>
                                                               
                                                                     <div class='m-t-sm'>
                                                                         <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
@@ -128,6 +126,8 @@
                                                 //     </td>
                                                 // </tr>
                                             ?>
+
+
                                         </tbody>
                                     </table>
                                 </div>
