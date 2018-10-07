@@ -52,35 +52,40 @@
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
                                         <tbody>
-                                            <tr>
-                                                <td width='90'>
-                                                    <div class='cart-product-imitation'>
-                                                    </div>
-                                                </td>
-                                                <td class='desc'>
-                                                    <h3><a href='#' class='text-navy'><?php echo '$shoppingitem'?></a></h3>
-                                                    <p class='small'>
-                                                        <?php echo '$description'?>
-                                                    </p>
-                                                    <div class='m-t-sm'>
-                                                        <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
-                                                        |
-                                                        <a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove item</a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <?php echo '$price'?>
-                                                    <s class='small text-muted'>$230,00</s>
-                                                </td>
-                                                <td width='65'>
-                                                    <input type='text' class='form-control' placeholder='1'>
-                                                </td>
-                                                <td>
-                                                    <h4>
-                                                        $180,00
-                                                    </h4>
-                                                </td>
-                                            </tr>
+                                            <?php 
+
+                                                foreach ($_POST["shoppingitem"] as $selected) {
+                                                    echo "$selected<br>";
+                                                }
+
+                                                // <tr>
+                                                //     <td width='90'>
+                                                //         <div class='cart-product-imitation'>
+                                                //         </div>
+                                                //     </td>
+                                                //     <td class='desc'>
+                                                //         <h3><a href='#' class='text-navy'></a></h3>
+                                                  
+                                                //         <div class='m-t-sm'>
+                                                //             <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
+                                                //             |
+                                                //             <a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove item</a>
+                                                //         </div>
+                                                //     </td>
+                                                //     <td>
+                                                       
+                                                //         <s class='small text-muted'>$230,00</s>
+                                                //     </td>
+                                                //     <td width='65'>
+                                                //         <input type='text' class='form-control' placeholder='1'>
+                                                //     </td>
+                                                //     <td>
+                                                //         <h4>
+                                                //             $180,00
+                                                //         </h4>
+                                                //     </td>
+                                                // </tr>
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
