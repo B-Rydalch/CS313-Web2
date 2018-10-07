@@ -54,7 +54,7 @@
                                     <table class='table shoping-cart-table'>
                                         <tbody>
                                             <?php 
-                                                var_dump($_POST['inventory']);
+                                                //var_dump($_POST['inventory']);
 
                                                 if (!isEmpty($_SESSION['inventory'])) {
                                                     foreach ($_SESSION['inventory'] as $name => $props) {
@@ -87,21 +87,20 @@
                                                                         $180,00
                                                                     </h4>
                                                                 </td>
-                                                            </tr>
-                                                        ";} else {
+                                                            </tr>";
+                                                        }   else {
                                                                 echo "
                                                                     <div class='card-body'>
                                                                         <div class='row'>
                                                                             <h1>No items in cart.</h1>
                                                                         </div>
                                                                     </div>
-                                                                    <br>
-                                                                ";
+                                                                <br>";
                                                             }
                                                         }
                                                     }
-
-                                                // <tr>
+                                                    ?>
+                                                <!-- <tr>
                                                 //     <td width='90'>
                                                 //         <div class='cart-product-imitation'>
                                                 //         </div>
@@ -127,8 +126,8 @@
                                                 //             $180,00
                                                 //         </h4>
                                                 //     </td>
-                                                // </tr>
-                                            ?>
+                                                // </tr> // -->
+                                            
                                         </tbody>
                                     </table>
                                 </div>
