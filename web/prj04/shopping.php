@@ -42,7 +42,7 @@
                 <h5 class='card-title'>Pokemon Trainer Kit</h5>
                 <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
                 <p class='card-text'>
-                  <small class='text-muted'><?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
                   <button class='btn'>Add to cart</button>
                 </p>
               </div>
@@ -55,7 +55,7 @@
                 <h5 class='card-title'>Avengers Action Figures</h5>
                 <p class='card-text'>Join the avengers in epic battles against Loki!</p>
                 <p class='card-text'>
-                  <small class='text-muted'><?php echo $_SESSION['inventory']['avengers']['price'];?></small>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['avengers']['price'];?></small>
                   <button class='btn'>Add to cart</button>
                 </p>
               </div>
@@ -67,7 +67,7 @@
               <div class='card-body' id='ferdinand'>
                 <h5 class='card-title'>Ferdinand Beanny Baby</h5>
                 <p class='card-text'>Have fun with Ferdinand and his friends. </p>
-                <p class='card-text'><small class='text-muted'><?php echo $_SESSION['inventory']['ferdinand']['price'];?></small>
+                <p class='card-text'><small class='text-muted'>$<?php echo $_SESSION['inventory']['ferdinand']['price'];?></small>
                   <button class='btn'>Add to cart</button>
                 </p>
               </div>
@@ -77,7 +77,8 @@
           <!--Checkout to next page-->
         <form action='shopping-cart.php' method="post" >  
           <div class='cart-btn'>
-            <button><a href='shopping-cart.php'>View Shopping Cart</a></button>
+            <!-- <button><a href='shopping-cart.php'>View Shopping Cart</a></button> -->
+            <input type="submit" class="btn btn-primary float-right m-3" value="Checkout">View Shopping Cart</input>
           </div>
         </form>
       </div>
