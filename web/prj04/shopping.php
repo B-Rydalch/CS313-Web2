@@ -1,11 +1,6 @@
 <?php
   session_start();
 
-  if (!isset($_SESSION["activeSession"])) {
-    $_SESSION["activeSession"] = true;
-    $_SESSION["numItems"] = 0;
-  }
-
   $inventory = array(
     'pokemon'  => array('name'=>'pokemon-kit', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
     'avengers' => array('name'=>'avengers-kit', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
