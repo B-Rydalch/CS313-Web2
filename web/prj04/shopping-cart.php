@@ -2,11 +2,11 @@
     session_start();
     
     if (isset($_POST)) {
-        $_SESSION["cart"][key($_POST)]["quantity"] = 0;
+        $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
     }
     
     $total = 0;
-    foreach ($_SESSION['cart'] as $name => $props) {
+    foreach ($_SESSION['inventory'] as $name => $props) {
         if ($props['quantity'] == 1) {
             $total += $props['price'];
         }
@@ -45,7 +45,7 @@
                 <div class='col-md-9'>
                     <div class='ibox'>
                         <div class='ibox-title'>
-                            <span class='pull-right'>(<strong>5</strong>) items</span>
+                            <span class='pull-right'>(<strong>#</strong>) items</span>
                             <h5>Items in your cart</h5>
                         </div>
                             <div class='ibox-content'>
@@ -53,12 +53,12 @@
                                     <table class='table shoping-cart-table'>
                                         <tbody>
                                             <?php 
-                                                var_dump($_POST['shoppingitem']);
-                                                echo "<tr>";
-                                                    foreach ($_POST["shoppingitem"] as $selected) {
-                                                        echo "<td>$selected<td>";
-                                                    }
-                                                echo "</tr>";
+                                                var_dump($_POST['inventory']);
+            
+                                                foreach ($_POST['inventory'] as $selected) {
+                                                    echo '<tr><td>'$selected'<\td><\tr>';
+                                                }
+            
                                             
                                                 // <tr>
                                                 //     <td width='90'>

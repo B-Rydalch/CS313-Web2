@@ -1,6 +1,7 @@
 <?php
   session_start();
 
+  $numItems = 0;
   $inventory = array(
     'pokemon'  => array('name'=>'pokemon-kit', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
     'avengers' => array('name'=>'avengers-kit', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
@@ -10,11 +11,17 @@
   if (!isset($_SESSION['activeSession'])) {
     $_SESSION['activeSession'] = true;
     $_SESSION['inventory'] = $inventory;
+    $_SESSION['numItems'] = $numItems;
   } 
   
   if (isset($_POST)) {
     $_SESSION['inventory'][key($_POST)]['quantity']++;
-  }     
+  }   
+
+  // FIX ADDING TOTAL NUMBER OF ITEMS ADDED TO CART (SUM OF QUANTITY)
+  // if ($_SESSION['inventory'][key($_POST)]['quantity'] != 0) {
+  //   foreach ($_POST['inventory'])
+  // }
 
 ?>
 
@@ -78,7 +85,7 @@
         <form action='shopping-cart.php' method="post" >  
           <div class='cart-btn'>
             <!-- <button><a href='shopping-cart.php'>View Shopping Cart</a></button> -->
-            <input type="submit" class="btn btn-primary float-right m-3" value="Checkout">View Shopping Cart</input>
+            <input type="submit" class="btn btn-primary float-right m-3" value="Checkout"></input>
           </div>
         </form>
       </div>
