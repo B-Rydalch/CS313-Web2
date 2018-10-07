@@ -54,11 +54,11 @@
                                         <tbody>
                                             <?php 
                                                 var_dump($_POST['shoppingitem'])
-                                                echo "<tr>"
+                                                echo "<tr>";
                                                     foreach ($_POST["shoppingitem"] as $selected) {
                                                         echo "<td>$selected<td>";
                                                     }
-                                                    "</tr>"
+                                                echo "</tr>";
                                             
                                                 // <tr>
                                                 //     <td width='90'>
