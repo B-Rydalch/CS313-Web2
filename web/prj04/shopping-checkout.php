@@ -6,6 +6,9 @@
         <title>CS313</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" href="/styles.css">
         <script src="/scripts.js"></script>
     </head> 
@@ -13,47 +16,118 @@
         <?php include '/header.php' ?>
         <?php include '/shopping-script.php' ?>
         <h1 class="cart-title"><u>Checkout</u></h1>
-        <?php
-							if (!isEmpty($_SESSION['cart'])) {
-								foreach ($_SESSION['cart'] as $name => $props) {
-									if ($props['quantity'] == 1) {
-										echo "
-											<div class='card-body'>
-												<div class='row'>
-													<div class='col-12 col-sm-12 col-md-2 text-center'>
-														<img src=" . $props['img'] . " alt=" . $name ." width='120' height='80'>
-													</div>
-													<div class='col-12 text-sm-center col-sm-12 text-md-left col-md-6'>
-														<h4 class='product-name'>" . $props['name'] . "</h4>
-													</div>
-													<div class='col-12 col-sm-12 text-sm-center col-md-4 text-md-right row'>
-														<div class='col-3 col-sm-3 col-md-6 text-md-right m-auto'>
-															<h6>$" . $props['price'] ."</h6>
-														</div>
-														<div class='col-2 col-sm-2 col-md-2 text-right m-auto'>
-															<form method='post'>
-																<button type='submit' name='" . $name . "' class='btn btn-outline-danger btn-xs'>
-																	<i class='fas fa-trash'></i>
-																</button>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-											<br>
-										";
-									}
-								}
-							} else {
-								echo "
-									<div class='card-body'>
-										<div class='row'>
-											<h1>No items in cart.</h1>
-										</div>
-									</div>
-									<br>
-								";
-							}
-						?>
+        <div class="container">
+            <div class="row">
+                <!-- You can make it whatever width you want. I'm making it full width
+                     on <= small devices and 4/12 page width on >= medium devices -->
+                <div class="col-xs-12 col-md-4">
+
+
+                    <!-- CREDIT CARD FORM STARTS HERE -->
+                    <div class="panel panel-default credit-card-box">
+                        <div class="panel-heading display-table" >
+                            <div class="row display-tr" >
+                                <h3 class="panel-title display-td" >Payment Details</h3>
+                                <div class="display-td" >                            
+                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="cardNumber">CARD NUMBER</label>
+                                            <div class="input-group">
+                                                <input 
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardNumber"
+                                                    placeholder="Valid Card Number"
+                                                    autocomplete="cc-number"
+                                                    required autofocus 
+                                                />
+                                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                            <input 
+                                                type="tel" 
+                                                class="form-control" 
+                                                name="cardExpiry"
+                                                placeholder="MM / YY"
+                                                autocomplete="cc-exp"
+                                                required 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="cardCVC">CV CODE</label>
+                                            <input 
+                                                type="tel" 
+                                                class="form-control"
+                                                name="cardCVC"
+                                                placeholder="CVC"
+                                                autocomplete="cc-csc"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="couponCode">COUPON CODE</label>
+                                            <input type="text" class="form-control" name="couponCode" />
+                                        </div>
+                                    </div>                        
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="subscribe btn btn-success btn-lg btn-block" type="button">Start Subscription</button>
+                                    </div>
+                                </div>
+                                <div class="row" style="display:none;">
+                                    <div class="col-xs-12">
+                                        <p class="payment-errors"></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>            
+                    <!-- CREDIT CARD FORM ENDS HERE -->
+
+                </div>            
+
+                <div class="col-xs-12 col-md-8" style="font-size: 12pt; line-height: 2em;">
+                    <p><h1>Features:</h1>
+                        <ul>
+                            <li>As-you-type, input formatting</li>
+                            <li>Form field validation (also as you type)</li>
+                            <li>Graceful error feedback for declined card, etc</li>
+                            <li>AJAX form submission w/ visual feedback</li>
+                            <li>Creates a Stripe credit card token</li>
+                        </ul>
+                    </p>
+                    <p>Be sure to replace the dummy API key with a valid Stripe API key.</p>
+
+                    <p>Built upon: Bootstrap, jQuery, 
+                        <a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a>, 
+                        <a href="https://github.com/stripe/jquery.payment">jQuery.payment library</a>,
+                        and <a href="https://stripe.com/docs/stripe.js">Stripe.js</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
   </body>
 </html>
