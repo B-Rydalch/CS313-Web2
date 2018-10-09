@@ -1,19 +1,19 @@
 <?php    
     session_start();
     
-    if (isset($_POST) && key(POST) != 'wrap') {
+    if (isset($_POST) && key($_POST) != 'wrap') {
         $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
     }
 
-    if (isset($_POST) && key(POST) == "wrap-ferdinand") {
+    if (isset($_POST) && key($_POST) == "wrap-ferdinand") {
         $_SESSION['inventory']['ferdinand']['price'] += 20;
     }
 
-    if (isset($_POST) && key(POST) == "wrap-avengers") {
+    if (isset($_POST) && key($_POST) == "wrap-avengers") {
         $_SESSION['inventory']['avengers']['price'] += 20;
     }
 
-    if (isset($_POST) && key(POST) == "wrap-pokemon") {
+    if (isset($_POST) && key($_POST) == "wrap-pokemon") {
         $_SESSION['inventory']['pokemon']['price'] += 20;
     }
     
