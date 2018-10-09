@@ -70,7 +70,7 @@
                                                                             </div>
                                                                         </td>
                                                                         <td class='desc'>
-                                                                            <h3><a href='#' class='text-navy'>'" . $props['name'] . "'</a></h3>
+                                                                            <h3>" . $props['name'] . "</h3>
                                                                             <small>'" . $props['desc'] . "'</small>
                                                                             <div class='m-t-sm'>
                                                                                 <input type='submit' name='wrap' class='text-muted'>Add gift package</a>
@@ -88,7 +88,7 @@
                                                                             <h4>
                                                                                 " . 
                                                                                     $props['price']
-                                                                                " .
+                                                                                . " 
                                                                             </h4>
                                                                         </td>
                                                                     </tr>";
