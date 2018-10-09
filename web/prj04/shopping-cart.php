@@ -142,7 +142,7 @@
                             <form action='/shopping-checkout.php' method='post'>
                                 <div class='m-t-sm'>
                                     <div class='btn-group'>
-                                    <a type=submit class='btn btn-primary btn-sm'>Checkout</a>
+                                    <input type=submit class='btn btn-primary btn-sm' value='Checkout' />
                                     <a type=submit class='btn btn-white btn-sm'> Cancel</a>
                                     </div>
                                 </div>
