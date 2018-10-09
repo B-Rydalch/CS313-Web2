@@ -1,7 +1,6 @@
 <?php
   session_start();
 
-  $numItems = 0;
   $inventory = array(
     'pokemon'  => array('name'=>'pokemon-kit', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
     'avengers' => array('name'=>'avengers-kit', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
@@ -11,7 +10,6 @@
   if (!isset($_SESSION['activeSession'])) {
     $_SESSION['activeSession'] = true;
     $_SESSION['inventory'] = $inventory;
-    $_SESSION['numItems'] = $numItems;
   } 
   
   if (isset($_POST)) {
@@ -38,7 +36,7 @@
         <script src='/scripts.js'></script>
    </head> 
    <body>
-      <?php include '/header.php' ?>
+      <?php include './header.php' ?>
       <h2 class='shopping-title'><u>Which one of my kids are you shopping for?</u></h2>
       <div class='card-deck'>
         <form action='' method='post'>  
@@ -49,8 +47,8 @@
                 <h5 class='card-title'>Pokemon Trainer Kit</h5>
                 <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
                 <p class='card-text'>
-                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
-                  <button class='btn'>Add to cart</button>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?> - <?php var_dump($_POST) ?></small>
+                  <button type="submit" name="pokemon" class='btn'>Add to cart</button>
                 </p>
               </div>
             </div>
@@ -63,7 +61,7 @@
                 <p class='card-text'>Join the avengers in epic battles against Loki!</p>
                 <p class='card-text'>
                   <small class='text-muted'>$<?php echo $_SESSION['inventory']['avengers']['price'];?></small>
-                  <button class='btn'>Add to cart</button>
+                  <button type="submit" name="avengers" class='btn'>Add to cart</button>
                 </p>
               </div>
             </div>
@@ -75,7 +73,7 @@
                 <h5 class='card-title'>Ferdinand Beanny Baby</h5>
                 <p class='card-text'>Have fun with Ferdinand and his friends. </p>
                 <p class='card-text'><small class='text-muted'>$<?php echo $_SESSION['inventory']['ferdinand']['price'];?></small>
-                  <button class='btn'>Add to cart</button>
+                  <button class='btn' type="submit" name="ferdinand">Add to cart</button>
                 </p>
               </div>
             </div>
