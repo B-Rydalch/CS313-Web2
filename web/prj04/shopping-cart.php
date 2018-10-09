@@ -54,6 +54,9 @@
                             <h5>Items in your cart</h5>
                         </div>
                             <div class='ibox-content'>
+                                <?php
+                                    var_dump($_POST);
+                                ?>
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
                                         <tbody>
@@ -73,9 +76,9 @@
                                                                             <h3>" . $props['name'] . "</h3>
                                                                             <small>'" . $props['desc'] . "'</small>
                                                                             <div class='m-t-sm'>
-                                                                                <input type='submit' name='wrap' class='text-muted'>Add gift package</a>
+                                                                                <input type='submit' name='wrap' class='text-muted' value='Add gift package'></input>
                                                                                 |
-                                                                                <input type='submit' name='remove-" . $name . "' class='text-muted'>Remove item</input>
+                                                                                <input type='submit' name='remove-" . $name . "' class='text-muted' value='Remove item'></input>
                                                                             </div>
                                                                         </td>
                                                                         <td>
