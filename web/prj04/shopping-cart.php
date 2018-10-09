@@ -82,12 +82,12 @@
                                                                             <s class='small text-muted'>$230,00</s>
                                                                         </td>
                                                                         <td width='65'>
-                                                                            <input type='text' class='form-control' placeholder='1'>
+                                                                            <p>Quantity: " . $props['quantity'] . "</p>
                                                                         </td>
                                                                         <td>
                                                                             <h4>
                                                                                 " . 
-                                                                                    $props['price']
+                                                                                    $props['price'] * $props['quantity']
                                                                                 . " 
                                                                             </h4>
                                                                         </td>
