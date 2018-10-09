@@ -5,8 +5,16 @@
         $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
     }
 
-    if (isset($_POST) && key(POST) == 'wrap') {
-        $_SESSION['inventory'][key($_POST)]['price'] += 20;
+    if (isset($_POST) && key(POST) == "wrap-ferdinand") {
+        $_SESSION['inventory']['ferdinand']['price'] += 20;
+    }
+
+    if (isset($_POST) && key(POST) == "wrap-avengers") {
+        $_SESSION['inventory']['avengers']['price'] += 20;
+    }
+
+    if (isset($_POST) && key(POST) == "wrap-pokemon") {
+        $_SESSION['inventory']['pokemon']['price'] += 20;
     }
     
     $total = 0;
@@ -54,6 +62,9 @@
                             <h5>Items in your cart</h5>
                         </div>
                             <div class='ibox-content'>
+                                <?php
+                                    var_dump($_POST);
+                                ?>
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
                                         <tbody>
@@ -73,7 +84,7 @@
                                                                             <h3>" . $props['name'] . "</h3>
                                                                             <small>'" . $props['desc'] . "'</small>
                                                                             <div class='m-t-sm'>
-                                                                                <input type='submit' name='wrap' class='text-muted' value='Add gift package'></input>
+                                                                                <input type='submit' name='wrap-" . $name . "' class='text-muted' value='Add gift package'></input>
                                                                                 |
                                                                                 <input type='submit' name='" . $name . "' class='text-muted' value='Remove item'></input>
                                                                             </div>
