@@ -2,9 +2,9 @@
   session_start();
 
   $inventory = array(
-    'pokemon'  => array('name'=>'pokemon-kit', 'img'=>'shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
-    'avengers' => array('name'=>'avengers-kit', 'img'=>'shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
-    'ferdinand'=> array('name'=>'ferdinand-kit', 'img'=>'shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99)
+    'pokemon'  => array('name'=>'pokemon-kit', 'img'=>'/shopping-items/pokemon1.jpg', 'desc'=>'Become a professional Pokemon trainer with this special trainers kit!','quantity'=> 0, 'price'=> 24.99),
+    'avengers' => array('name'=>'avengers-kit', 'img'=>'/shopping-items/avengers.jpg','desc'=>'Join the avengers in epic battles against Loki!','quantity'=> 0,'price'=> 45.99),
+    'ferdinand'=> array('name'=>'ferdinand-kit', 'img'=>'/shopping-items/ferdinand.jpg', 'desc'=>'Have fun with Ferdinand and his friends.', 'quantity'=>0, 'price'=>29.99)
   );
   
   if (!isset($_SESSION['activeSession'])) {
@@ -47,7 +47,7 @@
                 <h5 class='card-title'>Pokemon Trainer Kit</h5>
                 <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
                 <p class='card-text'>
-                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?> - <?php var_dump($_POST) ?></small>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?></small>
                   <button type="submit" name="pokemon" class='btn'>Add to cart</button>
                 </p>
               </div>

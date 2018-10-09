@@ -1,8 +1,12 @@
 <?php    
     session_start();
     
-    if (isset($_POST)) {
+    if (isset($_POST) && key(POST) != 'wrap') {
         $_SESSION['inventory'][key($_POST)]['quantity'] = 0;
+    }
+
+    if (isset($_POST) && key(POST) == 'wrap') {
+        $_SESSION['inventory'][key($_POST)]['price'] += 20;
     }
     
     $total = 0;
@@ -70,9 +74,9 @@
                                                                     <h3><a href='#' class='text-navy'>'" . $props['name'] . "'</a></h3>
                                                                     <small>'" . $props['desc'] . "'</small>
                                                                     <div class='m-t-sm'>
-                                                                        <a href='#' class='text-muted'><i class='fa fa-gift'></i> Add gift package</a>
+                                                                        <input type='submit' name='wrap' class='text-muted'>Add gift package</a>
                                                                         |
-                                                                        <a href='#' class='text-muted'><i class='fa fa-trash'></i> Remove item</a>
+                                                                        <input type='submit' name='remove-" . $name . "' class='text-muted'>Remove item</input>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -87,17 +91,18 @@
                                                                     </h4>
                                                                 </td>
                                                             </tr>";
-                                                        }   else {
-                                                                echo "
-                                                                    <div class='card-body'>
-                                                                        <div class='row'>
-                                                                            <h1>No items in cart.</h1>
-                                                                        </div>
-                                                                    </div>
-                                                                <br>";
-                                                            }
+                                                        }
                                                     }
+                                                } else {
+                                                    echo "
+                                                        <div class='card-body'>
+                                                            <div class='row'>
+                                                                <h1>No items in cart.</h1>
+                                                            </div>
+                                                        </div>
+                                                    <br>";
                                                 }
+                                        }
                                             ?>
                                     
                                                 <!-- <tr>
@@ -132,9 +137,6 @@
                                     </table>
                                 </div>
                             </div>
-                        <div class='ibox-content'>
-                            <button class='btn btn-primary pull-right'><i class='fa fa fa-shopping-cart'><a href='/shopping-checkout.php'></i>Checkout</a></button>
-                            <button class='btn btn-white'><i class='fa fa-arrow-left'></i><a href='/shopping.php'>Continue shopping</a></button>
                         </div>
                     </div>
                 </div>
@@ -148,7 +150,7 @@
                                 Total
                             </span>
                             <h2 class='font-bold'>
-                                $390,00
+                                <?php echo $total; ?>
                             </h2>
                             <hr>
                             <span class='text-muted small'>
@@ -156,7 +158,7 @@
                             </span>
                             <div class='m-t-sm'>
                                 <div class='btn-group'>
-                                <a href='#' class='btn btn-primary btn-sm'><i class='fa fa-shopping-cart'></i> Checkout</a>
+                                <a href='#' class='btn btn-primary btn-sm'>Checkout</a>
                                 <a href='#' class='btn btn-white btn-sm'> Cancel</a>
                                 </div>
                             </div>
@@ -169,7 +171,7 @@
                         <div class='ibox-content text-center'>
                             <h3><i class='fa fa-phone'></i> +43 100 783 001</h3>
                             <span class='small'>
-                                Please contact with us if you have any questions. We are avalible 24h.
+                                Please contact with us if you have any questions. We are available 24h.
                             </span>
                         </div>
                     </div>
