@@ -140,10 +140,9 @@
 							<div class="container">
 								<div class="row mt-4">
 									<div class="float-left ml-4 mr-4">
-										<form method="">
 											<button class="btn btn-warning mb-5" type="submit" formaction="./index.php"><i class='fas fa-arrow-left'></i>&nbsp;Go back</button>
-										</form>
 									</div>
+									<form action='shopping-confirmation.php' method="post" >
 									<div class="float-right">
 										<button class="btn btn-success" type="submit">Purchase&nbsp;<i class='fas fa-shopping-cart'></i></button>
 									</div>
