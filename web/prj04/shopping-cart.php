@@ -128,12 +128,14 @@
                             <span class='text-muted small'>
                                 *For United States, France and Germany applicable sales tax will be applied
                             </span>
-                            <div class='m-t-sm'>
-                                <div class='btn-group'>
-                                <a href='#' class='btn btn-primary btn-sm'>Checkout</a>
-                                <a href='#' class='btn btn-white btn-sm'> Cancel</a>
+                            <form action='shopping-checkout.php' method='post'>
+                                <div class='m-t-sm'>
+                                    <div class='btn-group'>
+                                    <a href='#' class='btn btn-primary btn-sm'>Checkout</a>
+                                    <a href='#' class='btn btn-white btn-sm'> Cancel</a>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class='ibox'>
