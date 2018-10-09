@@ -47,7 +47,7 @@
                 <h5 class='card-title'>Pokemon Trainer Kit</h5>
                 <p class='card-text'>Become a professional Pokemon trainer with this special trainers kit!</p>
                 <p class='card-text'>
-                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?>. Quantity: <?php echo $_SESSION['inventory']['ferdinand']['quantity']; ?></small>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['pokemon']['price'];?>. Quantity: <?php echo $_SESSION['inventory']['pokemon']['quantity']; ?></small>
                   <button type="submit" name="pokemon" class='btn'>Add to cart</button>
                 </p>
               </div>
@@ -60,7 +60,7 @@
                 <h5 class='card-title'>Avengers Action Figures</h5>
                 <p class='card-text'>Join the avengers in epic battles against Loki!</p>
                 <p class='card-text'>
-                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['avengers']['price'];?>. Quantity: <?php echo $_SESSION['inventory']['ferdinand']['quantity']; ?></small>
+                  <small class='text-muted'>$<?php echo $_SESSION['inventory']['avengers']['price'];?>. Quantity: <?php echo $_SESSION['inventory']['avengers']['quantity']; ?></small>
                   <button type="submit" name="avengers" class='btn'>Add to cart</button>
                 </p>
               </div>

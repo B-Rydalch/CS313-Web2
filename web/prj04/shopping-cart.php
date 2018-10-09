@@ -54,9 +54,6 @@
                             <h5>Items in your cart</h5>
                         </div>
                             <div class='ibox-content'>
-                                <?php
-                                    var_dump($_POST);
-                                ?>
                                 <div class='table-responsive'>
                                     <table class='table shoping-cart-table'>
                                         <tbody>
@@ -125,7 +122,7 @@
                                 Total
                             </span>
                             <h2 class='font-bold'>
-                                <?php echo $total; ?>
+                                $<?php echo $total; ?>
                             </h2>
                             <hr>
                             <span class='text-muted small'>
