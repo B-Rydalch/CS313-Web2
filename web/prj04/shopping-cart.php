@@ -139,7 +139,7 @@
                             <span class='text-muted small'>
                                 *For United States, France and Germany applicable sales tax will be applied
                             </span>
-                            <form action='/shopping-checkout.php' method='post'>
+                            <form action='./shopping-checkout.php' method='post'>
                                 <div class='m-t-sm'>
                                     <div class='btn-group'>
                                     <input type=submit class='btn btn-primary btn-sm' value='Checkout' />
