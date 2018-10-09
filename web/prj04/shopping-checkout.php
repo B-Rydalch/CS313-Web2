@@ -62,7 +62,7 @@
 						</div>	
 					</div>
 					<div class="col-12 col-md-4 m-auto">
-						<form action="confirmation.php" method="post">
+						<form action="shopping-confirmation.php" method="post">
 							<div class="control-group form-group">
 								<div class="controls">
 									<label>Name:</label>
@@ -142,14 +142,13 @@
 									<div class="float-left ml-4 mr-4">
 											<button class="btn btn-warning mb-5" type="submit" formaction="./index.php"><i class='fas fa-arrow-left'></i>&nbsp;Go back</button>
 									</div>
-									<form action='shopping-confirmation.php' method="post" >
 									<div class="float-right">
 										<button class="btn btn-success" type="submit">Purchase&nbsp;<i class='fas fa-shopping-cart'></i></button>
 									</div>
 								</div>
 							</div>
-						</div>
 						</form>
+					</div>
 				</div>
 			</div>
 	</div>
