@@ -78,7 +78,7 @@
                                                                             <div class='m-t-sm'>
                                                                                 <input type='submit' name='wrap' class='text-muted' value='Add gift package'></input>
                                                                                 |
-                                                                                <input type='submit' name='remove-" . $name . "' class='text-muted' value='Remove item'></input>
+                                                                                <input type='submit' name='" . $name . "' class='text-muted' value='Remove item'></input>
                                                                             </div>
                                                                         </td>
                                                                         <td>
