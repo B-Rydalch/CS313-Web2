@@ -11,8 +11,8 @@
     
     $total = 0;
     foreach ($_SESSION['inventory'] as $name => $props) {
-        if ($props['quantity'] == 1) {
-            $total += $props['price'];
+        if ($props['quantity'] >= 1) {
+            $total += ($props['price'] * $props['quantity']);
         }
     }
 
@@ -21,7 +21,7 @@
     function isEmpty($arr) {
         $val = true;
         foreach ($arr as $name => $props) {
-            if ($props['quantity'] == 1) {
+            if ($props['quantity'] >= 1) {
                 $val = false;
             }
         }
@@ -61,7 +61,7 @@
                                                     <?php
                                                         if (!isEmpty($_SESSION['inventory'])) {
                                                             foreach ($_SESSION['inventory'] as $name => $props) {
-                                                                if ($props['quantity'] == 1) {
+                                                                if ($props['quantity'] >= 1) {
                                                                     echo "
                                                                     <tr>
                                                                         <td width='90'>
