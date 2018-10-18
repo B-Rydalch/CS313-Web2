@@ -1,4 +1,4 @@
-
+DROP TABLE chef;
 
 CREATE TABLE chef (
 	id 			 SERIAL 		PRIMARY KEY
@@ -16,6 +16,3 @@ CREATE TABLE inventory(
    , storage_type   VARCHAR(15) NOT NULL 
    , chef_id	 	INT			NOT NULL REFERENCES chef(id)
 );
-
-
-
