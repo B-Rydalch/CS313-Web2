@@ -1,3 +1,58 @@
+<?php
+    session_start();
+    function get_db() {
+        $db = NULL;
+        $production = false;
+        try {
+            $dbUrl = getenv('DATABASE_URL');
+            $dbopts = parse_url($dbUrl);
+            $dbHost = $dbopts["host"];
+            $dbPort = $dbopts["port"];
+            $dbUser = $dbopts["user"];
+            $dbPassword = $dbopts["pass"];
+            $dbName = ltrim($dbopts["path"],'/');
+            $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+        catch (PDOException $ex) {
+            if (!$production) {
+                echo "Error connecting to DB. Details: $ex";
+            }
+            
+            die();
+        }
+        return $db;
+    }
+
+    function cheflogin($db) {
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        try {
+            $stmt = $db->prepare("SELECT username, password FROM chef 
+                                    WHERE username = $user;");
+            $stmt->execute();
+            $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+            if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
+                $_SESSION['loggedIn'] = true;
+                $_SESSION['user'] = $user;
+                header('index.php');
+                exit;
+            } else {
+                alert('Login credentials not found!');
+                exit;
+            }
+        } catch (PDOException $ex) {
+            die();
+        }
+    }
+    
+    if (isset($_POST)) {
+        $db = get_db();
+        loginUser($db);
+    }
+?>
+
 <!DOCTYPE HTML>
 <<!DOCTYPE html>
 <html>
@@ -22,7 +77,7 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type='text' id="input-user" class="form-control" placeholder="Email address" required autofocus>
+                <input type='text' id="input-user" class="form-control" placeholder="User Name" required autofocus>
                 <input type="password" id="input-password" class="form-control" placeholder="Password" required>
                 <div id="remember" class="checkbox">
                     <label>
