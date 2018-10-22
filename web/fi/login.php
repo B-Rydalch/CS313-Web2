@@ -48,10 +48,10 @@
         }
     }
 
-    if (isset($_POST)) {
-        $db = get_db();
-        cheflogin($db);
-    }
+    // if (isset($_POST)) {
+    //     $db = get_db();
+    //     cheflogin($db);
+    // }
 ?>
 
 <!DOCTYPE HTML>
