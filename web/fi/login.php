@@ -47,15 +47,10 @@
             die();
         }
     }
-    
-    if (!isset($_SESSION['activeSession'])) {
-        $_SESSION['activeSession'] = true;
-    }
-
 
     if (isset($_POST)) {
         $db = get_db();
-        loginUser($db);
+        cheflogin($db);
     }
 ?>
 
