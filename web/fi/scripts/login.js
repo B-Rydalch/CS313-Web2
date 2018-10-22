@@ -24,12 +24,12 @@ $( document ).ready(function() {
 function getLocalProfile(callback){
     var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
     var profileName        = localStorage.getItem("PROFILE_NAME");
-    var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+    var profileReAuthUser = localStorage.getItem("PROFILE_REAUTH_User");
 
     if(profileName !== null
-            && profileReAuthEmail !== null
+            && profileReAuthUser !== null
             && profileImgSrc !== null) {
-        callback(profileImgSrc, profileName, profileReAuthEmail);
+        callback(profileImgSrc, profileName, profileReAuthUser);
     }
 }
 
@@ -41,11 +41,11 @@ function loadProfile() {
     if(!supportsHTML5Storage()) { return false; }
     // we have to provide to the callback the basic
     // information to set the profile
-    getLocalProfile(function(profileImgSrc, profileName, profileReAuthEmail) {
+    getLocalProfile(function(profileImgSrc, profileName, profileReAuthUser) {
         //changes in the UI
         $("#profile-img").attr("src",profileImgSrc);
         $("#profile-name").html(profileName);
-        $("#reauth-email").html(profileReAuthEmail);
+        $("#reauth-user").html(profileReAuthUser);
         $("#inputEmail").hide();
         $("#remember").hide();
     });
@@ -77,5 +77,5 @@ function testLocalStorageData() {
     if(!supportsHTML5Storage()) { return false; }
     localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" );
     localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
-    localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+    localStorage.setItem("PROFILE_REAUTH_USER", "oneaccount");
 }
