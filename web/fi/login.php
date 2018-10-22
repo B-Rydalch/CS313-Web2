@@ -47,11 +47,10 @@
         }
     }
     
-    // if (isset($_POST)) {
-    //     $db = get_db();
-    //     loginUser($db);
-    //     $var_dump($db)
-    // }
+    if (isset($_POST)) {
+        $db = get_db();
+        loginUser($db);
+    }
 ?>
 
 <!DOCTYPE HTML>
