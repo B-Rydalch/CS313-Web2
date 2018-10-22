@@ -1,28 +1,28 @@
 <?php
     session_start();
-    function get_db() {
-        $db = NULL;
-        $production = false;
-        try {
-            $dbUrl = getenv('DATABASE_URL');
-            $dbopts = parse_url($dbUrl);
-            $dbHost = $dbopts["host"];
-            $dbPort = $dbopts["port"];
-            $dbUser = $dbopts["user"];
-            $dbPassword = $dbopts["pass"];
-            $dbName = ltrim($dbopts["path"],'/');
-            $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }
-        catch (PDOException $ex) {
-            if (!$production) {
-                echo "Error connecting to DB. Details: $ex";
-            }
+    // function get_db() {
+    //     $db = NULL;
+    //     $production = false;
+    //     try {
+    //         $dbUrl = getenv('DATABASE_URL');
+    //         $dbopts = parse_url($dbUrl);
+    //         $dbHost = $dbopts["host"];
+    //         $dbPort = $dbopts["port"];
+    //         $dbUser = $dbopts["user"];
+    //         $dbPassword = $dbopts["pass"];
+    //         $dbName = ltrim($dbopts["path"],'/');
+    //         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    //         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //     }
+    //     catch (PDOException $ex) {
+    //         if (!$production) {
+    //             echo "Error connecting to DB. Details: $ex";
+    //         }
             
-            die();
-        }
-        return $db;
-    }
+    //         die();
+    //     }
+    //     return $db;
+    // }
 
     // function cheflogin($db) {
     //     $user = $_POST['username'];
@@ -47,11 +47,11 @@
     //     }
     // }
     
-    if (isset($_POST)) {
-        $db = get_db();
-        loginUser($db);
-        $var_dump($db)
-    }
+    // if (isset($_POST)) {
+    //     $db = get_db();
+    //     loginUser($db);
+    //     $var_dump($db)
+    // }
 ?>
 
 <!DOCTYPE HTML>
