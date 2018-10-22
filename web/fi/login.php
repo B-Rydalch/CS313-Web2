@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     function get_db() {
         $db = NULL;
         $production = false;
@@ -47,6 +48,11 @@
         }
     }
     
+    if (!isset($_SESSION['activeSession'])) {
+        $_SESSION['activeSession'] = true;
+    }
+
+
     if (isset($_POST)) {
         $db = get_db();
         loginUser($db);
