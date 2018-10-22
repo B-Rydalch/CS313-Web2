@@ -6,8 +6,8 @@ CREATE TABLE chef (
     , password 	 VARCHAR(50) 	NOT NULL
 );
 
-CREATE TABLE inventory(
-   id               SERIAL 		NOT NULL PRIMARY KEY
+CREATE TABLE inventory (
+   id               SERIAL 	    PRIMARY KEY
    , item_name      VARCHAR(25) NOT NULL
    , quantity       INTEGER 	NOT NULL 
    , best_by		DATE                 
@@ -15,4 +15,13 @@ CREATE TABLE inventory(
    , category       VARCHAR(15) NOT NULL
    , storage_type   VARCHAR(15) NOT NULL 
    , chef_id	 	INT			NOT NULL REFERENCES chef(id)
+   , shopping_id    INT         NULL    REFERENCES shopping(id)
+);
+
+CREATE TABLE shopping (
+    id              SERIAL      PRIMARY KEY
+    , item_name     VARCHAR(50) NOT NULL 
+    , quantity      SMALLINT    NOT NULL
+    , category      VARCHAR(15) NOT NULL 
+    , chef_id       INT         NOT NULL 
 );
