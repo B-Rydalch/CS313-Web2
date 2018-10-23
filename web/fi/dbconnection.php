@@ -14,11 +14,12 @@ function get_db() {
 		$dbPassword = $dbopts["pass"];
 		$dbName = ltrim($dbopts["path"],'/');
 
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+		$db = new PDO("pgsql:host=$dbHost; port=$dbPort; dbname=$dbName",
+						$dbUser, 
+						$dbPassword);
 
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-	catch (PDOException $ex) {
+	} catch (PDOException $ex) {
         if (!$production) {
             echo "Error connecting to DB. Details: $ex";
         }
@@ -26,5 +27,7 @@ function get_db() {
 		die();
 	}
 
+	var_dump($db)
 	return $db;
 }
+?>
