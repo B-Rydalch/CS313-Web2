@@ -3,17 +3,13 @@
   session_start();
   $db = get_db();
   
-  if (isset($_POST['sortTerm'])) {
+//   if (isset($_POST[''])) {
     
-    $sortBy = strtolower($_POST['sortTerm']);
-    $stmt = $db->prepare("SELECT id, title, body from blog_post
-                            WHERE lower(title) LIKE '%$sortBy%'
-                            ORDER BY title DESC;");
-  } else {
-    $stmt = $db->prepare('SELECT id, title, body FROM blog_post;');
-  }
-  $stmt->execute();
-  $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//   } else {
+//     $stmt = $db->prepare('SELECT id, itemname, quantity, best_by, parishable, category, storage_type  FROM inventory;');
+//   }
+//   $stmt->execute();
+//   $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
