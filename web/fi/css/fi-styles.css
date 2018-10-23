@@ -13,6 +13,7 @@ body{
 }
 .fullscreen_bg {
     position: fixed;
+    padding-top: 5%;
     top: 0;
     right: 0;
     bottom: 0;
