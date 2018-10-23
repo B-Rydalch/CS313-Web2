@@ -50,6 +50,7 @@
 
     if (isset($_POST)) {
         $db = get_db();
+        var_dump($db);
         // cheflogin($db);
     }
 ?>
