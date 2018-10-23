@@ -23,9 +23,9 @@
     <div id="fullscreen_bg" class="fullscreen_bg" />
     <form class="form-signin">
         <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-md-offset-3"> 
-                    <div class="panel-default">
+            <div>
+                <div> 
+                    <div>
                         <div class="panel-primary">
                             <h3 class="text-center">Inventory</h3>
                             <div class="panel-body">
