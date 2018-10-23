@@ -7,6 +7,7 @@
     $production = false;
 
 	try {
+		var_dump("try");
 		$dbUrl = getenv('DATABASE_URL');
 		var_dump($dburl);
 
@@ -24,6 +25,7 @@
 
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $ex) {
+		var_dump("catch");
         if (!$production) {
             echo "Error connecting to DB. Details: $ex";
         }
