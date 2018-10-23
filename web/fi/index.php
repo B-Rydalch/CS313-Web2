@@ -50,7 +50,7 @@
                                                     '<td>' . $ele['best_by'] . '</td>' .
                                                     '<td>' . $ele['parishable'] . '</td>' .
                                                     '<td>' . $ele['category'] . '</td>' .
-                                                    '<td>' . $ele['storage_tpe'] . '</td>' .
+                                                    '<td>' . $ele['storage_type'] . '</td>' .
                                                '</tr>';
                                             }
                                         ?> 
