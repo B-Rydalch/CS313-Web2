@@ -22,6 +22,7 @@
             
             die();
         }
+        var_dump($db);
         return $db;
     }
 
