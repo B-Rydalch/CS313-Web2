@@ -65,7 +65,7 @@
     <title>CSs313</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type="text/css" media="screen" href='./css/login-stylesheet.css'>
-    <script src='./scripts/login.js'></script>
+    <!-- <script src='./scripts/login.js'></script> -->
 
     <!--boostrap-->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
