@@ -31,19 +31,19 @@
         try {
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = $user;");
-            var_dump($stmt);
-            // $stmt->execute();
-            // $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+            // var_dump($stmt);
+            $stmt->execute();
+            $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
         
-            // if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
-            //     $_SESSION['loggedIn'] = true;
-            //     $_SESSION['user'] = $user;
-            //     header('index.php');
-            //     exit;
-            // } else {
-            //     alert('Login credentials not found!');
-            //     exit;
-            // }
+            if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
+                $_SESSION['loggedIn'] = true;
+                $_SESSION['user'] = $user;
+                header('index.php');
+                exit;
+            } else {
+                alert('Login credentials not found!');
+                exit;
+            }
         } catch (PDOException $ex) {
             die();
         }
