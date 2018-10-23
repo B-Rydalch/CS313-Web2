@@ -1,6 +1,5 @@
 <?php
-//   require('dbConnect.php');
-//   session_start();
+    session_start();
 //   $db = get_db();
 //   if (isset($_POST['sortTerm'])) {
 //     $sortBy = strtolower($_POST['sortTerm']);
