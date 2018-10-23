@@ -1,10 +1,14 @@
+<html>
+<header></header>
+<body>
 <?php
-function get_db() {
+// function get_db() {
     $db = NULL;
     $production = false;
 
 	try {
 		$dbUrl = getenv('DATABASE_URL');
+		var_dump($dburl);
 
 		$dbopts = parse_url($dbUrl);
 
@@ -27,7 +31,12 @@ function get_db() {
 		die();
 	}
 
-	var_dump($db)
+	var_dump($db);
 	return $db;
-}
+// }
 ?>
+
+</body>
+
+
+</html>
