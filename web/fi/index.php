@@ -1,6 +1,6 @@
 <?php
 
-// require('dbConnect.php');
+    require('dbConnect.php');
     session_start();
 //   $db = get_db();
 //   if (isset($_POST['sortTerm'])) {
