@@ -1,18 +1,15 @@
 <?php
-
     require('dbConnect.php');
     session_start();
-//   $db = get_db();
-//   if (isset($_POST['sortTerm'])) {
-//     $sortBy = strtolower($_POST['sortTerm']);
-//     $stmt = $db->prepare("SELECT id, title, body from blog_post
-//                             WHERE lower(title) LIKE '%$sortBy%'
-//                             ORDER BY title DESC;");
-//   } else {
-//     $stmt = $db->prepare('SELECT id, title, body FROM blog_post;');
-//   }
-//   $stmt->execute();
-//   $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $db = get_db();
+    if (isset($_POST['sortTerm'])) {
+        $sortBy = strtolower($_POST['sortTerm']);
+        $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;"
+        } else {
+            $stmt = $db->prepare('SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;');
+        }
+        $stmt->execute();
+        $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -49,17 +46,27 @@
                                             <th>Quantity</th>
                                             <th>Best By</th>
                                             <th>Parishable</th>
+                                            <th>Category</th>
+                                            <th>Storage Type</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                    <?php
+                                        var_dump($val);
+                                        // foreach ($val) {
+                                        //     echo 
+                                        //     '<tr>'
+                                        //         '<td>' . $val['item_name'] . '</td>'
+                                        //         '<td>' . $val['quantity'] . '</td>'
+                                        //         '<td>' . $val['best_by'] . '</td>'
+                                        //         '<td>' . $val['parishable'] . '</td>'
+                                        //         '<td>' . $val['category'] . '</td>'
+                                        //         '<td>' . $val['storage_tpe'] . '</td>'
+                                        //    '</tr>';
+                                        // }
+                                    ?> 
                                         
-                                        <tr>
-                                            <td>Cherios</td>
-                                            <td>5</td>
-                                            <td>11/19/19</td>
-                                            <td>No</td>
-                                        </tr>
+                                        
                                         <tr>
                                             <td>milk</td>
                                             <td>3</td>
