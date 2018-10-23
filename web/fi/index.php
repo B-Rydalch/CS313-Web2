@@ -2,7 +2,7 @@
     require('dbConnect.php');
     session_start();
     $db = get_db();
-    if (isset($_POST['sortTerm'])) {
+    if (isset($_POST[''])) {
         $sortBy = strtolower($_POST['sortTerm']);
         $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;"
         } else {
@@ -16,7 +16,6 @@
 
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -25,9 +24,8 @@
         crossorigin='anonymous'>
     <link rel='stylesheet' href='./css/fi-styles.css'>
     <script src='../scripts.js'></script>
-    <script src='../fullcalendar.js'></script>
+    <!--<script src='../fullcalendar.js'></script>-->
 </head>
-
 <body>
     <?php include "../header.php" ?>
     <div id="fullscreen_bg" class="fullscreen_bg" />
@@ -51,33 +49,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
-                                        var_dump($val);
-                                        // foreach ($val) {
-                                        //     echo 
-                                        //     '<tr>'
-                                        //         '<td>' . $val['item_name'] . '</td>'
-                                        //         '<td>' . $val['quantity'] . '</td>'
-                                        //         '<td>' . $val['best_by'] . '</td>'
-                                        //         '<td>' . $val['parishable'] . '</td>'
-                                        //         '<td>' . $val['category'] . '</td>'
-                                        //         '<td>' . $val['storage_tpe'] . '</td>'
-                                        //    '</tr>';
-                                        // }
-                                    ?> 
-                                        
-                                        
-                                        <tr>
-                                            <td>milk</td>
-                                            <td>3</td>
-                                            <td>today's date</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>eggs</td>
-                                            <td>24</td>
-                                            <td>next week</td>
-                                        </tr>
+                                    <form>
+                                        <?php
+                                            var_dump($val);
+                                            // foreach ($val) {
+                                            //     echo 
+                                            //     '<tr>'
+                                            //         '<td>' . $val['item_name'] . '</td>'
+                                            //         '<td>' . $val['quantity'] . '</td>'
+                                            //         '<td>' . $val['best_by'] . '</td>'
+                                            //         '<td>' . $val['parishable'] . '</td>'
+                                            //         '<td>' . $val['category'] . '</td>'
+                                            //         '<td>' . $val['storage_tpe'] . '</td>'
+                                            //    '</tr>';
+                                            // }
+                                        ?> 
+                                    </form>
                                     </tbody>
                             </div>
                         </div>
