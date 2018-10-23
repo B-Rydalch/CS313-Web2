@@ -13,7 +13,7 @@
             $dbPassword = $dbopts["pass"];
             $dbName = ltrim($dbopts["path"],'/');
             $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-            //$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch (PDOException $ex) {
             if (!$production) {
@@ -48,7 +48,7 @@
         }
     }
 
-    if (isset($_POST)) {
+    if (isset($_POST['username'] && $_POST['password'])) {
         $db = get_db();
         cheflogin($db);
     }
