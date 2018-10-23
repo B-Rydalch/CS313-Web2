@@ -42,15 +42,15 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                            foreach ($val) {
+                                            foreach ($val as $ele) {
                                                 echo 
-                                                '<tr>'
-                                                    '<td>' . $val['item_name'] . '</td>'
-                                                    '<td>' . $val['quantity'] . '</td>'
-                                                    '<td>' . $val['best_by'] . '</td>'
-                                                    '<td>' . $val['parishable'] . '</td>'
-                                                    '<td>' . $val['category'] . '</td>'
-                                                    '<td>' . $val['storage_tpe'] . '</td>'
+                                                '<tr>' . 
+                                                    '<td>' . $ele['item_name'] . '</td>' .
+                                                    '<td>' . $ele['quantity'] . '</td>' .
+                                                    '<td>' . $ele['best_by'] . '</td>' .
+                                                    '<td>' . $ele['parishable'] . '</td>' .
+                                                    '<td>' . $ele['category'] . '</td>' .
+                                                    '<td>' . $ele['storage_tpe'] . '</td>' .
                                                '</tr>';
                                             }
                                         ?> 
