@@ -25,28 +25,29 @@
         return $db;
     }
 
-    // function cheflogin($db) {
-    //     $user = $_POST['username'];
-    //     $pass = $_POST['password'];
-    //     try {
-    //         $stmt = $db->prepare("SELECT username, password FROM chef 
-    //                                 WHERE username = $user;");
-    //         $stmt->execute();
-    //         $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+    function cheflogin($db) {
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        try {
+            $stmt = $db->prepare("SELECT username, password FROM chef 
+                                    WHERE username = $user;");
+            var_dump($stmt);
+            $stmt->execute();
+            $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
         
-    //         if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
-    //             $_SESSION['loggedIn'] = true;
-    //             $_SESSION['user'] = $user;
-    //             header('index.php');
-    //             exit;
-    //         } else {
-    //             alert('Login credentials not found!');
-    //             exit;
-    //         }
-    //     } catch (PDOException $ex) {
-    //         die();
-    //     }
-    // }
+            if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
+                $_SESSION['loggedIn'] = true;
+                $_SESSION['user'] = $user;
+                header('index.php');
+                exit;
+            } else {
+                alert('Login credentials not found!');
+                exit;
+            }
+        } catch (PDOException $ex) {
+            die();
+        }
+    }
 
     if (isset($_POST)) {
         $db = get_db();
@@ -61,7 +62,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>cs213</title>
+    <title>CSs313</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type="text/css" media="screen" href='./css/login-stylesheet.css'>
     <script src='./scripts/login.js'></script>
