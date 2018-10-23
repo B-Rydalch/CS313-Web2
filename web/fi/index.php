@@ -2,14 +2,9 @@
     require('dbConnect.php');
     session_start();
     $db = get_db();
-    if (isset($_POST[''])) {
-        $sortBy = strtolower($_POST['sortTerm']);
-        $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;"
-        } else {
-            $stmt = $db->prepare('SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;');
-        }
-        $stmt->execute();
-        $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;"
+    $stmt->execute();
+    $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
