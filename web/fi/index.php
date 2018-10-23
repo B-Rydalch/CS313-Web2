@@ -27,7 +27,6 @@
     <!--<script src='../fullcalendar.js'></script>-->
 </head>
 <body>
-    <?php include "../header.php" ?>
     <div id="fullscreen_bg" class="fullscreen_bg" />
     <form class="form-signin">
         <div class="container">
