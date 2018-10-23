@@ -48,7 +48,7 @@
                                                     '<td>' . $ele['item_name'] . '</td>' .
                                                     '<td>' . $ele['quantity'] . '</td>' .
                                                     '<td>' . $ele['best_by'] . '</td>' .
-                                                    '<td>' . $ele['parishable'] . '</td>' .
+                                                    '<td>' . ($ele['parishable'] ? 'yes' : 'no'). '</td>' .
                                                     '<td>' . $ele['category'] . '</td>' .
                                                     '<td>' . $ele['storage_type'] . '</td>' .
                                                '</tr>';
