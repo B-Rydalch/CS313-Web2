@@ -41,22 +41,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <form>
                                         <?php
-                                            var_dump($val);
-                                            // foreach ($val) {
-                                            //     echo 
-                                            //     '<tr>'
-                                            //         '<td>' . $val['item_name'] . '</td>'
-                                            //         '<td>' . $val['quantity'] . '</td>'
-                                            //         '<td>' . $val['best_by'] . '</td>'
-                                            //         '<td>' . $val['parishable'] . '</td>'
-                                            //         '<td>' . $val['category'] . '</td>'
-                                            //         '<td>' . $val['storage_tpe'] . '</td>'
-                                            //    '</tr>';
-                                            // }
+                                            foreach ($val) {
+                                                echo 
+                                                '<tr>'
+                                                    '<td>' . $val['item_name'] . '</td>'
+                                                    '<td>' . $val['quantity'] . '</td>'
+                                                    '<td>' . $val['best_by'] . '</td>'
+                                                    '<td>' . $val['parishable'] . '</td>'
+                                                    '<td>' . $val['category'] . '</td>'
+                                                    '<td>' . $val['storage_tpe'] . '</td>'
+                                               '</tr>';
+                                            }
                                         ?> 
-                                    </form>
                                     </tbody>
                             </div>
                         </div>
