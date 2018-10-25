@@ -76,7 +76,7 @@
     <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false; ?>
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <form class="form-signin" action="" metod="POST">
+            <form class="form-signin" action="" method="POST">
                 <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
                 <input type="password" class="form-control" name='pass' placeholder="Password" required>
                 <div id="remember" class="checkbox">
