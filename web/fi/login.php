@@ -15,7 +15,6 @@
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
-                echo"<h1>SHOULD HEAD TO INDEX.PHP</h1>";
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['user'] = $user;
 
@@ -37,7 +36,7 @@
 
 
     if (isset($_POST['username']) && isset($_POST['password'])) {
-        $db = get_db();
+        $db = connect_db();
         cheflogin($db);
     }
 ?>
