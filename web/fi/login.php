@@ -52,7 +52,7 @@
     }
 
 
-    if (isset($_POST['username'] && isset($_POST['password']))) {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
         $db = get_db();
         cheflogin($db);
     }
