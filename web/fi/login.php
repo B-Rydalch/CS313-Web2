@@ -33,7 +33,6 @@
                                     WHERE username = $user;");
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
-            var_dump($dbUser);       
             if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['user'] = $user;
