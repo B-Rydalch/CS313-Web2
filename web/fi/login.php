@@ -17,13 +17,14 @@
             if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['user'] = $user;
-                header('index.php');
+                header('Location:index.php');
                 exit;
+                
             } else {
                 alert('Login credentials not found!');
-                exit;
             }
         } catch (PDOException $ex) {
+            echo $ex;
             die();
         }
     }
