@@ -56,12 +56,10 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-<?php include "../header.php" ?>
 <div class="container">
     <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false; ?>
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" action="" metod="POST">
                 <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
                 <input type="password" class="form-control" name='pass' placeholder="Password" required>
