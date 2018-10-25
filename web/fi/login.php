@@ -10,7 +10,7 @@
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = :uname;");
             var_dump(echo"chefloginstmt");
-            echo "<h1>"var_dump($stmt); "</h1>";
+            //echo "<h1>"var_dump($stmt); "</h1>";
 
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
             $stmt->execute();
