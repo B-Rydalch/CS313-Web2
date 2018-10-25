@@ -15,7 +15,7 @@
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
-                echo"SHOULD HEAD TO INDEX.PHP";
+                echo"<h1>SHOULD HEAD TO INDEX.PHP</h1>";
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['user'] = $user;
 
