@@ -11,15 +11,12 @@
                                     WHERE username = :uname;");
     
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
-
-            echo $stmt;
-
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
+            if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
                 $_SESSION['loggedIn'] = true;
-                $_SESSION['user'] = $user;
+                $_SESSION['name'] = $user;
 
                 header('Location:index.php');
                 exit;
