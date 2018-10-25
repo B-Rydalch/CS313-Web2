@@ -79,7 +79,7 @@
 
     <?php 
         if ($_SESSION['loggedIn'] = true;){
-            echo $stmt;
+            echo '<h1>$stmt</h1>';
         }
     ?>
 </body>
