@@ -1,7 +1,7 @@
 <?php
     require('dbconnection.php');
     session_start();
-    $db = get_db();
+    $db = connect_db();
     $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
