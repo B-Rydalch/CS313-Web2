@@ -9,7 +9,7 @@
         try {
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = :uname;");
-
+var_dump($stmt);
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -47,7 +47,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CSs313</title>
+    <title>CS313</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type="text/css" media="screen" href='./css/login-stylesheet.css'>
     <!-- <script src='./scripts/login.js'></script> -->
