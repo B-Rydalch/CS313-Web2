@@ -78,10 +78,9 @@
             <a href="#" class="forgot-password">Forgot the password?</a>
         </div><!-- /card-container -->
     </div><!-- /container -->  
-
     <?php 
         $stmt = $_POST[$stmt];
-        echo '<h1>$_POST['username']</h1>';
+        echo '<h1>$_POST["username"]</h1>';
     ?>
 </body>
 </html>
