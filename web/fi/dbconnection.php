@@ -1,6 +1,6 @@
 
 <?php
-function get_db() {
+function connect_db() {
     $db = NULL;
     $production = false;
 
