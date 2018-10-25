@@ -4,8 +4,8 @@
     $db = connect_db();
 
     function cheflogin($db) {
-        $user = $_POST['username'];
-        $pass = $_POST['password'];
+        $user = $_POST['user'];
+        $pass = $_POST['pass'];
         try {
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = :uname;");
