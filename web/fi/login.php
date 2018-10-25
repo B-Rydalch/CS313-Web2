@@ -31,6 +31,7 @@
         }
     }
 
+    // change alert to have container shake. 
     function alert($msg) {
         echo "<script type='text/javascript'>alert('$msg');</script>";
     }
@@ -79,9 +80,7 @@
     </div><!-- /container -->  
 
     <?php 
-        if (isset($_POST['username']) && isset($_POST['password']) ){
-            echo '<h1>hello</h1>';
-        }
+        echo '<h1>hello</h1>';
     ?>
 </body>
 </html>
