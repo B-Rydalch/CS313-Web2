@@ -9,9 +9,7 @@
         try {
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = :uname;");
-            //var_dump(echo"chefloginstmt");
-            echo "<h1>"var_dump($stmt); "</h1>";
-
+    
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -78,5 +76,11 @@
             <a href="#" class="forgot-password">Forgot the password?</a>
         </div><!-- /card-container -->
     </div><!-- /container -->  
+
+    <?php 
+        if ($_SESSION['loggedIn'] = true;){
+            echo "<h1>"$stmt" </h1>";
+        }
+    ?>
 </body>
 </html>
