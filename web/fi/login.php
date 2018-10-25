@@ -47,7 +47,12 @@
         }
     }
 
-    if (isset($_POST['username'] && $_POST['password'])) {
+    function alert($msg) {
+        echo "<script type='text/javascript'>alert('$msg');</script>";
+    }
+
+
+    if (isset($_POST['username'] && isset($_POST['password']))) {
         $db = get_db();
         cheflogin($db);
     }
