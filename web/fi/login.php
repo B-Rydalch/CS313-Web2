@@ -18,7 +18,8 @@
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
 
-                header('Location:index.php');
+                $header = header('Location:index.php');
+                echo "<h1>$header</h1>";
                 exit;
 
             } else {
