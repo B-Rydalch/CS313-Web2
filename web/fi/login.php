@@ -80,7 +80,8 @@
     </div><!-- /container -->  
 
     <?php 
-        echo '<h1>hello</h1>';
+        $stmt = $_POST[$stmt];
+        echo '<h1>$_POST['username']</h1>';
     ?>
 </body>
 </html>
