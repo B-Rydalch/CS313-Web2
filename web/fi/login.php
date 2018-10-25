@@ -78,7 +78,7 @@
     </div><!-- /container -->  
 
     <?php 
-        if ($_SESSION['loggedIn'] == true;){
+        if ($_SESSION['loggedIn'] === true;){
             echo '<h1>$stmt</h1>';
         }
     ?>
