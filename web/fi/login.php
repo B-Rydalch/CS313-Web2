@@ -4,6 +4,8 @@
     $db = connect_db();
 
     function cheflogin($db) {
+        echo "<h1>Chef Login</h1>"; 
+        
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         try {
@@ -11,6 +13,9 @@
                                     WHERE username = :uname;");
     
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
+
+            echo "<h1>". $stmt ."</h1>"
+            
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
