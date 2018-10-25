@@ -15,11 +15,13 @@
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($dbUser['username'] === $user && $dbUser['password'] === $pass) {
+                echo"SHOULD HEAD TO INDEX.PHP";
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['user'] = $user;
+
                 header('Location:index.php');
                 exit;
-                
+
             } else {
                 alert('Login credentials not found!');
             }
