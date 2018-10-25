@@ -13,8 +13,6 @@
                                     WHERE username = :uname;");
     
             $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
-
-            echo "<h1>". $stmt ."</h1>"
             
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
