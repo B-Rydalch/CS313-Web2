@@ -79,7 +79,7 @@
     </div><!-- /container -->  
 
     <?php 
-        if (cheflogin()){
+        if (isset($_POST['username']) && isset($_POST['password']) ){
             echo '<h1>hello</h1>';
         }
     ?>
