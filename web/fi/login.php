@@ -19,13 +19,21 @@
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            echo $user;
+            echo " ";
+            echo $pass;
+            echo "<br>";
+            echo $dbUser['username'];
+            echo " ";
+            echo $dbUser['password'];
+            echo "<br>";
+
             if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
 
                 $header = header('Location:index.php');
-                echo "<h1>$header</h1>";
-                exit;
+                die;
 
             } else {
                 // change alert to have container shake. 
