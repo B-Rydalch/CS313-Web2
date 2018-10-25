@@ -63,9 +63,8 @@
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" action="" metod="POST">
-                <span id="reauth-email" class="reauth-email"></span>
                 <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
-                <input type="password" class="form-control" placeholder="Password" required>
+                <input type="password" class="form-control" name='pass' placeholder="Password" required>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
