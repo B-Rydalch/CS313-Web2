@@ -22,6 +22,7 @@
                 exit;
 
             } else {
+                // change alert to have container shake. 
                 alert('Login credentials not found!');
             }
         } catch (PDOException $ex) {
@@ -78,7 +79,7 @@
     </div><!-- /container -->  
 
     <?php 
-        if ($_SESSION['loggedIn'] == true){
+        if (cheflogin()){
             echo '<h1>hello</h1>';
         }
     ?>
