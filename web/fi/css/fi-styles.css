@@ -26,6 +26,7 @@ body{
 .newitem {
     position: fixed;
     padding-top: 4%;
+    margin:auto;
 }
 
 .newitemtable {
