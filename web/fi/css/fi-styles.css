@@ -27,4 +27,5 @@ body{
 .newitem {
     padding-top: 3%;
     position: fixed;
+    display: inline;
 }
