@@ -8,6 +8,7 @@
         
         $user = $_POST['user'];
         $pass = $_POST['pass'];
+
         try {
             $stmt = $db->prepare("SELECT username, password FROM chef 
                                     WHERE username = :uname;");
@@ -31,7 +32,7 @@
                 $_SESSION['name'] = $user;
 
                 $header = header('Location:index.php');
-                die;
+                die();
 
             } else {
                 // change alert to have container shake. 
@@ -90,9 +91,9 @@
                     echo " ";
                     echo "<p>" . $pass . "</p>"; 
                     echo "<br>";
-                    echo "<p>" . $dbUser['username'] . "</p>";
+                    echo "<p>" . $dbUser['user'] . "</p>";
                     echo " ";
-                    echo "<p>" . $dbUser['password'] . "</p>";
+                    echo "<p>" . $dbUser['pass'] . "</p>";
                     echo "<br>";
                 ?> 
             </form><!-- /form -->
