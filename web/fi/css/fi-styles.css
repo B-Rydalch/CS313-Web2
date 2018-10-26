@@ -31,3 +31,8 @@ body{
     background-color: azure;
     min-width: 580;
 }
+
+.newitem input {
+    width: 100%;
+    clear: both;
+}
