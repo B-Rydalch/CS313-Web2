@@ -11,7 +11,7 @@ body{
     background-color: azure;
     min-width: 580;
 }
-.fullscreen_bg .newitem {
+.fullscreen_bg, .newitem {
     position: fixed;
     padding-top: 5%;
     top: 0;
