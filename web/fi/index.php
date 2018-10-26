@@ -63,7 +63,7 @@
     </form>
     </table>
     <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
-    <!-- <div class="newitem">
+    <div class="newitem">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
@@ -75,6 +75,6 @@
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
             </table>
         </form>
-    </div> -->
+    </div>
 </body>
 </html>
