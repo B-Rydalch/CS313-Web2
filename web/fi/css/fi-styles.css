@@ -23,6 +23,9 @@ body{
     background-image: url('http://i.imgur.com/h26izWg.jpg');
     background-repeat:repeat;
 }
+.newitem{
+    padding-top: 4%;
+}
 .newitemtable {
     position: fixed;
     background-color: azure;
