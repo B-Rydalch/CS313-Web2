@@ -31,4 +31,5 @@ body{
 .newitemtable {
     background-color: azure;
     padding-top: 20rem;
+    min-width: 580;
 }
