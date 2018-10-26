@@ -89,6 +89,16 @@
             <a href="create-account.php" class="create-account">Create new account</a>
             <a href="#" class="forgot-password">Forgot the password?</a>
         </div><!-- /card-container -->
-    </div><!-- /container -->  
+    </div><!-- /container --> 
+    <?php
+        echo $user;
+        echo " ";
+        echo $pass;
+        echo "<br>";
+        echo $dbUser['username'];
+        echo " ";
+        echo $dbUser['password'];
+        echo "<br>";
+    ?> 
 </body>
 </html>
