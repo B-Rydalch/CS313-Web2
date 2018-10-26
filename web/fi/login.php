@@ -91,13 +91,13 @@
         </div><!-- /card-container -->
     </div><!-- /container --> 
     <?php
-        echo $user;
+        echo "<p>" . $user . "</p>";
         echo " ";
-        echo $pass;
+        echo "<p>" . $pass . "</p>"; 
         echo "<br>";
-        echo $dbUser['username'];
+        echo "<p>" . $dbUser['username'] . "</p>";
         echo " ";
-        echo $dbUser['password'];
+        echo "<p>" . $dbUser['password'] . "</p>";
         echo "<br>";
     ?> 
 </body>
