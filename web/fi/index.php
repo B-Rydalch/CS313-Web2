@@ -112,7 +112,7 @@
     <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
     <div class="newitem">
         <form action="" method="POST">
-            <table>
+            <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
                 <tr><td>Quantity:</td><td> <input type="number" name="quantity"></td></tr>
                 <tr><td>Best by:</td><td> <input type="text" name="bestby"></td></tr>

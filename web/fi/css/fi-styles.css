@@ -23,7 +23,7 @@ body{
     background-image: url('http://i.imgur.com/h26izWg.jpg');
     background-repeat:repeat;
 }
-.newitem {
+.newitemtable {
     position: fixed;
     background-color: azure;
     padding-top: 20rem;
