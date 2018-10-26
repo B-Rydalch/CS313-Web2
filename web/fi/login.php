@@ -30,6 +30,7 @@
             if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
+                var_dump($user);
 
                 $header = header('Location:index.php');
                 die();
