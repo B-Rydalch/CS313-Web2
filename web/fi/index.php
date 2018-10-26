@@ -110,7 +110,6 @@
     </form>
     </table>
     <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
-    <br><br>
     <div class="newitem">
         <form action="" method="POST">
             <table>

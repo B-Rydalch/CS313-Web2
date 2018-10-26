@@ -26,6 +26,4 @@ body{
 .newitem {
     position: fixed;
     background-color: azure;
-    width: 50%;
-    margin: auto;
 }
