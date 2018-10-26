@@ -21,10 +21,10 @@
     <script>
         function hidedisplay() {
             var x = document.getElementsByClassName("newitem");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
+            if (x.style.display === "block") {
                 x.style.display = "none";
+            } else {
+                x.style.display = "block";
             }
         }
     </script>
@@ -72,7 +72,7 @@
             </div>
     </form>
     </table>
-    <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add new item</button>
+    <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add New Item</button>
     <div class="newitem">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
