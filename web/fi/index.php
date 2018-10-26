@@ -2,7 +2,7 @@
     require('dbconnection.php');
     session_start();
     $db = connect_db();
-    $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;");
+    $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, perishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -48,7 +48,7 @@
                                                     '<td>' . $ele['item_name'] . '</td>' .
                                                     '<td>' . $ele['quantity'] . '</td>' .
                                                     '<td>' . $ele['best_by'] . '</td>' .
-                                                    '<td>' . ($ele['parishable'] ? 'yes' : 'no'). '</td>' .
+                                                    '<td>' . ($ele['perishable'] ? 'yes' : 'no'). '</td>' .
                                                     '<td>' . $ele['category'] . '</td>' .
                                                     '<td>' . $ele['storage_type'] . '</td>' .
                                                '</tr>';
