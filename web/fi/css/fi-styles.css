@@ -28,4 +28,6 @@ body{
     padding-top: 3%;
     position: fixed;
     display: inline;
+    background-color: azure;
+    min-width: 580;
 }
