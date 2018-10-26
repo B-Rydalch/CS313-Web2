@@ -118,7 +118,7 @@
             Parishable: <input type="checkbox" name="parishable"><br>
             Category <input type="text" name="category"><br>
             Storage type: <input type="text" name="storage"><br>
-            <input type="submit" value="Submit">
+            <input class="confirmadd" type="submit" value="Submit">
         </form>
     </div>
 </body>
