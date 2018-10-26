@@ -11,7 +11,7 @@ body{
     background-color: azure;
     min-width: 580;
 }
-.fullscreen_bg {
+.fullscreen_bg .newitem {
     position: fixed;
     padding-top: 5%;
     top: 0;
@@ -23,9 +23,7 @@ body{
     background-image: url('http://i.imgur.com/h26izWg.jpg');
     background-repeat:repeat;
 }
-.newitem{
-    padding-top: 4%;
-}
+
 .newitemtable {
     position: fixed;
     background-color: azure;
