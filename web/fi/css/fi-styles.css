@@ -33,6 +33,6 @@ body{
 }
 
 .newitem input {
-    width: 100%;
+    min-width: 580;
     clear: both;
 }
