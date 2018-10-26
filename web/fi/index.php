@@ -21,6 +21,7 @@
     <script>
         function hidedisplay() {
             var x = document.getElementsByClassName("newitem");
+            
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
