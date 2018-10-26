@@ -34,3 +34,7 @@ body{
     padding-top: 20rem;
     min-width: 580;
 }
+
+.newitemtable input {
+    width: 100%;
+}
