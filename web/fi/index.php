@@ -20,11 +20,11 @@
     <!--<script src='../fullcalendar.js'></script>-->
     <script>
         function hidedisplay() {
-            var x = document.getElementsById("itemform");
+            var x = document.getElementById("itemform");
             x.style.display = "none"; 
         }
         function toggle() {
-            var x = document.getElementsById("itemform");
+            var x = document.getElementById("itemform");
 
             if (x.style.display === "block") {
                 x.style.display = "none";
