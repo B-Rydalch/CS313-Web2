@@ -26,13 +26,16 @@ body{
 
 .newitem {
     padding-top: 3%;
-    position: fixed;
     display: inline;
     background-color: azure;
-    min-width: 580;
+    width: 50%;
+    margin: auto;
+
 }
 
+
 .newitem input {
-    min-width: 580;
+    
+    width: 50%;
     clear: both;
 }
