@@ -23,3 +23,7 @@ body{
     background-image: url('http://i.imgur.com/h26izWg.jpg');
     background-repeat:repeat;
 }
+
+.newitem {
+    padding-top: 1%;
+}
