@@ -24,8 +24,8 @@ body{
     background-repeat:repeat;
 }
 .newitem {
-    padding-top: 3%;
-    display: inline;
+    padding-top: 4%;
+    position: fixed;
     background-color: azure;
     width: 50%;
     margin: auto;
