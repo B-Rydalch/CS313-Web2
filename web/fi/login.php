@@ -18,19 +18,9 @@
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            echo $user;
-            echo " ";
-            echo $pass;
-            echo "<br>";
-            echo $dbUser['username'];
-            echo " ";
-            echo $dbUser['password'];
-            echo "<br>";
-
             if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
-                var_dump($user);
 
                 $header = header('Location:index.php');
                 die();
@@ -81,6 +71,7 @@
             <form class="form-signin" action="" method="POST">
                 <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
                 <input type="password" class="form-control" name='pass' placeholder="Password" required>
+                <?php isset($_SESSION['name']); ?>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
