@@ -18,6 +18,16 @@
     <link rel='stylesheet' href='./css/fi-styles.css'>
     <script src='../scripts.js'></script>
     <!--<script src='../fullcalendar.js'></script>-->
+    <script>
+        function hidedisplay() {
+            var x = document.getElementsByClassName("newitem");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="fullscreen_bg" class="fullscreen_bg" />
