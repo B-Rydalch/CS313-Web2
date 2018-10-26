@@ -20,7 +20,7 @@
     <!--<script src='../fullcalendar.js'></script>-->
     <script>
         function hidedisplay() {
-            var x = document.getElementsByClassName("newitem");
+            var x = document.getElementsById("itemform");
             
             if (x.style.display === "block") {
                 x.style.display = "none";
@@ -74,7 +74,7 @@
     </form>
     </table>
     <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add New Item</button>
-    <div class="newitem">
+    <div class="newitem" id="itemform">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
