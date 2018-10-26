@@ -62,6 +62,6 @@
             </div>
     </form>
     </table>
-    <a href="http://www.jquery2dotnet.com" class="btn btn-sm btn-primary btn-block" role="button">Add new item</a>
+    <button class="btn btn-sm btn-primary btn-block">Add new item</button>
 </body>
 </html>
