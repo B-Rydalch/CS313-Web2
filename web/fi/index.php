@@ -72,7 +72,7 @@
             </div>
     </form>
     </table>
-    <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
+    <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add new item</button>
     <div class="newitem">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
