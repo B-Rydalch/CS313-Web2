@@ -21,7 +21,11 @@
     <script>
         function hidedisplay() {
             var x = document.getElementsById("itemform");
-            
+            x.style.display = "none"; 
+        }
+        function toggle() {
+            var x = document.getElementsById("itemform");
+
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -30,7 +34,7 @@
         }
     </script>
 </head>
-<body>
+<body onload=hidedisplay()>
     <div id="fullscreen_bg" class="fullscreen_bg" />
     <form class="form-signin">
         <div class="container">
@@ -73,7 +77,7 @@
             </div>
     </form>
     </table>
-    <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add New Item</button>
+    <button class="btn btn-sm btn-primary btn-block" onclick=toggle()>Add New Item</button>
     <div class="newitem" id="itemform">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
