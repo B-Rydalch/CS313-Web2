@@ -18,13 +18,13 @@
     // binding area 
     $stmt->bindValue(':purchase', $item, PDO::PARAM_INT);
     $stmt->bindValue(':amount', $quantity, PDO::PARAM_INT);
-    $stmt->bindValue(':eatby', $freshness, PDO::PARAM_DATE);
+    $stmt->bindValue(':eatby', $freshness, PDO::PARAM_STR);
     $stmt->bindValue(':parish', $content, PDO::PARAM_BOOL);
-    $stmt->bindValue(':brand', $department, PDO::PARAM_INT);
+    $stmt->bindValue(':brand', $department, PDO::PARAM_STR);
     $stmt->bindValue(':wrapping', $wrap, PDO::PARAM_STR);
     
     $stmt->execute();
-    $new_page = "index.php?course_id=$course_id";
+    $new_page = "index.php";
     header("Location: $new_page");
     die();
 

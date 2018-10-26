@@ -111,7 +111,7 @@
     </table>
     <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
     <div class="newitem">
-        <form action="insert-item.php" method="POST">
+        <!-- <form action="insert-item.php" method="POST">
             <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
                 <tr><td>Quantity:</td><td> <input type="number" name="quantity"></td></tr>
@@ -121,7 +121,7 @@
                 <tr><td>Storage type:</td><td> <input type="text" name="storage"></td></tr>
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
             </table>
-        </form>
+        </form> -->
     </div>
 </body>
 </html>
