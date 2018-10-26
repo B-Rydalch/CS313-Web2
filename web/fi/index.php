@@ -112,13 +112,15 @@
     <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
     <div class="newitem">
         <form action="" method="POST">
-            Item name: <input type="text" name="iname"><br>
-            Quantity: <input type="number" name="quantity"><br>
-            Best by: <input type="text" name="bestby"><br>
-            Parishable: <input type="checkbox" name="parishable"><br>
-            Category <input type="text" name="category"><br>
-            Storage type: <input type="text" name="storage"><br>
-            <input class="confirmadd" type="submit" value="Submit">
+            <table>
+                <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
+                <tr><td>Quantity:</td><td> <input type="number" name="quantity"></td></tr>
+                <tr><td>Best by:</td><td> <input type="text" name="bestby"></td></tr>
+                <tr><td>Parishable:</td><td> <input type="checkbox" name="parishable"></td></tr>
+                <tr><td>Category:</td><td><input type="text" name="category"></td></tr>
+                <tr><td>Storage type:</td><td> <input type="text" name="storage"></td></tr>
+                <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
+            </table>
         </form>
     </div>
 </body>
