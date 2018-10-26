@@ -5,6 +5,53 @@
     $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, parishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    function additem($db) {
+        $itemname = $_Post('iname');
+        $itemname = $_Post('quantity');
+        $itemname = $_Post('bestby');
+        $itemname = $_Post('parishable');
+        $itemname = $_Post('category');
+        $itemname = $_Post('storage');
+        $itemname = $_Post('user');
+
+
+
+        
+        try {
+            $stmt = $db->prepare(" INSERT INTO inventory(item_name, quantity, best_by, parishable, category, storage_type, chef_id) 
+            VALUES (:item, :amount, :eatby, :par, :cat, :store, :cook)");
+
+    
+            $stmt->bindValue(':item', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':amount', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':eatby', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':par', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':cat', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':store', $user, PDO::PARAM_STR);
+            $stmt->bindValue(':cook', $user, PDO::PARAM_STR);
+
+
+
+            $stmt->execute();
+            $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
+                $_SESSION['loggedIn'] = true;
+                $_SESSION['name'] = $user;
+
+                $header = header('Location:index.php');
+                die();
+
+            } else {
+                // change alert to have container shake. 
+                alert('Login credentials not found!');
+            }
+        } catch (PDOException $ex) {
+            echo $ex;
+            die();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +109,17 @@
             </div>
     </form>
     </table>
-    <button class="btn btn-sm btn-primary btn-block">Add new item</button>
+    <button class="btn btn-sm btn-primary btn-block" onclick=additem()>Add new item</button>
+    <div class="newitem">
+        <form action="" method="POST">
+            Item name: <input type="text" name="iname"><br>
+            Quantity: <input type="number" name="quantity"><br>
+            Best by: <input type="text" name="bestby"><br>
+            Parishable: <input type="checkbox" name="parishable"><br>
+            Category <input type="text" name="category"><br>
+            Storage type: <input type="text" name="storage"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>

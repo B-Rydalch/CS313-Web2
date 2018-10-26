@@ -3,9 +3,7 @@
     session_start();
     $db = connect_db();
 
-    function cheflogin($db) {
-        echo "<h1>Chef Login</h1>"; 
-        
+    function cheflogin($db) {        
         $user = $_POST['user'];
         $pass = $_POST['pass'];
 
