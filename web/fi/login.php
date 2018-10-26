@@ -85,20 +85,20 @@
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <?php
+                    echo "<p>" . $user . "</p>";
+                    echo " ";
+                    echo "<p>" . $pass . "</p>"; 
+                    echo "<br>";
+                    echo "<p>" . $dbUser['username'] . "</p>";
+                    echo " ";
+                    echo "<p>" . $dbUser['password'] . "</p>";
+                    echo "<br>";
+                ?> 
             </form><!-- /form -->
             <a href="create-account.php" class="create-account">Create new account</a>
             <a href="#" class="forgot-password">Forgot the password?</a>
         </div><!-- /card-container -->
     </div><!-- /container --> 
-    <?php
-        echo "<p>" . $user . "</p>";
-        echo " ";
-        echo "<p>" . $pass . "</p>"; 
-        echo "<br>";
-        echo "<p>" . $dbUser['username'] . "</p>";
-        echo " ";
-        echo "<p>" . $dbUser['password'] . "</p>";
-        echo "<br>";
-    ?> 
 </body>
 </html>
