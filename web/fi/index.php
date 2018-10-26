@@ -74,7 +74,7 @@
     </form>
     </table>
     <button class="btn btn-sm btn-primary btn-block" onclick=hidedisplay()>Add New Item</button>
-    <div class="newitem">
+    <div class="newitem" onload="style.display=none;">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
