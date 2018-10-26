@@ -48,7 +48,6 @@
 ?>
 
 <!DOCTYPE HTML>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -71,7 +70,7 @@
             <form class="form-signin" action="" method="POST">
                 <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
                 <input type="password" class="form-control" name='pass' placeholder="Password" required>
-                <?php isset($_SESSION['name']); ?>
+                <?php echo "<p>" . $user . "</p>" ?>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
