@@ -8,6 +8,14 @@ CREATE TABLE chef (
     , password 	 VARCHAR(50) 	NOT NULL
 );
 
+CREATE TABLE shopping (
+    id              SERIAL      PRIMARY KEY
+    , item_name     VARCHAR(50) NOT NULL 
+    , quantity      SMALLINT    NOT NULL
+    , category      VARCHAR(50) NOT NULL 
+    , chef_id       INT         NOT NULL 
+);
+
 CREATE TABLE inventory (
    id               SERIAL 	    PRIMARY KEY
    , item_name      VARCHAR(50) NOT NULL
@@ -18,14 +26,6 @@ CREATE TABLE inventory (
    , storage_type   VARCHAR(50) NOT NULL /* BOXED noodles, DRIED fruits, BAGGED  */ 
    , chef_id	 	INT			NOT NULL REFERENCES chef(id)
    , shopping_id    INT         NULL    REFERENCES shopping(id)
-);
-
-CREATE TABLE shopping (
-    id              SERIAL      PRIMARY KEY
-    , item_name     VARCHAR(50) NOT NULL 
-    , quantity      SMALLINT    NOT NULL
-    , category      VARCHAR(50) NOT NULL 
-    , chef_id       INT         NOT NULL 
 );
 
 /****DEFAULT DATA*****/
