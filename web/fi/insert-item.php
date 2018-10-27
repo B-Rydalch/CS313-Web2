@@ -41,8 +41,8 @@
     
     $stmt->execute();
     $new_page = "index.php";
-    header("Location: $new_page");
-    die(echo "<h1>" . $stmt . "</h1>");
+  //  header("Location: $new_page");
+  //  die(echo "<h1>" . $stmt . "</h1>");
 
 ?>
 
