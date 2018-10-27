@@ -1,6 +1,6 @@
-DROP TABLE chef;
-DROP TABLE inventory; 
-DROP TABLE shopping; 
+DROP TABLE chef CASCADE;
+DROP TABLE inventory CASCADE; 
+DROP TABLE shopping CASCADE; 
 
 CREATE TABLE chef (
 	id 			 SERIAL 		PRIMARY KEY
@@ -10,12 +10,12 @@ CREATE TABLE chef (
 
 CREATE TABLE inventory (
    id               SERIAL 	    PRIMARY KEY
-   , item_name      VARCHAR(25) NOT NULL
+   , item_name      VARCHAR(50) NOT NULL
    , quantity       INTEGER 	NOT NULL 
    , best_by		DATE                 
    , perishable     BOOLEAN 	NOT NULL 
-   , category       VARCHAR(15) NOT NULL /* fruits, vegetables, etc*/
-   , storage_type   VARCHAR(15) NOT NULL /*BOXED noodles, DRIED fruits, BAGGED  */ 
+   , category       VARCHAR(50) NOT NULL /* fruits, vegetables, etc*/
+   , storage_type   VARCHAR(50) NOT NULL /* BOXED noodles, DRIED fruits, BAGGED  */ 
    , chef_id	 	INT			NOT NULL REFERENCES chef(id)
    , shopping_id    INT         NULL    REFERENCES shopping(id)
 );
@@ -24,7 +24,7 @@ CREATE TABLE shopping (
     id              SERIAL      PRIMARY KEY
     , item_name     VARCHAR(50) NOT NULL 
     , quantity      SMALLINT    NOT NULL
-    , category      VARCHAR(15) NOT NULL 
+    , category      VARCHAR(50) NOT NULL 
     , chef_id       INT         NOT NULL 
 );
 
