@@ -41,5 +41,7 @@ body{
 }
 
 .rbtn {
-    float:right;
+    padding-right: 9px;
+    padding-top: 9px;
+    float: right;
 }
