@@ -9,11 +9,18 @@
     $item = htmlspecialchars($_POST['iname']);
     $quantity = htmlspecialchars($_POST['quantity']);
     $freshness = htmlspecialchars($_POST['bestby']);
-    $peri = htmlspecialchars($_POST['perishable']);
+    $peri = htmlspecialchars($_POST['perishable']);  
     $department = htmlspecialchars($_POST['category']);
     $wrap = htmlspecialchars($_POST['storage']);
     //$chefid = htmlspecialchars($_GET['chef_id']);
     $chefid = 1;   
+
+    // convert checkbox value to boolean
+    if ($peri != 'on') {
+        $peri = false;
+    }else {
+        $peri = true;
+    }
 
 
     // connect db
