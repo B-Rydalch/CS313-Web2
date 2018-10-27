@@ -5,7 +5,6 @@
     	die("Error, chef id not specified...");
     }
 
-
     // variables 
     $item = htmlspecialchars($_POST['iname']);
     $quantity = htmlspecialchars($_POST['quantity']);
