@@ -1,9 +1,9 @@
 <?php
 
-    if (!isset($_GET['chef_id']))
-    {
-    	die("Error, chef id not specified...");
-    }
+    // if (!isset($_GET['chef_id']))
+    // {
+    // 	die("Error, chef id not specified...");
+    // }
 
     // variables 
     $item = htmlspecialchars($_POST['iname']);
@@ -13,7 +13,7 @@
     $department = htmlspecialchars($_POST['category']);
     $wrap = htmlspecialchars($_POST['storage']);
     $chefid = htmlspecialchars($_GET['chef_id']);
-
+    $chefid = 1;   
 
 
     // connect db
