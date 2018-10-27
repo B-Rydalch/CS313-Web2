@@ -78,6 +78,7 @@
     </form>
     </table>
     <a class="btn" onclick=toggle()>Add New Item</a>
+    <a class="rbtn" onclick=toggle()>Remove Item</a>
     <div class="newitem" id="itemform">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
