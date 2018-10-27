@@ -3,7 +3,7 @@
     $item = htmlspecialchars($_POST['iname']);
     $quantity = htmlspecialchars($_POST['quantity']);
     $freshness = htmlspecialchars($_POST['bestby']);
-    $ = htmlspecialchars($_POST['perishable']);
+    $peri = htmlspecialchars($_POST['perishable']);
     $department = htmlspecialchars($_POST['category']);
     $wrap = htmlspecialchars($_POST['storage']);
 
@@ -19,7 +19,7 @@
     $stmt->bindValue(':purchase', $item, PDO::PARAM_INT);
     $stmt->bindValue(':amount', $quantity, PDO::PARAM_INT);
     $stmt->bindValue(':eatby', $freshness, PDO::PARAM_STR);
-    $stmt->bindValue(':parish', $content, PDO::PARAM_BOOL);
+    $stmt->bindValue(':parish', $peri, PDO::PARAM_BOOL);
     $stmt->bindValue(':brand', $department, PDO::PARAM_STR);
     $stmt->bindValue(':wrapping', $wrap, PDO::PARAM_STR);
     
