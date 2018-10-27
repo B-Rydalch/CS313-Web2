@@ -37,12 +37,12 @@
     // insert into inventory (item_name, quantity, best_by, perishable, category, storage_type, chef_id) 
     // values('milk',2,'2018-11-2', True, 'dairy', 'plastic gallon', 1);
 
-    echo $stmt;
+    echo "<h1>" . $stmt . "</h1>";
     
     $stmt->execute();
     $new_page = "index.php";
     header("Location: $new_page");
-    die();
+    die(echo "<h1>" . $stmt . "</h1>");
 
 ?>
 
