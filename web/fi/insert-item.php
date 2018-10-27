@@ -12,12 +12,12 @@
     $peri = htmlspecialchars($_POST['perishable']);
     $department = htmlspecialchars($_POST['category']);
     $wrap = htmlspecialchars($_POST['storage']);
-    $chefid = htmlspecialchars($_GET['chef_id']);
+    //$chefid = htmlspecialchars($_GET['chef_id']);
     $chefid = 1;   
 
 
     // connect db
-    require('dbConnect.php');
+    require('dbconnection.php');
     $db = get_db();
 
     $stmt = $db->prepare('INSERT INTO inventory(item_name, quantity, best_by, perishable, category, storage_type, chef_id ) 
