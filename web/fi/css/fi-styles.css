@@ -39,3 +39,7 @@ body{
     padding: 10px; 
     width: 100%;
 }
+
+.rbtn {
+    float:right;
+}
