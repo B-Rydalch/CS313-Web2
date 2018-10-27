@@ -25,7 +25,7 @@
 
     // connect db
     require('dbconnection.php');
-    $db = get_db();
+    $db = connect_db());
 
     $stmt = $db->prepare('INSERT INTO inventory(item_name, quantity, best_by, perishable, category, storage_type, chef_id ) 
                         VALUES (:purchase, :amount, :eatby, :parish, :brand, :wrapping, :cook);');
