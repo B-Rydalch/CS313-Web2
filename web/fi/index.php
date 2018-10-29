@@ -108,6 +108,7 @@
                     <td>Item Name</td>
                     <td><input type="text" name="ritem"></td>
                     <td>Quantity</td><td><input type="number" name="ramount"></td>
+                    <td><input class="confirmadd" type="submit" value="Submit"></td>
                 </tr>
             </table>
         </form>
