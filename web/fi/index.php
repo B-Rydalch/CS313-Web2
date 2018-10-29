@@ -20,16 +20,25 @@
     <!--<script src='../fullcalendar.js'></script>-->
     <script>
         function hidedisplay() {
-            var x = document.getElementById("itemform");
+            var x = document.getElementById("itemformadd");
+            var y = document.getElementById("itemformremove")
             x.style.display = "none"; 
+            y.style.display = "none";
         }
         function toggle() {
-            var x = document.getElementById("itemform");
+            var x = document.getElementById("itemformadd");
+            var y = document.getElementById("itemformremove");
 
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
+            }
+
+            if (y.style.display === "block") {
+                y.style.display = "none";
+            } else {
+                y.style.display = "block";
             }
         }
     </script>
@@ -68,7 +77,7 @@
                                                     '<td>' . $ele['storage_type'] . '</td>' .
                                                '</tr>';
                                             }
-                                        ?> 
+                                        ?>      
                                     </tbody>
                             </div>
                         </div>
@@ -79,7 +88,7 @@
     </table>
     <a class="btn" onclick=toggle()>Add New Item</a>
     <a class="rbtn" onclick=toggle()>Remove Item</a>
-    <div class="newitem" id="itemform">
+    <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
@@ -89,6 +98,17 @@
                 <tr><td>Category:</td><td><input type="text" name="category"></td></tr>
                 <tr><td>Storage type:</td><td> <input type="text" name="storage"></td></tr>
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
+            </table>
+        </form>
+    </div>
+    <div class="removeitem" id="itemformremove">
+        <form action="remove-item.php" method="POST">
+            <table>
+                <tr>
+                    <td>Item Name</td>
+                    <td><input type="text" name="ritem"></td>
+                    <td>Quantity</td><td><input type="number" name="ramount"></td>
+                </tr>
             </table>
         </form>
     </div>
