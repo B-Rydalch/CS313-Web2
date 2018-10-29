@@ -25,16 +25,16 @@
             x.style.display = "none"; 
             y.style.display = "none";
         }
-        function toggle() {
+        function togglex() {
             var x = document.getElementById("itemformadd");
-            var y = document.getElementById("itemformremove");
-
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
             }
-
+        }
+        function toggley() {
+            var y = document.getElementById("itemformremove");
             if (y.style.display === "block") {
                 y.style.display = "none";
             } else {
@@ -86,8 +86,8 @@
             </div>
     </form>
     </table>
-    <a class="btn" onclick=toggle()>Add New Item</a>
-    <a class="rbtn" onclick=toggle()>Remove Item</a>
+    <a class="btn" onclick=togglex()>Add New Item</a>
+    <a class="rbtn" onclick=toggley()>Remove Item</a>
     <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
