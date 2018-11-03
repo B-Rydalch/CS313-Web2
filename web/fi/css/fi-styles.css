@@ -32,20 +32,29 @@ body{
     margin-top: auto;
     padding-left: 22%
 }
-
 .newitemtable {
     background-color: azure;
     padding-top: 20rem;
     min-width: 580px;
 }
-
 .newitemtable input {
     padding: 10px; 
     width: 100%;
 }
-
+.removeitem {
+    position: relative;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-left: 22%
+}
 .rbtn {
     padding-right: 9px;
     padding-top: 9px;
     float: right;
+}
+.addheader {
+    text-align: center;
+    padding: 1%;
 }
