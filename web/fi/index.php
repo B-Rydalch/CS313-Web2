@@ -7,7 +7,7 @@
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if(isset($_POST['submit'])) {
-        header("Location: shopping-list.php");
+        header("Location: https://salty-mesa-22398.herokuapp.com/fi/shopping-list.php");
         die();
     }
 ?>
