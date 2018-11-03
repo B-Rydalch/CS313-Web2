@@ -1,6 +1,7 @@
 body{
     background-color: #1b1b1b;
-    padding-top: 40px;
+    padding: 40px;
+    margin: auto;
 }
 .form-signin {
     padding: 15px;
