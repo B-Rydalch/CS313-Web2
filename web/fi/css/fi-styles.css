@@ -25,7 +25,7 @@ body{
 }
 .newitem {
     position: fixed;
-    padding-top: 4%;
+    padding: 4%;
     margin:auto;
 }
 
@@ -36,7 +36,7 @@ body{
 }
 
 .newitemtable input {
-    padding: 5%; 
+    padding: 10px; 
     width: 100%;
 }
 
