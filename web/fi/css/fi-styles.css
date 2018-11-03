@@ -67,4 +67,9 @@ body{
     padding-top: 20rem;
     min-width: 580px;
 }
+.shoppinglist {
+    padding-right: 9px;
+    padding-top: 9px;
+    float: right;
+}
 
