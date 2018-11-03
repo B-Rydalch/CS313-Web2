@@ -32,7 +32,7 @@ body{
     margin-top: auto;
     padding-left: 22%
 }
-.newitemtable .removeitemtable{
+.newitemtable {
     background-color: azure;
     padding-top: 20rem;
     min-width: 580px;
@@ -40,6 +40,10 @@ body{
 .newitemtable input {
     padding: 10px; 
     width: 100%;
+}
+.addheader {
+    text-align: center;
+    padding: 1%;
 }
 .removeitem {
     background-color: azure;
@@ -55,7 +59,9 @@ body{
     padding-top: 9px;
     float: right;
 }
-.addheader {
-    text-align: center;
-    padding: 1%;
+.removeitemtable{
+    background-color: azure;
+    padding-top: 20rem;
+    min-width: 580px;
 }
+
