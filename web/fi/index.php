@@ -20,31 +20,35 @@
     <!--<script src='../fullcalendar.js'></script>-->
     <script>
         function hidedisplay() {
-            var x = document.getElementById("itemformadd");
-            var y = document.getElementById("itemformremove")
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove")
             x.style.display = "none"; 
             y.style.display = "none";
         }
         function togglex() {
-            var x = document.getElementById("itemformadd");
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
+                y.style.display = "none";
             }
         }
         function toggley() {
-            var y = document.getElementById("itemformremove");
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove");
             if (y.style.display === "block") {
                 y.style.display = "none";
             } else {
+                x.style.display = "none";
                 y.style.display = "block";
             }
         }
     </script>
 </head>
 <body onload=hidedisplay()>
-    <div id="fullscreen_bg" class="fullscreen_bg" />
+    <div id="fullscreen_bg" class="fullscreen_bg">
     <form class="form-signin">
         <div class="container">
             <div>
