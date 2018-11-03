@@ -105,11 +105,11 @@
                 </thead>
                 <tr>
                     <td><input type="text" name="iname"></td>
-                    <td> <input type="number" name="quantity"></td>
+                    <td><input type="number" name="quantity"  min="0"></td>
                     <td><input type="text" name="bestby"></td>
-                    <td> <input type="checkbox" name="parishable"></td>
+                    <td><input type="checkbox" name="parishable"></td>
                     <td><input type="text" name="category"></td>
-                    <td> <input type="text" name="storage"></td>
+                    <td><input type="text" name="storage"></td>
                 </tr>
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
             </table>
