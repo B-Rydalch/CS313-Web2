@@ -1,7 +1,5 @@
 body{
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+    background-color: #1b1b1b;
     padding: 40px;
     margin: auto;
 }
@@ -14,7 +12,7 @@ body{
     background-color: azure;
     min-width: 580;
 }
-/* .fullscreen_bg  {
+.fullscreen_bg  {
     position: fixed;
     padding-top: 5%;
     top: 0;
@@ -22,10 +20,13 @@ body{
     bottom: 0;
     left: 0;
     background-size: cover;
-    background-position: 100%;
+    /* background-position: 100%;
     background-image: url('http://i.imgur.com/h26izWg.jpg');
-    background-repeat:repeat; 
-}*/
+    background-repeat:repeat; */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
 .newitem {
     position: relative;
     margin: auto;
