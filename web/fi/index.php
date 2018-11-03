@@ -79,13 +79,14 @@
                                             }
                                         ?>      
                                     </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </form>
-    </table>
+        </div>
+    </form>   
     <a class="btn" onclick=togglex()>Add New Item</a>
     <a class="rbtn" onclick=toggley()>Remove Item</a>
     <div class="newitem" id="itemformadd">
@@ -100,14 +101,14 @@
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
             </table> -->
             <table class="newitemtable">
-                <tr>
+                <thead>
                     <td>Item name</td>
                     <td>Quantity</td>
                     <td>Best by</td>
                     <td>Parishable</td>
                     <td>Category</td>
                     <td>Storage type</td>
-                </tr>
+                </thead>
                 <tr>
                     <td><input type="text" name="iname"></td>
                     <td> <input type="number" name="quantity"></td>
