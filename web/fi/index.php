@@ -5,6 +5,11 @@
     $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, perishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if(isset($_POST['submit'])){
+        header("Location: shopping-list.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>

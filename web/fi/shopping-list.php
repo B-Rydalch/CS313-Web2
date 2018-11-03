@@ -96,7 +96,6 @@
             </div>
         </div>
     </form>   
-    
     <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
