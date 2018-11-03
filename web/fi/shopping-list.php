@@ -86,7 +86,7 @@
                                         <tr>
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="rbtn" onclick=toggley()>Remove Item</a></td>
-                                            <td><a class="shoppinglist" action="shopping-list.php" metod="POST">Shopping List</a></td>
+                                            <td><a class="shoppinglist" href="index.php">Inventory</a></td>
                                         </tr>    
                                     </tbody>
                                 </table>
