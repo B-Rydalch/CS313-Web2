@@ -24,6 +24,9 @@ body{
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 }
+#features {
+    column-width: 190px;
+}
 .newitem {
     position: relative;
     margin: auto;

@@ -82,7 +82,7 @@
                                                '</tr>';
                                             }
                                         ?>
-                                        <tr>
+                                        <tr id="features">
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="btn" id="rbtn" onclick=toggley()>Remove Item</a></td>
                                             <td><a class="btn" id="shoppinglist" action="shopping-list.php" metod="POST">Shopping List</a></td>
