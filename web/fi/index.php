@@ -117,7 +117,7 @@
     </div>
     <div class="removeitem" id="itemformremove">
         <form action="remove-item.php" method="POST">
-            <table>
+            <table class="removeitemtable">
                 <tr>
                     <td>Item Name</td>
                     <td><input type="text" name="ritem"></td>
