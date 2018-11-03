@@ -20,9 +20,6 @@ body{
     bottom: 0;
     left: 0;
     background-size: cover;
-    /* background-position: 100%;
-    background-image: url('http://i.imgur.com/h26izWg.jpg');
-    background-repeat:repeat; */
     height: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
@@ -57,7 +54,7 @@ body{
     margin-top: auto;
     padding-left: 22%
 }
-.rbtn {
+#rbtn {
     padding-right: 9px;
     padding-top: 9px;
     float: right;
@@ -67,7 +64,7 @@ body{
     padding-top: 20rem;
     min-width: 580px;
 }
-.shoppinglist {
+#shoppinglist {
     padding-right: 9px;
     padding-top: 9px;
     float: right;
