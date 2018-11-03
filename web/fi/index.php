@@ -7,7 +7,7 @@
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if(isset($_POST['submit'])){
-        header("Location: shopping-list.php");
+        header("Location: ../shopping-list.php");
         exit;
     }
 ?>
