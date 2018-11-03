@@ -1,119 +1,136 @@
-<!DOCTYPE  html>
-<html>
-        <header>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>cs213</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='stylesheet' type="text/css" media="screen" href=''>
-        <script src=''></script>
-        
-        <!--Boostrap--> 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    </header>
-    <body>
-        <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+<?php
+    require('dbconnection.php');
+    session_start();
+    $db = connect_db();
+    $stmt = $db->prepare("SELECT id, item_name, quantity FROM shopping;");
+    $stmt->execute();
+    $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>CS313</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
+        crossorigin='anonymous'>
+    <link rel='stylesheet' href='./css/fi-styles.css'>
+    <script src='../scripts.js'></script>
+    <!--<script src='../fullcalendar.js'></script>-->
+    <script>
+        function hidedisplay() {
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove")
+            x.style.display = "none"; 
+            y.style.display = "none";
+        }
+        function togglex() {
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+            }
+        }
+        function toggley() {
+            let x = document.getElementById("itemformadd");
+            let y = document.getElementById("itemformremove");
+            if (y.style.display === "block") {
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body onload=hidedisplay()>
+    <div id="fullscreen_bg" class="fullscreen_bg">
+    <form class="form-signin">
         <div class="container">
-           <div class="card shopping-cart">
-                    <div class="card-header bg-dark text-light">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        Shipping cart
-                        <a href="" class="btn btn-outline-info btn-sm pull-right">Continiu shopping</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="card-body">
-                            <!-- PRODUCT -->
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-2 text-center">
-                                        <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                                </div>
-                                <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                                    <h4 class="product-name"><strong>Product Name</strong></h4>
-                                    <h4>
-                                        <small>Product description</small>
-                                    </h4>
-                                </div>
-                                <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                                    <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                                    </div>
-                                    <div class="col-4 col-sm-4 col-md-4">
-                                        <div class="quantity">
-                                            <input type="button" value="+" class="plus">
-                                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                                   size="4">
-                                            <input type="button" value="-" class="minus">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 col-sm-2 col-md-2 text-right">
-                                        <button type="button" class="btn btn-outline-danger btn-xs">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <!-- END PRODUCT -->
-                            <!-- PRODUCT -->
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-2 text-center">
-                                        <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                                </div>
-                                <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                                    <h4 class="product-name"><strong>Product Name</strong></h4>
-                                    <h4>
-                                        <small>Product description</small>
-                                    </h4>
-                                </div>
-                                <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                                    <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                                    </div>
-                                    <div class="col-4 col-sm-4 col-md-4">
-                                        <div class="quantity">
-                                            <input type="button" value="+" class="plus">
-                                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                                   size="4">
-                                            <input type="button" value="-" class="minus">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 col-sm-2 col-md-2 text-right">
-                                        <button type="button" class="btn btn-outline-danger btn-xs">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <!-- END PRODUCT -->
-                        <div class="pull-right">
-                            <a href="" class="btn btn-outline-secondary pull-right">
-                                Update shopping cart
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
-                            <div class="row">
-                                <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="cupone code">
-                                </div>
-                                <div class="col-6">
-                                    <input type="submit" class="btn btn-default" value="Use cupone">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pull-right" style="margin: 10px">
-                            <a href="" class="btn btn-success pull-right">Checkout</a>
-                            <div class="pull-right" style="margin: 5px">
-                                Total price: <b>50.00€</b>
+            <div>
+                <div> 
+                    <div>
+                        <div class="panel-primary">
+                            <h3 class="text-center">Inventory</h3>
+                            <div class="panel-body">
+                                <table class="table table-striped table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Item Name</th>
+                                            <th>Quantity</th>
+                                            <th>Best By</th>
+                                            <th>Parishable</th>
+                                            <th>Category</th>
+                                            <th>Storage Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            foreach ($val as $ele) {
+                                                echo 
+                                                '<tr>' . 
+                                                    '<td>' . $ele['item_name'] . '</td>' .
+                                                    '<td>' . $ele['quantity'] . '</td>' .
+                                                    '<td>' . $ele['best_by'] . '</td>' .
+                                                    '<td>' . ($ele['perishable'] ? 'yes' : 'no'). '</td>' .
+                                                    '<td>' . $ele['category'] . '</td>' .
+                                                    '<td>' . $ele['storage_type'] . '</td>' .
+                                               '</tr>';
+                                            }
+                                        ?>
+                                        <tr>
+                                            <td><a class="btn" onclick=togglex()>Add New Item</a></td>
+                                            <td><a class="rbtn" onclick=toggley()>Remove Item</a></td>
+                                            <td><a class="shoppinglist" action="shopping-list.php" metod="POST">Shopping List</a></td>
+                                        </tr>    
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </body>
-
+    </form>   
+    
+    <div class="newitem" id="itemformadd">
+        <form action="insert-item.php" method="POST">
+            <table class="newitemtable">
+                <thead class="addheader">
+                    <td>Item name</td>
+                    <td>Quantity</td>
+                    <td>Best by</td>
+                    <td>Parishable</td>
+                    <td>Category</td>
+                    <td>Storage type</td>
+                </thead>
+                <tr>
+                    <td><input type="text" name="iname"></td>
+                    <td><input type="number" name="quantity"  min="0"></td>
+                    <td><input type="text" name="bestby"></td>
+                    <td><input type="checkbox" name="parishable"></td>
+                    <td><input type="text" name="category"></td>
+                    <td><input type="text" name="storage"></td>
+                </tr>
+                <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
+            </table>
+        </form>
+    </div>
+    <div class="removeitem" id="itemformremove">
+        <form action="remove-item.php" method="POST">
+            <table class="removeitemtable">
+                <tr>
+                    <td>Item Name</td>
+                    <td><input type="text" name="ritem"></td>
+                    <td>Quantity</td><td><input type="number" name="ramount"></td>
+                    <td><input class="confirmadd" type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
 </html>

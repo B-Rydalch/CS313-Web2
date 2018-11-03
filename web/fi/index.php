@@ -85,6 +85,7 @@
                                         <tr>
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="rbtn" onclick=toggley()>Remove Item</a></td>
+                                            <td><a class="shoppinglist" action="shopping-list.php" metod="POST">Shopping List</a></td>
                                         </tr>    
                                     </tbody>
                                 </table>
@@ -95,7 +96,6 @@
             </div>
         </div>
     </form>   
-    
     <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
             <table class="newitemtable">
