@@ -90,13 +90,32 @@
     <a class="rbtn" onclick=toggley()>Remove Item</a>
     <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
-            <table class="newitemtable">
+            <!-- <table class="newitemtable">
                 <tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
                 <tr><td>Quantity:</td><td> <input type="number" name="quantity"></td></tr>
                 <tr><td>Best by:</td><td> <input type="text" name="bestby"></td></tr>
                 <tr><td>Parishable:</td><td> <input type="checkbox" name="parishable"></td></tr>
                 <tr><td>Category:</td><td><input type="text" name="category"></td></tr>
                 <tr><td>Storage type:</td><td> <input type="text" name="storage"></td></tr>
+                <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
+            </table> -->
+            <table class="newitemtable">
+                <tr>
+                    <td>Item name</td>
+                    <td>Quantity</td>
+                    <td>Best by</td>
+                    <td>Parishable</td>
+                    <td>Category</td>
+                    <td>Storage type</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="iname"></td>
+                    <td> <input type="number" name="quantity"></td>
+                    <td><input type="text" name="bestby"></td>
+                    <td> <input type="checkbox" name="parishable"></td>
+                    <td><input type="text" name="category"></td>
+                    <td> <input type="text" name="storage"></td>
+                </tr>
                 <tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>
             </table>
         </form>
@@ -112,13 +131,6 @@
                 </tr>
             </table>
         </form>
-    </div>
-    <div>
-    <footer>
-        <p>Posted by: Hege Refsnes</p>
-        <p>Contact information: <a href="mailto:someone@example.com">
-        someone@example.com</a>.</p>
-</footer>
     </div>
 </body>
 </html>
