@@ -77,7 +77,11 @@
                                                     '<td>' . $ele['storage_type'] . '</td>' .
                                                '</tr>';
                                             }
-                                        ?>      
+                                        ?>
+                                        <tr>
+                                            <td><a class="btn" onclick=togglex()>Add New Item</a></td>
+                                            <td><a class="rbtn" onclick=toggley()>Remove Item</a></td>
+                                        </tr>    
                                     </tbody>
                                 </table>
                             </div>
@@ -87,8 +91,7 @@
             </div>
         </div>
     </form>   
-    <a class="btn" onclick=togglex()>Add New Item</a>
-    <a class="rbtn" onclick=toggley()>Remove Item</a>
+    
     <div class="newitem" id="itemformadd">
         <form action="insert-item.php" method="POST">
             <!-- <table class="newitemtable">
