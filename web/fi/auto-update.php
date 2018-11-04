@@ -30,7 +30,7 @@
         // sql statements
         $sql = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
                                 WHERE id = :rid AND item_name = rit;");
-        $sql.= $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
+        $sql2= $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                     VALUES (:iname, :iqty, :ict, :cook);');
 
 
@@ -39,13 +39,13 @@
         $sql  = $db->bindValue(':rqty', $rquantity, PDO::PARAM_INT);
         $sql  = $db->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $sql  = $db->bindValue(':rit', $ritem, PDO::PARAM_STR);
-        $sql. = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
-        $sql. = $db->bindValue(':iqty', $rquantity, PDO::PARAM_INT);
-        $sql. = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
-        $sql. = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
+        $sql2 = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
+        $sql2 = $db->bindValue(':iqty', $rquantity, PDO::PARAM_INT);
+        $sql2 = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
+        $sql2 = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
 
         $sql->execut();
-        $sql.->execute();
+        $sql2->execute();
 
 
 
