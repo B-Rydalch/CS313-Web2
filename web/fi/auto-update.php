@@ -37,6 +37,7 @@
         $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
         echo $stmt;
         $stmt->execute();  
+        echo "finished update"; 
     }
 
     function update_shoppinglist($db, $ritem, $rquantity, $chefid){
