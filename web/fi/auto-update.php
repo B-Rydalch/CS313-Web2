@@ -53,7 +53,7 @@
         echo "inside if statement<br>";
         echo "" . $row['quantity'] . "-" . $rquantity . "=" . ($row['quantity'] - $rquantity) . "<br>" ;
         // delete row 
-        delete_row($db);
+        delete_row($db, $row);
 
     } else if(($row['quantity'] - $rquantity) > 0) {
 
