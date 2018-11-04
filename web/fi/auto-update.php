@@ -27,6 +27,11 @@
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute();
+        
+        // return to page
+        $page = "index.php";
+        header("Location: $page");
+
         die();
 
     } else if(($row['quantity'] - $rquantity) > 0) {
@@ -39,8 +44,7 @@
         $stmt->bindValue(':rqty', $rquantity, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
-        $stmt->execute();
-        die();
+        $stmt->execute();     
 
         // insert into shopping list
         $sql = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
@@ -50,11 +54,19 @@
         $sql = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $sql = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $sql->execute();
+
+        // return to page
+        $page = "index.php";
+        header("Location: $page");
+        
         die();
 
     } else{
-        // user error 
-        echo "<h1>Error! Not able to perform update.</h1>";
+        // ERROR handler
+        
+        // return to page
+        $page = "index.php";
+        header("Location: $page");
     }
     echo "end of script";
 ?>
