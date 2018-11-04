@@ -8,7 +8,7 @@
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
     
-    echo "variables initialized";
+    echo "variables initialized"<br>;
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
@@ -16,7 +16,7 @@
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo "executing if";
+    echo "executing if<br>";
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
         
@@ -35,7 +35,7 @@
         die();
 
     } else if(($row['quantity'] - $rquantity) > 0) {
-        echo "executing update";
+        echo "executing update"<br>;
 
         // update inventory
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
@@ -57,6 +57,8 @@
 
         // return to page
         $page = "index.php";
+        echo "<br>";
+        echo $page;
         header("Location: $page");
         
         die();
