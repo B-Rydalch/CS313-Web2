@@ -16,18 +16,6 @@
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo "row<br>";
-    echo print_r ($row);
-    echo "<br>";
-    echo "testing if <br> ";
-    echo $row['quantity'];
-    echo "<br>";
-    echo $rquantity;
-    echo "<br>";
-    echo $row['quantity'] - $rquantity;
-
-
-
     echo "executing if<br>";
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
