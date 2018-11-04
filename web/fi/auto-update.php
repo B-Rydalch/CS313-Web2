@@ -56,6 +56,7 @@
         $stmt->bindValue(':rqty', $rquantity, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
+        echo $stmt;
         $stmt->execute();  
         
         echo "stmt executed";
