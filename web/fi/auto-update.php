@@ -7,14 +7,14 @@
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
-    echo "" . $ritem ."<br>";
+    echo "" . $ramount ."<br>";
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
     $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    print_r($row); 
+    echo $row['quantity'];
 
     function gather_request($db) {
     }
@@ -50,7 +50,8 @@
 
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
-            
+        echo "inside if statement";
+        echo 
         // delete row 
         delete_row($db);
 
