@@ -7,6 +7,9 @@
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
+
+    function gather_request($db) {
+    }
     
     function delete_row($db) {
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
@@ -66,7 +69,15 @@
 
     $new_page = "index.php";
     header("Location: $new_page");
-        
     die();
+
+
+    // if (isset($_POST['chefid'])) {
+    //     $db = connect_db();
+    //     
+    // } else {
+    //     header('Location: index.php');
+    //     die();
+    // }
 
 ?>
