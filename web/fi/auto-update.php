@@ -56,7 +56,9 @@
         $stmt->bindValue(':rqty', $rquantity, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
-        $stmt->execute();     
+        $stmt->execute();  
+        
+        echo "stmt executed";
 
         // insert into shopping list
         $sql = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
@@ -66,6 +68,8 @@
         $sql = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $sql = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $sql->execute();
+
+        echo "sql executed";
 
         // return to page
         $page = "index.php";
