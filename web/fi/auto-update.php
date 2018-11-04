@@ -19,6 +19,7 @@
     echo "row<br>";
     echo print_r ($row);
     echo "<br>";
+    echo "testing if <br> " . $row['quantity'] - $rquantity . "end<br>";
 
     echo "executing if<br>";
     // update the inventory and insert into grocery list
