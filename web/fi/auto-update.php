@@ -50,8 +50,8 @@
 
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
-        echo "inside if statement";
-        echo 
+        echo "inside if statement<br>";
+        echo "" . $row['quantity'] . "-" . $rquantity . "=" . ($row['quantity'] - $rquantity) . "<br>" ;
         // delete row 
         delete_row($db);
 
