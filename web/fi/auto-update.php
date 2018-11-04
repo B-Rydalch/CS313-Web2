@@ -35,8 +35,9 @@
         // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
         // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         // $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
+        echo ""
 
-        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . " and item_name = " . $ritem . ";");
+        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . " and item_name = " /' . $ritem . '/";");
         $stmt->execute();  
         echo "finished update"; 
     }
@@ -59,7 +60,7 @@
 
     } else if(($row['quantity'] - $rquantity) > 0) {
         
-        echo "inside if statement<br>";
+        echo "row qua";
         echo "" . $row['quantity'] . "-" . $rquantity . "=" . ($row['quantity'] - $rquantity) . "<br>" ;
 
         // update inventory
