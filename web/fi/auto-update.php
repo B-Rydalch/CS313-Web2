@@ -29,12 +29,14 @@
 
     function update_inventory($db, $ritem, $rquantity, $row) {
         echo "calling"; 
-        $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
-                                WHERE id = :rid AND item_name = rit;");
-        $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
-        $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
-        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
-        $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
+        // $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
+        //                         WHERE id = :rid AND item_name = rit;");
+        // $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
+        // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
+        // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
+        // $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
+
+        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . " and item_name = " . $ritem . ";");
         echo $stmt;
         $stmt->execute();  
         echo "finished update"; 
