@@ -11,14 +11,14 @@
     function gather_request($db) {
     }
     
-    function delete_row($db) {
+    function delete_row($db, $row) {
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute();
     }
 
-    function update_inventory($db){
+    function update_inventory($db, $ritem, $rquantity, $row) {
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
                                 WHERE id = :rid AND item_name = rit;");
         $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
@@ -29,7 +29,7 @@
         $stmt->execute();  
     }
 
-    function update_shoppinglist($db){
+    function update_shoppinglist($db, $ritem, $rquantity, $chefid){
         $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
