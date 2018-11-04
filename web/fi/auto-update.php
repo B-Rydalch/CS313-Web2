@@ -8,7 +8,7 @@
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
     
-    echo "variables initialized"<br>;
+    echo "variables initialized<br>";
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
@@ -35,7 +35,7 @@
         die();
 
     } else if(($row['quantity'] - $rquantity) > 0) {
-        echo "executing update"<br>;
+        echo "executing update<br>";
 
         // update inventory
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
