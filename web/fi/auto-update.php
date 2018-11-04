@@ -8,6 +8,12 @@
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
 
+    // grab what the user is wanting to remove from database and confirm quantity is there. 
+    $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
+    $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
     function gather_request($db) {
     }
     
@@ -38,12 +44,6 @@
         $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $stmt->execute();
     }
-
-    // grab what the user is wanting to remove from database and confirm quantity is there. 
-    $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
-    $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
-    $stmt->execute();
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
