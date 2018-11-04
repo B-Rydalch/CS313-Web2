@@ -7,7 +7,7 @@
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
-    $echo "" . $ritem ."<br>";
+    echo "" . $ritem ."<br>";
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
@@ -20,7 +20,7 @@
     }
     
     function delete_row($db, $row) {
-        echo "calling delete";
+        echo "calling"
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
