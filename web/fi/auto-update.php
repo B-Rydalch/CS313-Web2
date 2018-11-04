@@ -7,6 +7,8 @@
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
+    
+    echo "variables initialized";
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
@@ -14,8 +16,12 @@
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    echo "executing if";
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
+        
+        echo "delete row";
+        
         // delete row 
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
@@ -24,6 +30,8 @@
         die();
 
     } else if(($row['quantity'] - $rquantity) > 0) {
+        echo "executing update";
+
         // update inventory
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
                                 WHERE id = :rid AND item_name = rit;");
@@ -48,4 +56,5 @@
         // user error 
         echo "<h1>Error! Not able to perform update.</h1>";
     }
+    echo "end of script";
 ?>
