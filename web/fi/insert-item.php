@@ -44,12 +44,3 @@
     die();
 
 ?>
-
-
-<!--<tr><td>Item name:</td><td><input type="text" name="iname"></td></tr>
-<tr><td>Quantity:</td><td> <input type="number" name="quantity"></td></tr>
-<tr><td>Best by:</td><td> <input type="text" name="bestby"></td></tr>
-<tr><td>Parishable:</td><td> <input type="checkbox" name="parishable"></td></tr>
-<tr><td>Category:</td><td><input type="text" name="category"></td></tr>
-<tr><td>Storage type:</td><td> <input type="text" name="storage"></td></tr>
-<tr><td><input class="confirmadd" type="submit" value="Submit"></td></tr>-->

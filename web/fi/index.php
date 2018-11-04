@@ -1,15 +1,10 @@
 <?php
     require('dbconnection.php');
-    session_start();
+    session_start();    
     $db = connect_db();
     $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, perishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    if(isset($_POST['submit'])) {
-        header("Location: https://salty-mesa-22398.herokuapp.com/fi/shopping-list.php");
-        die();
-    }
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +45,40 @@
                 y.style.display = "block";
             }
         }
+    
+        let table = $('table');
+        $('#itemname, #quantity, #bestby, #perish, #category, #storage ')
+            .wrapInner('<span title="sort this column"/>')
+            .each(function(){
+
+                let th = $(this),
+                    thIndex = th.index(),
+                    inverse = false;
+
+                th.click(function(){
+
+                    table.find('td').filter(function(){
+
+                        return $(this).index() === thIndex;
+
+                    }).sortElements(function(a, b){
+
+                        return $.text([a]) > $.text([b]) ?
+                            inverse ? -1 : 1
+                            : inverse ? 1 : -1;
+
+                    }, function(){
+
+                        // parentNode is the element we want to move
+                        return this.parentNode; 
+
+                    });
+
+                    inverse = !inverse;
+
+                });
+
+            });
     </script>
 </head>
 <body onload=hidedisplay()>
@@ -65,12 +94,12 @@
                                 <table class="table table-striped table-condensed">
                                     <thead>
                                         <tr>
-                                            <th>Item Name</th>
-                                            <th>Quantity</th>
-                                            <th>Best By</th>
-                                            <th>Parishable</th>
-                                            <th>Category</th>
-                                            <th>Storage Type</th>
+                                            <th id="itemname">Item Name</th>
+                                            <th id="quantity">Quantity</th>
+                                            <th id="bestby">Best By</th>
+                                            <th id="perish">Perishable</th>
+                                            <th id="category">Category</th>
+                                            <th id="storage">Storage Type</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -127,12 +156,12 @@
         </form>
     </div>
     <div class="removeitem" id="itemformremove">
-        <form action="remove-item.php" method="POST">
+        <form action="auto-update.php" method="POST">
             <table class="removeitemtable">
                 <tr>
                     <td>Item Name</td>
                     <td><input type="text" name="ritem"></td>
-                    <td>Quantity</td><td><input type="number" name="ramount"></td>
+                    <td>Quantity</td><td><input type="number" name="ramount" min="0"></td>
                     <td><input class="confirmadd" type="submit" value="Submit"></td>
                 </tr>
             </table>

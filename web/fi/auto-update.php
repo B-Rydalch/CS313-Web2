@@ -1,0 +1,51 @@
+<?php
+    session_start();
+    require('dbconnection.php');
+    $db = connect_db();
+
+    //variables
+    $ritem = htmlspecialchars($_POST['ritem']);
+    $rquantity = htmlspecialchars($_POST['ramount']);
+    $chefid = 1; 
+
+    // grab what the user is wanting to remove from database and confirm quantity is there. 
+    $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
+    $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
+    $stmt->execute();
+    $row = stmt->fetch(PDO::FETCH_ASSOC);
+
+    // update the inventory and insert into grocery list
+    if ((row['quantity'] - $rquantity) == 0) {
+        // delete row 
+        $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
+        $stmt->bindValue(':rit', row['item_name'], PDO::PARAM_STR);
+        $stmt->bindValue(':rid', row['id'], PDO::PARAM_INT);
+        $stmt->execute();
+        die();
+
+    } else if((row['quantity'] - $rquantity)) > 0) {
+        // update inventory
+        $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
+                                WHERE id = :rid AND item_name = rit;");
+        $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
+        $stmt->bindValue(':rqty', $rquantity, PDO::PARAM_INT);
+        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
+        $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
+        $stmt->execute();
+        die();
+
+        // insert into shopping list
+        $sql = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
+                                VALUES (:iname, :iqty, :ict, :cook);');
+        $sql = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
+        $sql = $db->bindValue(':iqty', $rquantity, PDO::PARAM_INT);
+        $sql = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
+        $sql = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
+        $sql->execute();
+        die();
+
+    } else{
+        // user error 
+        echo "<h1>Error! Not able to perform update.</h1>";
+    }
+?>

@@ -45,6 +45,40 @@
                 y.style.display = "block";
             }
         }
+
+        let table = $('table');
+        $('#itemname, #quantity, #bestby, #perish, #category, #storage ')
+            .wrapInner('<span title="sort this column"/>')
+            .each(function(){
+
+                let th = $(this),
+                    thIndex = th.index(),
+                    inverse = false;
+
+                th.click(function(){
+
+                    table.find('td').filter(function(){
+
+                        return $(this).index() === thIndex;
+
+                    }).sortElements(function(a, b){
+
+                        return $.text([a]) > $.text([b]) ?
+                            inverse ? -1 : 1
+                            : inverse ? 1 : -1;
+
+                    }, function(){
+
+                        // parentNode is the element we want to move
+                        return this.parentNode; 
+
+                    });
+
+                    inverse = !inverse;
+
+                });
+
+            });
     </script>
 </head>
 <body onload=hidedisplay()>
@@ -60,12 +94,12 @@
                                 <table class="table table-striped table-condensed">
                                     <thead>
                                         <tr>
-                                            <th>Item Name</th>
-                                            <th>Quantity</th>
-                                            <th>Best By</th>
-                                            <th>Parishable</th>
-                                            <th>Category</th>
-                                            <th>Storage Type</th>
+                                            <th id="itemname">Item Name</th>
+                                            <th id="quantity">Quantity</th>
+                                            <th id="bestby">Best By</th>
+                                            <th id="perish">Perishable</th>
+                                            <th id="category">Category</th>
+                                            <th id="storage">Storage Type</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -85,8 +119,8 @@
                                         <tr><td></td></tr>
                                         <tr>
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
-                                            <td><a class="rbtn" onclick=toggley()>Remove Item</a></td>
-                                            <td><a class="shoppinglist" href="index.php">Inventory</a></td>
+                                            <td><a class="btn" onclick=toggley()>Remove Item</a></td>
+                                            <td><a class="btn" href="index.php">Inventory</a></td>
                                         </tr>    
                                     </tbody>
                                 </table>
