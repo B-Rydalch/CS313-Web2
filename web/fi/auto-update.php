@@ -7,14 +7,14 @@
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
     $chefid = 1; 
-    echo "" . $ramount ."<br>";
+    //echo "" . $ramount ."<br>";
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
     $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo $row['quantity'];
+    //echo $row['quantity'];
 
     function gather_request($db) {
     }
@@ -28,6 +28,7 @@
     }
 
     function update_inventory($db, $ritem, $rquantity, $row) {
+        echo "calling"; 
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
                                 WHERE id = :rid AND item_name = rit;");
         $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
@@ -50,18 +51,20 @@
 
     // update the inventory and insert into grocery list
     if (($row['quantity'] - $rquantity) == 0) {
-        echo "inside if statement<br>";
-        echo "" . $row['quantity'] . "-" . $rquantity . "=" . ($row['quantity'] - $rquantity) . "<br>" ;
+
         // delete row 
         delete_row($db, $row);
 
     } else if(($row['quantity'] - $rquantity) > 0) {
+        
+        echo "inside if statement<br>";
+        echo "" . $row['quantity'] . "-" . $rquantity . "=" . ($row['quantity'] - $rquantity) . "<br>" ;
 
         // update inventory
-        update_inventory($db);
+        update_inventory($db, $ritem, $rquantity, $row);
 
         // insert into shopping list
-        update_shoppinglist($db);
+        update_shoppinglist($db, $ritem, $rquantity, $chefid);
 
     } else{
         // ERROR handler
