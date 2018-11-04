@@ -41,10 +41,10 @@
         $stmt->execute();
         
         // return to page
-        $page = "index.php";
-        header("Location: $page");
+        // $new_page = "index.php";
+        // header("Location: $new_page");
 
-        die();
+        // die();
 
     } else if(($row['quantity'] - $rquantity) > 0) {
         echo "executing update<br>";
@@ -72,19 +72,22 @@
         echo "sql executed";
 
         // return to page
-        $page = "index.php";
-        echo "<br>";
-        echo $page;
-        header("Location: $page");
+        // $new_page = "index.php";
+        // header("Location: $new_page");
         
-        die();
+        // die();
 
     } else{
         // ERROR handler
         
         // return to page
-        $page = "index.php";
-        header("Location: $page");
+        // $new_page = "index.php";
+        // header("Location: $new_page");
     }
-    echo "end of script";
+
+    $new_page = "index.php";
+    header("Location: $new_page");
+        
+    die();
+
 ?>
