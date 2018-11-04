@@ -12,18 +12,18 @@
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
     $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
     $stmt->execute();
-    $row = stmt->fetch(PDO::FETCH_ASSOC);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // update the inventory and insert into grocery list
-    if ((row['quantity'] - $rquantity) == 0) {
+    if (($row['quantity'] - $rquantity) == 0) {
         // delete row 
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
-        $stmt->bindValue(':rit', row['item_name'], PDO::PARAM_STR);
-        $stmt->bindValue(':rid', row['id'], PDO::PARAM_INT);
+        $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
+        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute();
         die();
 
-    } else if((row['quantity'] - $rquantity)) > 0) {
+    } else if(($row['quantity'] - $rquantity) > 0) {
         // update inventory
         $stmt = $db->prepare("UPDATE inventory SET quantity = (:ramt - :rqty) 
                                 WHERE id = :rid AND item_name = rit;");
