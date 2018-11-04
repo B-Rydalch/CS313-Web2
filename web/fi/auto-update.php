@@ -17,7 +17,8 @@
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     echo "row<br>";
-    echo $row;
+    echo print_r ($row);
+    echo "<br>";
 
     echo "executing if<br>";
     // update the inventory and insert into grocery list
