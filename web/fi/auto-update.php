@@ -20,7 +20,7 @@
     }
     
     function delete_row($db, $row) {
-        echo "calling"
+        echo "calling";
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
