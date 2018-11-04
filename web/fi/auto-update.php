@@ -37,7 +37,6 @@
         // $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
 
         $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . " and item_name = " . $ritem . ";");
-        echo $stmt;
         $stmt->execute();  
         echo "finished update"; 
     }
