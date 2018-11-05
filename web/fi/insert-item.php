@@ -57,6 +57,7 @@
 
     }
 
+    // need to change to current page. 
     additem($db);
     $new_page = "index.php";
     header("Location: $new_page");

@@ -1,30 +1,24 @@
 <?php
-    require ('dbconnection.php');
+    require('dbConnect.php');
     session_start();
-    $db = connect_db();
-
-    function cheflogin($db) {        
-        $user = $_POST['user'];
-        $pass = $_POST['pass'];
-
+    $db = get_db();
+    function loginUser($db) {
+        $user = htmlspecialchars($_POST['user']);
+        $pass = htmlspecialchars($_POST['pass']);
+        
         try {
-            $stmt = $db->prepare("SELECT username, password FROM chef 
-                                    WHERE username = :uname;");
-    
-            $stmt->bindValue(':uname', $user, PDO::PARAM_STR);
-            
+            $stmt = $db->prepare("SELECT id, username, password FROM chef 
+                                    WHERE username = :usr;");
+            $stmt->bindValue(':usr', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if ($dbUser['username'] == $user && $dbUser['password'] == $pass) {
+            if ($dbUser['username'] == $user && password_verify($pass, $dbUser['password'])) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
-
-                $header = header('Location:index.php');
+                $_SESSION['userId'] = $dbUser['id'];
+                header('Location: index.php');
                 die();
-
             } else {
-                // change alert to have container shake. 
                 alert('Login credentials not found!');
             }
         } catch (PDOException $ex) {
@@ -32,16 +26,12 @@
             die();
         }
     }
-
-    // change alert to have container shake. 
     function alert($msg) {
         echo "<script type='text/javascript'>alert('$msg');</script>";
     }
-
-
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-        $db = connect_db();
-        cheflogin($db);
+    if (isset($_POST['user']) && isset($_POST['pass'])) {
+        $db = get_db();
+        loginUser($db);
     }
 ?>
 
