@@ -57,32 +57,41 @@
 <body>
 <div class="container">
     <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false; ?>
-        <div class="card card-container">
-            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <form class="form-signin" action="" method="POST">
-                <input type='text' class="form-control" name='user' placeholder="User Name" required autofocus>
-                <input type="password" class="form-control" name='pass' placeholder="Password" required>
-                <?php echo "<p>" . $user . "</p>" ?>
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
+    <div class="container py-5">
+        <div class="row">
+            <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false; ?>
+            <div class="col-md-12">
+                <h2 class="text-center text-white mb-4">Please login.</h2>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="card rounded-0">
+                            <div class="card-header">
+                                <h3 class="mb-0">Login</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="" novalidate="" method="POST">
+                                    <div class="form-group">
+                                        <label for="user">Username</label>
+                                        <input type="text" class="form-control form-control-lg rounded-0" name="user" required autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control form-control-lg rounded-0" name="pass" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary btn-lg float-right">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-                <?php
-                    echo "<p>" . $user . "</p>";
-                    echo " ";
-                    echo "<p>" . $pass . "</p>"; 
-                    echo "<br>";
-                    echo "<p>" . $dbUser['user'] . "</p>";
-                    echo " ";
-                    echo "<p>" . $dbUser['pass'] . "</p>";
-                    echo "<br>";
-                ?> 
-            </form><!-- /form -->
-            <a href="create-account.php" class="create-account">Create new account</a>
-            <a href="#" class="forgot-password">Forgot the password?</a>
-        </div><!-- /card-container -->
-    </div><!-- /container --> 
+            </div>
+        </div>
+    </div>
+    <a href="create-account.php" class="create-account">Create new account</a>
+    <a href="#" class="forgot-password">Forgot the password?</a>
 </body>
 </html>
+
+
+
+
