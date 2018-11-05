@@ -34,13 +34,18 @@
                                 WHERE id = :rid;");
         $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
-        // $stmt = $db->prepare("update inventory set quantity = " . $updatedValue . " where id = " . $row['id'] . ";");
         $stmt->execute(); 
-        echo "update inventory complete";
+        echo "update inventory complete <br>";
     }
 
     function update_shoppinglist($db, $ritem, $rquantity, $row, $chefid){
-        echo "calling shopping"; 
+        echo "calling shopping<br>"; 
+        echo $ritem; 
+        echo "<br>";
+        echo $rquantity;
+        echo "<br>";
+        echo $row['category'];
+        echo "<br>end";
         $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef _id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
