@@ -36,7 +36,7 @@
         // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         echo "<br>"; 
         echo gettype($row['quantity']);
-        echo gettype($rquantity);
+        echo gettype(intval($rquantity));
         echo "<br>"; 
         echo $row['quantity'];
         echo $rquantity;
