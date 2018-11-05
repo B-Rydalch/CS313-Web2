@@ -27,16 +27,15 @@
         $stmt->execute();
     }
 
-    function update_inventory($db, $ritem, $rquantity, $row) {
+    function update_inventory($db, $rquantity, $row) {
         echo "calling"; 
-        // $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
-        //                         WHERE id = :rid AND item_name = rit;");
-        // $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
-        // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
-        // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
-        // $stmt->bindValue(':rit', $ritem, PDO::PARAM_STR);
+        $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
+                                WHERE id = :rid;");
+        $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
+        $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
+        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
 
-        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . ";");
+        // $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . ";");
         $stmt->execute();  
         echo "finished update"; 
     }
