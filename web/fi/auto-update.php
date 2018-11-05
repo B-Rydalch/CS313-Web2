@@ -59,10 +59,10 @@
                                 VALUES (:iname, :iqty, :ict, :cook);');
     
             echo "prepared";
-            $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
-            $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
-            $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
-            $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_ID);
+            $stmt->bindValue(':iname', $ritem, PDO::PARAM_STR);
+            $stmt->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
+            $stmt->bindValue(':ict', $row['category'], PDO::PARAM_STR);
+            $stmt->bindValue(':cook', $chefid, PDO::PARAM_ID);
             $stmt->execute();
         } catch (PDOException $err) {
             echo $err;
