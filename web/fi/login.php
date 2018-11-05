@@ -1,7 +1,7 @@
 <?php
     require('dbconnection.php');
     session_start();
-    $db = get_db();
+    $db = connect_db();
 
     function loginUser($db) {
         $user = htmlspecialchars($_POST['user']);
