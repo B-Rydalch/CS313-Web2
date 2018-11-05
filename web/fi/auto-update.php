@@ -49,8 +49,8 @@
         echo $row['category'];
         echo gettype($row['category']);
         echo "<br>";
-        echo gettype($chefid);
         echo $chefid;
+        echo gettype($chefid);
         echo "<br>end";
 
 
@@ -61,7 +61,7 @@
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
         $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
-        $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_STR);
+        $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_ID);
         $stmt->execute(); 
         echo "update shopping complete";  
 
