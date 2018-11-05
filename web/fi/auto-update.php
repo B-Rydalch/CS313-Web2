@@ -55,7 +55,7 @@
 
 
         try {
-            $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef _id ) 
+            $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
     
             echo "prepared";
