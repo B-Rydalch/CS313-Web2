@@ -28,7 +28,6 @@
     }
 
     function update_inventory($db, $rquantity, $row) {
-        echo "calling update inventory"; 
         $updatedValue = $row['quantity'] - intval($rquantity);
 
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
@@ -36,7 +35,6 @@
         $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         // $stmt = $db->prepare("update inventory set quantity = " . $updatedValue . " where id = " . $row['id'] . ";");
-        echo "prepared";
         $stmt->execute(); 
         echo "update inventory complete";
     }
