@@ -28,6 +28,7 @@
     }
 
     function update_inventory($db, $rquantity, $row) {
+        echo "calling update inventory"; 
         // $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
         //                         WHERE id = :rid;");
         // $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
@@ -39,7 +40,7 @@
         echo "update inventory complete";
     }
 
-    function update_shoppinglist($db, $ritem, $rquantity, $chefid){
+    function update_shoppinglist($db, $ritem, $rquantity, $row, $chefid){
         echo "calling shopping"; 
         $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
@@ -64,7 +65,7 @@
         update_inventory($db, $ritem, $rquantity, $row);
 
         // insert into shopping list
-        update_shoppinglist($db, $ritem, $rquantity, $chefid);
+        update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);
 
     } else{
         // ERROR handler
