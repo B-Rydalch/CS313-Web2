@@ -7,6 +7,8 @@
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);
         echo "<h1>" . $user . "</h1>";
+        echo "<h1>" . $pass . "</h1>";
+
         
         try {
             $stmt = $db->prepare("SELECT id, username, password FROM chef 
@@ -15,6 +17,8 @@
             $stmt->bindValue(':usr', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+            echo "<h1>" . $dbuser['username'] . "</h1>";
+            echo "<h1>" . $dbuser['password'] . "</h1>";
             if ($dbUser['username'] == $user && password_verify($pass, $dbUser['password'])) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
@@ -58,7 +62,7 @@
 </head>
 <body>
 <div class="container">
-    <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false; ?>
+    <?php unset($_SESSION['name']); $_SESSION['loggedIn'] = false;  unset($_SESSION['pass']); ?>
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <form class="form-signin" action="" novalidate="" method="POST">
