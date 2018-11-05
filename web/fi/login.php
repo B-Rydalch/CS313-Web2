@@ -3,6 +3,8 @@
     session_start();
     $db = connect_db();
 
+    
+
     function loginUser($db) {
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);

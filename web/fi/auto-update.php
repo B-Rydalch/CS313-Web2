@@ -34,9 +34,8 @@
         // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
         // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
 
-        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] . " - " . $rquantity . " where id = " . $row['id'] . ";");
+        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] - $rquantity . " where id = " . $row['id'] . ";");
         $stmt->execute(); 
-        die(); 
     }
 
     function update_shoppinglist($db, $ritem, $rquantity, $chefid){
@@ -48,12 +47,10 @@
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $stmt->execute(); 
-        die();
-
     }
 
     // update the inventory and insert into grocery list
-    if (($row['quantity'] - $rquantity) == 0) {
+    if (($row['quantity'] - $rquantity) <= 0) {
 
         // delete row 
         delete_row($db, $row);
