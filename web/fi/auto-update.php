@@ -34,16 +34,8 @@
         // $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
         // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
         // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
-        echo "<br>"; 
-        echo gettype($row['quantity']);
-        echo gettype(intval($rquantity));
-        echo "<br>"; 
-        echo $row['quantity'];
-        echo $rquantity;
-        echo "<br>"; 
-        echo  $row['quantity'] -  $rquantity;
-        echo "<br>"; 
-        $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] - intval($rquantity) . " where id = " . $row['id'] . ";");
+        $updatedValue = $row['quantity'] - intval($rquantity);
+        $stmt = $db->prepare("update inventory set quantity = " . $updatedValue . " where id = " . $row['id'] . ";");
         echo "prepared";
         $stmt->execute(); 
         echo "update inventory complete";
