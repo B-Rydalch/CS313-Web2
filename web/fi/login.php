@@ -2,6 +2,7 @@
     require('dbconnection.php');
     session_start();
     $db = get_db();
+
     function loginUser($db) {
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);
@@ -9,6 +10,7 @@
         try {
             $stmt = $db->prepare("SELECT id, username, password FROM chef 
                                     WHERE username = :usr;");
+
             $stmt->bindValue(':usr', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -16,6 +18,7 @@
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
                 $_SESSION['userId'] = $dbUser['id'];
+
                 header('Location: index.php');
                 die();
             } else {
@@ -26,11 +29,12 @@
             die();
         }
     }
+
     function alert($msg) {
         echo "<script type='text/javascript'>alert('$msg');</script>";
     }
+
     if (isset($_POST['user']) && isset($_POST['pass'])) {
-        $db = get_db();
         loginUser($db);
     }
 ?>
