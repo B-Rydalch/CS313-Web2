@@ -29,13 +29,13 @@
 
     function update_inventory($db, $rquantity, $row) {
         echo "calling update inventory"; 
-        // $stmt = $db->prepare("UPDATE inventory SET quantity = :ramt - :urqty 
-        //                         WHERE id = :rid;");
-        // $stmt->bindValue(':ramt', $row['quantity'], PDO::PARAM_INT);
-        // $stmt->bindValue(':urqty', $rquantity, PDO::PARAM_INT);
-        // $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $updatedValue = $row['quantity'] - intval($rquantity);
-        $stmt = $db->prepare("update inventory set quantity = " . $updatedValue . " where id = " . $row['id'] . ";");
+
+        $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
+                                WHERE id = :rid;");
+        $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
+        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
+        // $stmt = $db->prepare("update inventory set quantity = " . $updatedValue . " where id = " . $row['id'] . ";");
         echo "prepared";
         $stmt->execute(); 
         echo "update inventory complete";
