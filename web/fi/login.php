@@ -6,8 +6,8 @@
     function loginUser($db) {
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);
-        echo "<h1>" . $user . "</h1>";
-        echo "<h1>" . $pass . "</h1>";
+        echo "<h1> User: " . $user . "</h1>";
+        echo "<h1> Pass: " . $pass . "</h1>";
 
         
         try {
@@ -17,8 +17,8 @@
             $stmt->bindValue(':usr', $user, PDO::PARAM_STR);
             $stmt->execute();
             $dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
-            echo "<h1>" . $dbuser['username'] . "</h1>";
-            echo "<h1>" . $dbuser['password'] . "</h1>";
+            echo "<h1> DB User: " . $dbuser['username'] . "</h1>";
+            echo "<h1> DB Pass: " . $dbuser['password'] . "</h1>";
             if ($dbUser['username'] == $user && password_verify($pass, $dbUser['password'])) {
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['name'] = $user;
