@@ -36,6 +36,7 @@
 
         $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] - $rquantity . " where id = " . $row['id'] . ";");
         $stmt->execute(); 
+        echo "update inventory complete";
     }
 
     function update_shoppinglist($db, $ritem, $rquantity, $chefid){
@@ -47,6 +48,8 @@
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $stmt->execute(); 
+        echo "update shopping compelte"; 
+
     }
 
     // update the inventory and insert into grocery list
