@@ -40,20 +40,26 @@
 
     function update_shoppinglist($db, $ritem, $rquantity, $row, $chefid){
         echo "calling shopping<br>"; 
-        echo $ritem; 
+        echo $ritem;
+        echo gettype($ritem);
         echo "<br>";
         echo $rquantity;
+        echo gettype($rquantity);
         echo "<br>";
         echo $row['category'];
+        echo gettype($row['category']);
         echo "<br>end";
+
         $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef _id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
+    
+        echo "prepared";
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
         $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_STR);
         $stmt->execute(); 
-        echo "update shopping compelte"; 
+        echo "update shopping complete";  
 
     }
 
