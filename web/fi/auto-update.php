@@ -55,9 +55,9 @@
     
         echo "prepared";
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
-        $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
+        $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_INT);
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
-        $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_STR);
+        $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $stmt->execute(); 
         echo "update shopping complete";  
 
@@ -72,7 +72,7 @@
     } else if(($row['quantity'] - $rquantity) > 0) {
 
         // update inventory
-        update_inventory($db, $rquantity, $row);
+       // update_inventory($db, $rquantity, $row);
 
         // insert into shopping list
         update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);
