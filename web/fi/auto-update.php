@@ -62,7 +62,7 @@
             $stmt->bindValue(':iname', $ritem, PDO::PARAM_STR);
             $stmt->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
             $stmt->bindValue(':ict', $row['category'], PDO::PARAM_STR);
-            $stmt->bindValue(':cook', $chefid, PDO::PARAM_ID);
+            $stmt->bindValue(':cook', $chefid, PDO::PARAM_INT);
             $stmt->execute();
         } catch (PDOException $err) {
             echo $err;
