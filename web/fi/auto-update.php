@@ -71,7 +71,7 @@
     } else if(($row['quantity'] - $rquantity) > 0) {
 
         // update inventory
-        update_inventory($db, $ritem, $rquantity, $row);
+        update_inventory($db, $rquantity, $row);
 
         // insert into shopping list
         update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);
