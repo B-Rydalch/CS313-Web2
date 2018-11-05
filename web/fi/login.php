@@ -1,5 +1,5 @@
 <?php
-    require('dbConnect.php');
+    require('dbconnection.php');
     session_start();
     $db = get_db();
     function loginUser($db) {
