@@ -43,10 +43,10 @@
 
     function update_shoppinglist($db, $ritem, $rquantity, $row, $chefid){
         echo "calling shopping"; 
-        $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
+        $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef _id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
         $stmt = $db->bindValue(':iname', $ritem, PDO::PARAM_STR);
-        $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_INT);
+        $stmt = $db->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
         $stmt = $db->bindValue(':ict', $row['category'], PDO::PARAM_STR);
         $stmt = $db->bindValue(':cook', $chefid, PDO::PARAM_INT);
         $stmt->execute(); 
