@@ -38,6 +38,9 @@
         echo gettype($row['quantity']);
         echo gettype($rquantity);
         echo "<br>"; 
+        echo $row['quantity'];
+        echo $rquantity;
+        echo "<br>"; 
         $stmt = $db->prepare("update inventory set quantity = " . $row['quantity'] - intval($rquantity) . " where id = " . $row['id'] . ";");
         echo "prepared";
         $stmt->execute(); 
