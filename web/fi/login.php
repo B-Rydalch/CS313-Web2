@@ -36,6 +36,7 @@
     }
 
     if (isset($_POST['user']) && isset($_POST['pass'])) {
+        $db = connect_db();
         loginUser($db);
     }
 ?>
