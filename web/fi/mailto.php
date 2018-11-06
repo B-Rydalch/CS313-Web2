@@ -66,7 +66,7 @@
     echo "message: " . $message . "<br>";
 
 
-    echo mail($to, $subject, $message, $headers);
+    echo "<a href='mailto:$to>Click this to email!</a>";
     echo "msg sent"; 
     // $new_page = "index.php";
     // header("Location: $new_page");
