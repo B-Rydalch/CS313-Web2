@@ -105,7 +105,7 @@
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
             echo print_r($results);
             
-            if ($results){
+            if (key($results) ){
                 updateitem($db);
             } else {
                 additem($db);
