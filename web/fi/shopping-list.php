@@ -96,10 +96,6 @@
                                         <tr>
                                             <th id="itemname">Item Name</th>
                                             <th id="quantity">Quantity</th>
-                                            <th id="bestby">Best By</th>
-                                            <th id="perish">Perishable</th>
-                                            <th id="category">Category</th>
-                                            <th id="storage">Storage Type</th>
                                         </tr>
                                     </thead>
                                     <tbody>
