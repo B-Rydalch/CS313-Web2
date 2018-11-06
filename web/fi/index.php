@@ -120,7 +120,7 @@
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="btn" id="rbtn" onclick=toggley()>Remove Item</a></td>
                                             <td><a class="btn" id="shoppinglist" href="shopping-list.php">Shopping List</a></td>
-                                            <td><a class="btn" href="logout.php">Log Out</a></td>
+                                            <td><a class='nav-link' href='login.php'><?php session_unset(); ?>Log Out</a></td>
                                         </tr>    
                                     </tbody>
                                 </table>
