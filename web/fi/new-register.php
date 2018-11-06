@@ -32,7 +32,7 @@
 	function add_account($db) {
 		try {
             $user_name = htmlspecialchars($_POST['user_name']);
-            $password = htmlspecialchars($_POST['password']);
+            $password = $_POST['password'];
 			$email = htmlspecialchars($_POST['email']);
 			
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -40,7 +40,7 @@
             // need to add email values once ready to hash passwords
 			$stmt = $db->prepare("Insert INTO chef (username, password, email) values(:identity, :credentials, :contact);");
 			$stmt->bindvalue(':identity', $user_name, PDO::PARAM_STR); 
-			$stmt->bindvalue(':credentials', $password, PDO::PARAM_STR); 
+			$stmt->bindvalue(':credentials', $hashedPassword, PDO::PARAM_STR); 
 			$stmt->bindvalue(':contact', $email, PDO::PARAM_STR); 
 
             $stmt->execute();
