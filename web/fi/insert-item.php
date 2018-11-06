@@ -70,7 +70,7 @@
         echo $updatedValue;
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
                                 WHERE id = :rid;");
-        $stmt->bindValue(':rtotal', $updteatedValue, PDO::PARAM_INT);
+        $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute();
     }
