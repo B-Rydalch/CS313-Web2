@@ -50,7 +50,7 @@
             
             die();
 
-        } catch(PDOException $ex) {
+        } catch(PDOException $ex) { echo $ex;
             die();
         }
 
