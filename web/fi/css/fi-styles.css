@@ -10,7 +10,8 @@ body{
 }
 .panel-primary {
     background-color: azure;
-    min-width: 580;
+    margin: auto; 
+    /* min-width: 580; */
 }
 .fullscreen_bg  {
     position: fixed;
