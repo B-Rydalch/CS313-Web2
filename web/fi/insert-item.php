@@ -68,8 +68,8 @@
 
         $updatedValue = $row['quantity'] + intval($rquantity);
 
-        echo $row['quantity'];
-        echo intval($rquantity);
+        echo 'dbquantity ' . $row['quantity'];
+        echo 'quantity '. intval($rquantity);
 
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
                                 WHERE id = :rid;");
