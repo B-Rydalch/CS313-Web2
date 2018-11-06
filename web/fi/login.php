@@ -22,8 +22,11 @@
                 $_SESSION['name'] = $user;
                 $_SESSION['userId'] = $dbUser['id'];
 
-                $new_page = 'index.php?chef_id=$user';
-                header($new_page);
+                //$new_page = 'index.php?chef_id=$user';
+                //header($new_page);
+                
+                header('Location: index.php');
+                
                 die();
             } else {
                 alert('Login credentials not found!');

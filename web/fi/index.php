@@ -3,10 +3,10 @@
     session_start();    
     $db = connect_db();
 
-    if (!isset($_GET['course_id'])) {
-	    die("Error, course id not specified...");
-    }
-    
+    // if (!isset($_GET['course_id'])) {
+	//     die("Error, course id not specified...");
+    // }
+
     $stmt = $db->prepare("SELECT id, item_name, quantity, best_by, perishable, category, storage_type FROM inventory;");
     $stmt->execute();
     $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
