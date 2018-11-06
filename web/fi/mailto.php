@@ -1,7 +1,7 @@
 <?php
     require('dbconnection.php');
     session_start();
-    $sender = kelebra@live.com;
+    $sender = 'kelebra@live.com';
     
     // grab shopping data 
     function get_list() {
