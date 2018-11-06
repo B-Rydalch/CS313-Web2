@@ -48,6 +48,6 @@
 
     mail($to, $subject, $message, $headers);
     echo "msg sent"; 
-    $new_page = "index.php";
-    header("Location: $new_page");
+    // $new_page = "index.php";
+    // header("Location: $new_page");
 ?>
