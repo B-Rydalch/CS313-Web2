@@ -51,16 +51,16 @@
                         <th>Quantity</th>
                     </tr>
                 </thead>
-                <tbody>" .
+                <tbody>" ;
                         foreach ($val as $ele) {
-                            echo 
+                            message .=   
                             '<tr>' . 
                                 '<td>' . $ele['item_name'] . '</td>' .
                                 '<td>' . $ele['quantity'] . '</td>' .
                            '</tr>';
                         }
-                    . "</tbody>
-                </table>";
+                    message .= "</tbody>";
+                message .= "</table>";
     $message .= '</body></html>';
     
     echo "message: " . $message . "<br>";
