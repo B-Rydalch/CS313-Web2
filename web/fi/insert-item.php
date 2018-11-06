@@ -26,6 +26,9 @@
         }else {
             $peri = true;
         }
+        if ($freshness == "") {
+            $freshness = null;
+        }
         
         try {
             echo $item;               
