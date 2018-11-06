@@ -103,9 +103,9 @@
             $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
-            echo key($results);
+            echo $results['exists'];
             
-            if (key($results) ){
+            if ($results['exists']){
                 updateitem($db);
             } else {
                 additem($db);
