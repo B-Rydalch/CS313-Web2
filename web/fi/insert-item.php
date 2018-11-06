@@ -72,14 +72,12 @@
             $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
-            echo $results; 
             
-            // if ($results){
-            //     updateitem($db);
-
-            // } else {
-            //     additem($db);
-            // }
+            if ($results){
+                updateitem($db);
+            } else {
+                additem($db);
+            }
     
 
             // index.php?id=$pId
