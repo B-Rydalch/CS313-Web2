@@ -46,6 +46,9 @@
 		}
 	}
 
+
+	existing_user();
+
 	if ($registered == true) {
 		// direct to new page 
         $new_page = "login.php";
@@ -53,7 +56,10 @@
 		die();
 	} else {
 		// return to register account 
-		existing_user(); 	
+		alert('New user was not registered.');
+		$new_page = "login.php";
+		header("Location: $new_page");
+		die();
 	}
 
 	// page should die before reaching this
