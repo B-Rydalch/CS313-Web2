@@ -103,7 +103,7 @@
             $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
-            echo print_r($results);
+            echo key($results);
             
             if (key($results) ){
                 updateitem($db);
