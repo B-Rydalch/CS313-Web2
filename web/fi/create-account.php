@@ -1,5 +1,23 @@
+<?php 
+    require('dbconnection.php');
+    session_start();
+	$db = connect_db();
+	
+	function add_account() {
+		try {
+
+			
+
+		} catch (PDOException $ex) {
+			echo $ex;
+            die();
+		}
+	}
+
+?> 
+
 <!DOCTYPE html>
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
