@@ -56,9 +56,10 @@
 
     }
 
-    function checkexisting($db, $table, $tim ) {
-        $table = ""; 
-        
+    function checkexisting() {
+        $table = "inventory";
+        $tim = $_POST['iname'];  
+
         try {
 
             $stmt = $db->prepare('select exists (select 1  from :page where item_name = :it LIMIT 1);');
@@ -68,12 +69,12 @@
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
             echo $results; 
             
-            if ($results){
-                updateitem($db);
+            // if ($results){
+            //     updateitem($db);
 
-            } else {
-                additem($db);
-            }
+            // } else {
+            //     additem($db);
+            // }
     
 
             // index.php?id=$pId
@@ -89,7 +90,7 @@
     }
 
     // need to change to current page.
-    checkexisting($db); 
+    checkexisting(); 
     $new_page = "index.php";
     header("Location: $new_page");
     die();

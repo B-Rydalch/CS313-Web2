@@ -139,6 +139,7 @@
                     <td>Storage type</td>
                 </thead>
                 <tr>
+                    <input type='hidden' name='inventory'>                        
                     <td><input type="text" name="iname"></td>
                     <td><input type="number" name="quantity"  min="0"></td>
                     <td><input type="text" name="bestby"></td>
