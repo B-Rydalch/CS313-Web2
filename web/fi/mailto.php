@@ -1,7 +1,7 @@
 <?php
     require('dbconnection.php');
     session_start();
-    $sender = 'kelebra@live.com';
+
     
     // grab shopping data 
     function get_list() {
@@ -21,16 +21,21 @@
     }
 
     function get_email() {
-
     }
-    echo "create message"; 
-    // the message
-    $msg = "Here's your shopping list! Thanks for using Food Inventory";
-    echo "wrap message"; 
-    // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70);
-    echo "send message"; 
-    // send email
-    $status = bool mail("ryd11002@byui.edu","Shopping List ",$msg, "From:" . $sender);
-    echo $status; 
+
+    $to = 'kelebra@live.com';
+
+    $subject = 'Website Change Request';
+    
+    $headers = "From: ryd11002@byui.edu \r\n";
+    //$headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
+    $headers .= "CC: \r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+    $message = '<html><body>';
+    $message .= '<h1>Hello, World!</h1>';
+    $message .= '</body></html>';
+
+    mail($to, $subject, $message, $headers);
 ?>
