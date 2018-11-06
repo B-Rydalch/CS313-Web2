@@ -5,7 +5,7 @@
 
     
 
-    function loginUser($db) {
+    function loginChef($db) {
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);
         
@@ -39,7 +39,7 @@
 
     if (isset($_POST['user']) && isset($_POST['pass'])) {
         $db = connect_db();
-        loginUser($db);
+        loginChef($db);
     }
 ?>
 
