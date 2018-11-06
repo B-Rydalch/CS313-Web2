@@ -28,6 +28,12 @@
         }
         
         try {
+            echo $item;               
+            echo $quantity  ;
+            echo $freshness ;            
+            echo $peri; 
+            echo $department;
+            echo $wrap;    
 
             $stmt = $db->prepare('INSERT INTO inventory(item_name, quantity, best_by, perishable, category, storage_type, chef_id ) 
             VALUES (:purchase, :amount, :eatby, :parish, :brand, :wrapping, :cook);');
@@ -44,13 +50,14 @@
             $stmt->execute();
 
             // index.php?id=$pId
-            $new_page = "index.php";
-            echo $page;
-            header("Location: $new_page");
+            // $new_page = "index.php";
+            // echo $page;
+            // header("Location: $new_page");
             
             die();
 
-        } catch(PDOException $ex) { echo $ex;
+        } catch(PDOException $ex) {
+            echo $ex; 
             die();
         }
 
