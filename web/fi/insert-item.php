@@ -62,7 +62,7 @@
 
         try {
 
-            if ($table == "inventory") { echo $tim; 
+            if ($table == "inventory") { echo gettype($tim); 
                 $stmt = $db->prepare('select exists (select 1  from inventory where item_name = :it LIMIT 1);');
             } else {
                 $stmt = $db->prepare('select exists (select 1  from shopping where item_name = :it LIMIT 1);');
