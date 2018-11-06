@@ -57,7 +57,6 @@
     }
 
     function updateitem($db) {
-        echo "hit";
         $item = htmlspecialchars($_POST['iname']);
         $quantity = htmlspecialchars($_POST['quantity']);
 
@@ -68,9 +67,7 @@
 
         $updatedValue = $row['quantity'] + intval($quantity);
 
-        echo 'dbquantity ' . $row['quantity'];
-        echo 'quantity '. intval($quantity);
-
+        echo $updatedValue;
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
                                 WHERE id = :rid;");
         $stmt->bindValue(':rtotal', $updteatedValue, PDO::PARAM_INT);
