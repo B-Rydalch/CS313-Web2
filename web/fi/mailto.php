@@ -66,7 +66,7 @@
     echo "message: " . $message . "<br>";
 
 
-    mail($to, $subject, $message, $headers);
+    echo mail($to, $subject, $message, $headers);
     echo "msg sent"; 
     // $new_page = "index.php";
     // header("Location: $new_page");
