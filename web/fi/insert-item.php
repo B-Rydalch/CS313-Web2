@@ -73,6 +73,11 @@
         $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute();
+
+        // index.php?id=$pId
+        $new_page = "index.php";
+        echo $page;
+        header("Location: $new_page");
     }
 
     function checkexisting() {
@@ -97,15 +102,6 @@
             } else {
                 additem($db);
             }
-    
-
-            // index.php?id=$pId
-            // $new_page = "index.php";
-            // echo $page;
-            // header("Location: $new_page");
-            
-            // die();
-
         } catch(PDOException $ex) {
             echo $ex;
             die();
