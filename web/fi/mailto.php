@@ -31,6 +31,6 @@
     $msg = wordwrap($msg,70);
     echo "send message"; 
     // send email
-    mail("ryd11002@byui.edu","Shopping List ",$msg, "From:" . $sender);
-    echo "message sent"; 
+    $status = bool mail("ryd11002@byui.edu","Shopping List ",$msg, "From:" . $sender);
+    echo $status; 
 ?>
