@@ -117,6 +117,8 @@
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="btn" onclick=toggley()>Remove Item</a></td>
                                             <td><a class="btn" href="index.php">Inventory</a></td>
+                                            <td><a class="btn" href="mailto.php">Email Grocery List</a></td>
+                                            <td><a class="btn" href="logout.php">Log Out</a></td>
                                         </tr>    
                                     </tbody>
                                 </table>

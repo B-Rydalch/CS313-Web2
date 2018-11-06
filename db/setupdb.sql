@@ -4,8 +4,9 @@ DROP TABLE shopping CASCADE;
 
 CREATE TABLE chef (
 	id 			 SERIAL 		PRIMARY KEY
-	, username 	 VARCHAR(50)	UNIQUE	NOT NULL 
-    , password 	 VARCHAR(50) 	NOT NULL
+	, username 	 VARCHAR(250)	UNIQUE	NOT NULL 
+    , password 	 VARCHAR(250) 	NOT NULL
+    , email      VARCHAR(250)   NOT NULL 
 );
 
 CREATE TABLE shopping (
