@@ -1,6 +1,7 @@
 <?php
     require('dbconnection.php');
     session_start();
+    $sender = kelebra@live.com;
     
     // grab shopping data 
     function get_list() {
@@ -30,5 +31,5 @@
     $msg = wordwrap($msg,70);
 
     // send email
-    mail("ryd11002@byui.edu","Shopping List ",$msg);
+    mail("ryd11002@byui.edu","Shopping List ",$msg, "From:" . $sender);
 ?>
