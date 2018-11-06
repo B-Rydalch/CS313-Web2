@@ -86,7 +86,6 @@
 
         // index.php?id=$pId
         $new_page = "index.php";
-        echo $page;
         header("Location: $new_page");
     }
 
