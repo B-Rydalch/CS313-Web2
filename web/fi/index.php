@@ -143,7 +143,7 @@
                     <td>Item name</td>
                     <td>Quantity</td>
                     <td>Best by</td>
-                    <td>Parishable</td>
+                    <td>Perishable</td>
                     <td>Category</td>
                     <td>Storage type</td>
                 </thead>
@@ -152,7 +152,7 @@
                         <td><input type="text" name="iname"></td>
                         <td><input type="number" name="quantity"  min="0"></td>
                         <td><input type="text" name="bestby"></td>
-                        <td><input type="checkbox" name="parishable"></td>
+                        <td><input type="checkbox" name="perishable"></td>
                         <td><input type="text" name="category"></td>
                         <td><input type="text" name="storage"></td>
                     </tr>
