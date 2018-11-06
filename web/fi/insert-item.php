@@ -62,8 +62,12 @@
 
         try {
 
-            $stmt = $db->prepare('select exists (select 1  from :page where item_name = :it LIMIT 1);');
-            $stmt->bindValue(':page', $table, PDO::PARAM_STR);
+            if ($table == "inventory") {
+                $stmt = $db->prepare('select exists (select 1  from inventory where item_name = :it LIMIT 1);');
+            } else {
+                $stmt = $db->prepare('select exists (select 1  from shopping where item_name = :it LIMIT 1);');
+            }
+            
             $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
