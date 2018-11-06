@@ -6,7 +6,7 @@
 	function add_account() {
 		try {
 
-			
+
 
 		} catch (PDOException $ex) {
 			echo $ex;
@@ -24,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CS313</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/create-stylesheet.css" />
+    <link rel='stylesheet' type="text/css" media="screen" href='./css/login-stylesheet.css'>
 
     <!--Boostrap-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -38,7 +38,7 @@
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Please sign up for Food Inventory  <small>Everyone likes FI becuse It's free!</small></h3>
+			    		<h3 class="panel-title">Please sign up for Food Inventory  <small><br>Everyone likes FI Becuse It's free!</small></h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form role="form">

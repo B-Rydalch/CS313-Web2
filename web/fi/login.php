@@ -8,9 +8,6 @@
     function loginUser($db) {
         $user = htmlspecialchars($_POST['user']);
         $pass = htmlspecialchars($_POST['pass']);
-        echo "<h1> User: " . $user . "</h1>";
-        echo "<h1> Pass: " . $pass . "</h1>";
-
         
         try {
             $stmt = $db->prepare("SELECT id, username, password FROM chef 
