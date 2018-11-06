@@ -89,6 +89,7 @@
             die();
 
         } catch(PDOException $ex) {
+            echo $ex;
             die();
         }
     }
