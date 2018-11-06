@@ -52,15 +52,15 @@
                     </tr>
                 </thead>
                 <tbody>" ;
-                        foreach ($val as $ele) {
-                            message .=   
-                            '<tr>' . 
-                                '<td>' . $ele['item_name'] . '</td>' .
-                                '<td>' . $ele['quantity'] . '</td>' .
-                           '</tr>';
-                        }
-                    message .= "</tbody>";
-                message .= "</table>";
+                            foreach ($val as $ele) {
+                                $message .=  
+                                '<tr>' . 
+                                    '<td>' . $ele['item_name'] . '</td>' .
+                                    '<td>' . $ele['quantity'] . '</td>' .
+                            '</tr>';
+                            }
+                    $message .= "</tbody>";
+                $message .= "</table>";
     $message .= '</body></html>';
     
     echo "message: " . $message . "<br>";
