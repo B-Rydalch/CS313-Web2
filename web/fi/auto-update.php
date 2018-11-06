@@ -20,7 +20,6 @@
     }
     
     function delete_row($db, $row) {
-        echo "calling";
         $stmt = $db->prepare("DELETE FROM inventory WHERE item_name = :rit AND id = :rid");
         $stmt->bindValue(':rit', $row['item_name'], PDO::PARAM_STR);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
@@ -35,25 +34,9 @@
         $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
         $stmt->execute(); 
-        echo "update inventory complete <br>";
     }
 
     function update_shoppinglist($db, $ritem, $rquantity, $row, $chefid){
-        echo "calling shopping<br>"; 
-        echo $ritem;
-        echo gettype($ritem);
-        echo "<br>";
-        echo $rquantity;
-        echo gettype($rquantity);
-        echo "<br>";
-        echo $row['category'];
-        echo gettype($row['category']);
-        echo "<br>";
-        echo $chefid;
-        echo gettype($chefid);
-        echo "<br>end";
-
-
         try {
             $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
@@ -81,7 +64,7 @@
     } else if(($row['quantity'] - $rquantity) > 0) {
 
         // update inventory
-       // update_inventory($db, $rquantity, $row);
+        update_inventory($db, $rquantity, $row);
 
         // insert into shopping list
         update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);

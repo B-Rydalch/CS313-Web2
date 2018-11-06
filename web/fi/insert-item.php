@@ -10,7 +10,6 @@
     $db = connect_db();
 
     function additem($db) {
-        echo "add item called";
         // variables 
         $item = htmlspecialchars($_POST['iname']);
         $quantity = htmlspecialchars($_POST['quantity']);
@@ -57,8 +56,40 @@
 
     }
 
-    // need to change to current page. 
-    additem($db);
+    function checkexisting($db, $table, $tim ) {
+        $table = ""; 
+        
+        try {
+
+            $stmt = $db->prepare('select exists (select 1  from :page where item_name = :it LIMIT 1);');
+            $stmt->bindValue(':page', $table, PDO::PARAM_STR);
+            $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
+            $stmt->execute();
+            $results = $stmt->fetch(PDO::FETCH_ASSOC);
+            echo $results; 
+            
+            if ($results){
+                updateitem($db);
+
+            } else {
+                additem($db);
+            }
+    
+
+            // index.php?id=$pId
+            $new_page = "index.php";
+            echo $page;
+            header("Location: $new_page");
+            
+            die();
+
+        } catch(PDOException $ex) {
+            die();
+        }
+    }
+
+    // need to change to current page.
+    checkexisting($db); 
     $new_page = "index.php";
     header("Location: $new_page");
     die();
