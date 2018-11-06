@@ -57,12 +57,23 @@
     }
 
     function updateitem($db) {
+        $item = htmlspecialchars($_POST['iname']);
+        $quantity = htmlspecialchars($_POST['quantity']);
+        
+        $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
+        $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
         $updatedValue = $row['quantity'] + intval($rquantity);
+
 
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
                                 WHERE id = :rid;");
         $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
         $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
+        $stmt->bindValue(':purchase', $item, PDO::PARAM_STR);
+        $stmt->bindValue(':amount', $quantity, PDO::PARAM_INT);
         $stmt->execute();
     }
 
