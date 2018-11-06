@@ -53,9 +53,7 @@
 		die();
 	} else {
 		// return to register account 
-		$new_page = "create-account.php";
-		header("Location: $new_page");
-		die();
+		existing_user(); 	
 	}
 
 	// page should die before reaching this
