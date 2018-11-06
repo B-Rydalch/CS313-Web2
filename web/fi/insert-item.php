@@ -61,15 +61,15 @@
         $item = htmlspecialchars($_POST['iname']);
         $quantity = htmlspecialchars($_POST['quantity']);
 
-        $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
+        $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it;");
         $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $updatedValue = $row['quantity'] + intval($rquantity);
+        $updatedValue = $row['quantity'] + intval($quantity);
 
         echo 'dbquantity ' . $row['quantity'];
-        echo 'quantity '. intval($rquantity);
+        echo 'quantity '. intval($quantity);
 
         $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
                                 WHERE id = :rid;");
