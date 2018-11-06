@@ -6,7 +6,7 @@
     //variables
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
-    $chefid = 1;
+    $chefid = $_GET['id'];
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
