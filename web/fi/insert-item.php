@@ -7,7 +7,7 @@
 
     // connect db
     require('dbconnection.php');
-    $db = connect_db();
+    
 
     function additem($db) {
         // variables 
@@ -57,13 +57,14 @@
     }
 
     function checkexisting() {
+        $db = connect_db();
         $table = "inventory";
         $tim = $_POST['iname'];  
 
         try {
 
-            if ($table == "inventory") { echo gettype($tim); 
-                $stmt = $db->prepare("select exists (select 1  from inventory where item_name = ':it' LIMIT 1);");
+            if ($table == "inventory") {  
+                $stmt = $db->prepare("select exists (select 1  from inventory where item_name = :it LIMIT 1);");
             } else {
                 $stmt = $db->prepare('select exists (select 1  from shopping where item_name = :it LIMIT 1);');
             }
