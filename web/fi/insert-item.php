@@ -56,6 +56,16 @@
 
     }
 
+    function updateitem($db) {
+        $updatedValue = $row['quantity'] + intval($rquantity);
+
+        $stmt = $db->prepare("UPDATE inventory SET quantity = :rtotal
+                                WHERE id = :rid;");
+        $stmt->bindValue(':rtotal', $updatedValue, PDO::PARAM_INT);
+        $stmt->bindValue(':rid', $row['id'], PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
     function checkexisting() {
         $db = connect_db();
         $table = "inventory";
@@ -64,7 +74,7 @@
         try {
 
             if ($table == "inventory") {  
-                $stmt = $db->prepare("select exists (select 1  from inventory where item_name = :it LIMIT 1);");
+                $stmt = $db->prepare("select exists (select 1  from inventory where item_name = ':it' LIMIT 1);");
             } else {
                 $stmt = $db->prepare('select exists (select 1  from shopping where item_name = :it LIMIT 1);');
             }
