@@ -51,8 +51,7 @@
                         <th>Quantity</th>
                     </tr>
                 </thead>
-                <tbody>"
-                    <?php
+                <tbody>" .
                         foreach ($val as $ele) {
                             echo 
                             '<tr>' . 
@@ -60,8 +59,7 @@
                                 '<td>' . $ele['quantity'] . '</td>' .
                            '</tr>';
                         }
-                    ?>
-                    "</tbody>
+                    . "</tbody>
                 </table>";
     $message .= '</body></html>';
     
