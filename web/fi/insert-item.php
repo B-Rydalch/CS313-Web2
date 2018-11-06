@@ -100,11 +100,11 @@
     
 
             // index.php?id=$pId
-            $new_page = "index.php";
-            echo $page;
-            header("Location: $new_page");
+            // $new_page = "index.php";
+            // echo $page;
+            // header("Location: $new_page");
             
-            die();
+            // die();
 
         } catch(PDOException $ex) {
             echo $ex;
