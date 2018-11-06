@@ -64,21 +64,19 @@
         // insert into shopping list
         update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);
 
-    } else{
-        // ERROR handle
-    }
+    } 
 
     $new_page = "index.php";
     header("Location: $new_page");
     die();
 
 
-    // if (isset($_POST['chefid'])) {
-    //     $db = connect_db();
-    //     
-    // } else {
-    //     header('Location: index.php');
-    //     die();
-    // }
+    if (isset($_POST['chefid'])) {
+        $db = connect_db();
+        
+    } else {
+        header('Location: index.php');
+        die();
+    }
 
 ?>
