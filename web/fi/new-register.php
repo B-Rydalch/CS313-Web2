@@ -42,7 +42,6 @@
             $stmt->execute();
             
             $registered = true; 
-			die();
 
 		} catch (PDOException $ex) {
 			echo $ex;
