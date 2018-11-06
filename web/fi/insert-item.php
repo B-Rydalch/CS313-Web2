@@ -82,9 +82,9 @@
         $stmt->execute();
 
         // index.php?id=$pId
-        $new_page = "index.php";
-        echo $page;
-        header("Location: $new_page");
+        // $new_page = "index.php";
+        // echo $page;
+        // header("Location: $new_page");
     }
 
     function checkexisting() {
@@ -103,6 +103,7 @@
             $stmt->bindvalue(':it', $tim, PDO::PARAM_STR);
             $stmt->execute();
             $results = $stmt->fetch(PDO::FETCH_ASSOC);
+            echo $results;
             
             if ($results){
                 updateitem($db);
