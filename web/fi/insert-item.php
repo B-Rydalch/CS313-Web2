@@ -118,12 +118,8 @@
             die();
         }
     }
-
-    // need to change to current page.
+    
     checkexisting(); 
-    // $new_page = "index.php";
-    // header("Location: $new_page");
-    // die();
 
     // if (isset($_POST['chefid'])) {
     //     $db = connect_db();

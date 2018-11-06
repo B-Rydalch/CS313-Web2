@@ -6,15 +6,13 @@
     //variables
     $ritem = htmlspecialchars($_POST['ritem']);
     $rquantity = htmlspecialchars($_POST['ramount']);
-    $chefid = 1; 
-    //echo "" . $ramount ."<br>";
+    $chefid = 1;
 
     // grab what the user is wanting to remove from database and confirm quantity is there. 
     $stmt = $db->prepare("SELECT id, item_name, quantity, category FROM inventory WHERE item_name = :it");
     $stmt->bindValue(':it', $ritem, PDO::PARAM_STR);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    //echo $row['quantity'];
 
     function gather_request($db) {
     }
@@ -41,7 +39,6 @@
             $stmt = $db->prepare('INSERT INTO shopping (item_name, quantity, category, chef_id ) 
                                 VALUES (:iname, :iqty, :ict, :cook);');
     
-            echo "prepared";
             $stmt->bindValue(':iname', $ritem, PDO::PARAM_STR);
             $stmt->bindValue(':iqty', $rquantity, PDO::PARAM_STR);
             $stmt->bindValue(':ict', $row['category'], PDO::PARAM_STR);
@@ -51,8 +48,6 @@
             echo $err;
             die();
         }
-        echo "update shopping complete";  
-
     }
 
     // update the inventory and insert into grocery list
@@ -70,11 +65,7 @@
         update_shoppinglist($db, $ritem, $rquantity, $row, $chefid);
 
     } else{
-        // ERROR handler
-        
-        // return to page
-        // $new_page = "index.php";
-        // header("Location: $new_page");
+        // ERROR handle
     }
 
     $new_page = "index.php";

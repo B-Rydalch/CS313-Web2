@@ -113,7 +113,9 @@
                                             <td><a class="btn" onclick=togglex()>Add New Item</a></td>
                                             <td><a class="btn" onclick=toggley()>Remove Item</a></td>
                                             <td><a class="btn" href="index.php">Inventory</a></td>
-                                            <td><a class="btn" href="mailto.php">Email Grocery List</a></td>
+                                            <form action="mail-list.php" method="POST">
+                                                <td><a class="btn" href="mailto.php">Email Grocery List</a></td>
+                                            </form>
                                             <td><a class="btn" href="logout.php">Log Out</a></td>
                                         </tr>    
                                     </tbody>
