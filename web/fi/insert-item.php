@@ -50,9 +50,9 @@
             $stmt->execute();
 
             // index.php?id=$pId
-            // $new_page = "index.php";
-            // echo $page;
-            // header("Location: $new_page");
+            $new_page = "index.php";
+            echo $page;
+            header("Location: $new_page");
             
             die();
 
@@ -82,9 +82,9 @@
         $stmt->execute();
 
         // index.php?id=$pId
-        // $new_page = "index.php";
-        // echo $page;
-        // header("Location: $new_page");
+        $new_page = "index.php";
+        echo $page;
+        header("Location: $new_page");
     }
 
     function checkexisting() {
