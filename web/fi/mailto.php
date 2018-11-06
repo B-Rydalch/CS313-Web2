@@ -63,6 +63,7 @@
                 $message .= "</table>";
     
     $message .= "<p><a href='mailto:" . $to . ">Click this to email!</a></p>";
+    echo "<p><a href='mailto:" . $to . ">Click this to email!</a></p>";
 
     $message .= '</body></html>';
 
