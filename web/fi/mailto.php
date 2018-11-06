@@ -1,7 +1,10 @@
 <?php
     require('dbconnection.php');
     session_start();
-
+    $db = connect_db();
+    $stmt = $db->prepare("SELECT id, item_name, quantity FROM shopping;");
+    $stmt->execute();
+    $val = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     // grab shopping data 
     function get_list() {
@@ -40,7 +43,26 @@
 
 
     $message = '<html><body>';
-    $message .= '<h1>Hello, World!</h1>';
+    $message .= '<h1>Thanks for using FI!</h1>';
+    $message .= "<table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>"
+                    <?php
+                        foreach ($val as $ele) {
+                            echo 
+                            '<tr>' . 
+                                '<td>' . $ele['item_name'] . '</td>' .
+                                '<td>' . $ele['quantity'] . '</td>' .
+                           '</tr>';
+                        }
+                    ?>
+                    "</tbody>
+                </table>";
     $message .= '</body></html>';
     
     echo "message: " . $message . "<br>";
