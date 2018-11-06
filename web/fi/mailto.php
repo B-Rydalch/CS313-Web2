@@ -61,12 +61,13 @@
                             }
                     $message .= "</tbody>";
                 $message .= "</table>";
-    $message .= '</body></html>';
     
+    $message .= "<a href='mailto:$to>Click this to email!</a>";
+
+    $message .= '</body></html>';
+
     echo "message: " . $message . "<br>";
 
-
-    echo "<a href='mailto:$to>Click this to email!</a>";
     echo "msg sent"; 
     // $new_page = "index.php";
     // header("Location: $new_page");
