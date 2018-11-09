@@ -4,13 +4,13 @@ const url = require('url');
 const PORT = 8888;
 
 http.createServer((request, response) => {
-    let _Url_ = url.parse(request.url, true);
+    let app_url = url.parse(request.url, true);
 
-    if (_Url_.pathname === '/home') {
+    if (app_url.pathname === '/home') {
         response.writeHead(200, {'Content-Type': 'text/html'});
 
         response.write('<h1>Welcome to the Node Server main page!</h1>');
-    } else if (_Url_.pathname === '/getData') {
+    } else if (app_url.pathname === '/getData') {
         response.writeHead(200, {'Content-Type': 'application/json'});
 
         response.write(JSON.stringify({
